@@ -1,234 +1,119 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
-<robot generator="Robot 5.0.1 (Python 3.10.5 on darwin)" generated="20220715 12:45:52.766" rpa="false" schemaversion="3">
-<suite id="s1" name="LOGIN04 TEST" source="/Users/leoalano/developer/Ascender/Automação de testes/04 Login/ascender-automation-practice-test/tests/LOGIN04_TEST.ROBOT">
+<robot generator="Robot 5.0.1 (Python 3.10.5 on darwin)" generated="20220715 16:03:14.578" rpa="false" schemaversion="3">
+<suite id="s1" name="Login04 Test" source="/Users/leoalano/developer/Ascender/Automação de testes/04 Login/ascender-automation-practice-test/tests/login04_test.robot">
 <test id="s1-t1" name="Test Case 04" line="19">
 <kw name="Open up" library="login04">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>browser=chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220715 12:45:53.046" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20220715 12:45:53.046" endtime="20220715 12:45:55.771"/>
+<msg timestamp="20220715 16:03:14.875" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220715 16:03:14.874" endtime="20220715 16:03:16.819"/>
 </kw>
-<status status="PASS" starttime="20220715 12:45:53.045" endtime="20220715 12:45:55.771"/>
+<status status="PASS" starttime="20220715 16:03:14.874" endtime="20220715 16:03:16.819"/>
 </kw>
 <kw name="Acess website automationpractice.com" library="login04">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220715 12:45:55.773" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
-<status status="PASS" starttime="20220715 12:45:55.773" endtime="20220715 12:46:01.325"/>
+<msg timestamp="20220715 16:03:16.820" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
+<status status="PASS" starttime="20220715 16:03:16.820" endtime="20220715 16:03:22.075"/>
 </kw>
-<status status="PASS" starttime="20220715 12:45:55.772" endtime="20220715 12:46:01.326"/>
+<status status="PASS" starttime="20220715 16:03:16.820" endtime="20220715 16:03:22.075"/>
 </kw>
 <kw name="Enter menu &quot;Sign in&quot;" library="login04">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${SIGNIN}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220715 12:46:01.326" endtime="20220715 12:46:01.387"/>
-=======
-<robot generator="Robot 5.0.1 (Python 3.10.5 on darwin)" generated="20220715 11:03:19.535" rpa="false" schemaversion="3">
-<suite id="s1" name="Login04 Test" source="/Users/leoalano/developer/Ascender/Automação de testes/04 Login/ascender-automation-practice-test/tests/login04_test.robot">
-<test id="s1-t1" name="Open up" line="19">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>browser=chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220715 11:03:19.831" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20220715 11:03:19.831" endtime="20220715 11:03:22.015"/>
-</kw>
-<status status="PASS" starttime="20220715 11:03:19.830" endtime="20220715 11:03:22.016"/>
-</test>
-<test id="s1-t2" name="Acess website automationpractice.com" line="22">
-<kw name="Go To" library="SeleniumLibrary">
-<arg>${URL}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220715 11:03:22.018" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
-<status status="PASS" starttime="20220715 11:03:22.018" endtime="20220715 11:03:27.784"/>
-</kw>
-<status status="PASS" starttime="20220715 11:03:22.017" endtime="20220715 11:03:27.784"/>
-</test>
-<test id="s1-t3" name="Enter menu &quot;Sign in&quot;" line="25">
-<kw name="Sleep" library="BuiltIn">
-<arg>3 seconds</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220715 11:03:30.788" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20220715 11:03:27.786" endtime="20220715 11:03:30.788"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${SIGNIN}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220715 11:03:30.789" endtime="20220715 11:03:30.838"/>
->>>>>>> 56ecd8a (adding files to new branch)
+<status status="PASS" starttime="20220715 16:03:22.076" endtime="20220715 16:03:22.103"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${SIGNIN}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<<<<<<< HEAD
-<msg timestamp="20220715 12:46:01.388" level="INFO">Clicking element '//a[@class='login']'.</msg>
-<msg timestamp="20220715 12:46:03.259" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20220715 12:46:03.260" level="FAIL">WebDriverException: Message: unknown error: unexpected command response
+<msg timestamp="20220715 16:03:22.103" level="INFO">Clicking element '//a[@class='login']'.</msg>
+<msg timestamp="20220715 16:03:24.954" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220715 16:03:24.955" level="FAIL">WebDriverException: Message: unknown error: unexpected command response
   (Session info: chrome=103.0.5060.114)
 Stacktrace:
-0   chromedriver                        0x0000000103123079 chromedriver + 4444281
-1   chromedriver                        0x00000001030af403 chromedriver + 3970051
-2   chromedriver                        0x0000000102d4a038 chromedriver + 409656
-3   chromedriver                        0x0000000102d373c8 chromedriver + 332744
-4   chromedriver                        0x0000000102d36ac7 chromedriver + 330439
-5   chromedriver                        0x0000000102d36047 chromedriver + 327751
-6   chromedriver                        0x0000000102d35803 chromedriver + 325635
-7   chromedriver                        0x0000000102d511fa chromedriver + 438778
-8   chromedriver                        0x0000000102db062d chromedriver + 828973
-9   chromedriver                        0x0000000102d9d683 chromedriver + 751235
-10  chromedriver                        0x0000000102d73a45 chromedriver + 580165
-11  chromedriver                        0x0000000102d74a95 chromedriver + 584341
-12  chromedriver                        0x00000001030f455d chromedriver + 4253021
-13  chromedriver                        0x00000001030f93a1 chromedriver + 4273057
-14  chromedriver                        0x00000001030fe16f chromedriver + 4292975
-15  chromedriver                        0x00000001030f9dea chromedriver + 4275690
-16  chromedriver                        0x00000001030d354f chromedriver + 4117839
-17  chromedriver                        0x0000000103113ed8 chromedriver + 4382424
-18  chromedriver                        0x000000010311405f chromedriver + 4382815
-19  chromedriver                        0x000000010312a8d5 chromedriver + 4475093
+0   chromedriver                        0x000000010a66a079 chromedriver + 4444281
+1   chromedriver                        0x000000010a5f6403 chromedriver + 3970051
+2   chromedriver                        0x000000010a291038 chromedriver + 409656
+3   chromedriver                        0x000000010a27e3c8 chromedriver + 332744
+4   chromedriver                        0x000000010a27dac7 chromedriver + 330439
+5   chromedriver                        0x000000010a27d047 chromedriver + 327751
+6   chromedriver                        0x000000010a27c803 chromedriver + 325635
+7   chromedriver                        0x000000010a2981fa chromedriver + 438778
+8   chromedriver                        0x000000010a2f762d chromedriver + 828973
+9   chromedriver                        0x000000010a2e4683 chromedriver + 751235
+10  chromedriver                        0x000000010a2baa45 chromedriver + 580165
+11  chromedriver                        0x000000010a2bba95 chromedriver + 584341
+12  chromedriver                        0x000000010a63b55d chromedriver + 4253021
+13  chromedriver                        0x000000010a6403a1 chromedriver + 4273057
+14  chromedriver                        0x000000010a64516f chromedriver + 4292975
+15  chromedriver                        0x000000010a640dea chromedriver + 4275690
+16  chromedriver                        0x000000010a61a54f chromedriver + 4117839
+17  chromedriver                        0x000000010a65aed8 chromedriver + 4382424
+18  chromedriver                        0x000000010a65b05f chromedriver + 4382815
+19  chromedriver                        0x000000010a6718d5 chromedriver + 4475093
 20  libsystem_pthread.dylib             0x00007fff2035d8fc _pthread_start + 224
 21  libsystem_pthread.dylib             0x00007fff20359443 thread_start + 15
 </msg>
-<status status="FAIL" starttime="20220715 12:46:01.387" endtime="20220715 12:46:03.266"/>
-=======
-<msg timestamp="20220715 11:03:30.839" level="INFO">Clicking element '//a[@class='login']'.</msg>
-<status status="PASS" starttime="20220715 11:03:30.838" endtime="20220715 11:03:32.692"/>
->>>>>>> 56ecd8a (adding files to new branch)
+<status status="FAIL" starttime="20220715 16:03:22.103" endtime="20220715 16:03:24.963"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>6 seconds</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<<<<<<< HEAD
-<status status="NOT RUN" starttime="20220715 12:46:03.266" endtime="20220715 12:46:03.267"/>
+<status status="NOT RUN" starttime="20220715 16:03:24.963" endtime="20220715 16:03:24.963"/>
 </kw>
-<status status="FAIL" starttime="20220715 12:46:01.326" endtime="20220715 12:46:03.267"/>
+<status status="FAIL" starttime="20220715 16:03:22.075" endtime="20220715 16:03:24.964"/>
 </kw>
 <kw name="Fill form with email &quot;xxxxxx@xxxxx.com&quot; and password &quot;1111&quot;" library="login04">
-<status status="NOT RUN" starttime="20220715 12:46:03.267" endtime="20220715 12:46:03.267"/>
+<status status="NOT RUN" starttime="20220715 16:03:24.964" endtime="20220715 16:03:24.964"/>
 </kw>
 <kw name="Click on button &quot;Sign In&quot;" library="login04">
-<status status="NOT RUN" starttime="20220715 12:46:03.268" endtime="20220715 12:46:03.268"/>
+<status status="NOT RUN" starttime="20220715 16:03:24.965" endtime="20220715 16:03:24.965"/>
 </kw>
 <kw name="Verify if error message appears &quot;There is 1 error&quot;" library="login04">
-<status status="NOT RUN" starttime="20220715 12:46:03.268" endtime="20220715 12:46:03.268"/>
+<status status="NOT RUN" starttime="20220715 16:03:24.965" endtime="20220715 16:03:24.965"/>
 </kw>
 <kw name="Close All Browsers" library="login04">
-<status status="NOT RUN" starttime="20220715 12:46:03.268" endtime="20220715 12:46:03.268"/>
+<status status="NOT RUN" starttime="20220715 16:03:24.965" endtime="20220715 16:03:24.965"/>
 </kw>
-<status status="FAIL" starttime="20220715 12:45:53.044" endtime="20220715 12:46:03.269">WebDriverException: Message: unknown error: unexpected command response
+<status status="FAIL" starttime="20220715 16:03:14.873" endtime="20220715 16:03:24.966">WebDriverException: Message: unknown error: unexpected command response
   (Session info: chrome=103.0.5060.114)
 Stacktrace:
-0   chromedriver                        0x0000000103123079 chromedriver + 4444281
-1   chromedriver                        0x00000001030af403 chromedriver + 3970051
-2   chromedriver                        0x0000000102d4a038 chromedriver + 409656
-3   chromedriver                        0x0000000102d373c8 chromedriver + 332744
-4   chromedriver                        0x0000000102d36ac7 chromedriver + 330439
-5   chromedriver                        0x0000000102d36047 chromedriver + 327751
-6   chromedriver                        0x0000000102d35803 chromedriver + 325635
-7   chromedriver                        0x0000000102d511fa chromedriver + 438778
-8   chromedriver                        0x0000000102db062d chromedriver + 8...
+0   chromedriver                        0x000000010a66a079 chromedriver + 4444281
+1   chromedriver                        0x000000010a5f6403 chromedriver + 3970051
+2   chromedriver                        0x000000010a291038 chromedriver + 409656
+3   chromedriver                        0x000000010a27e3c8 chromedriver + 332744
+4   chromedriver                        0x000000010a27dac7 chromedriver + 330439
+5   chromedriver                        0x000000010a27d047 chromedriver + 327751
+6   chromedriver                        0x000000010a27c803 chromedriver + 325635
+7   chromedriver                        0x000000010a2981fa chromedriver + 438778
+8   chromedriver                        0x000000010a2f762d chromedriver + 8...
     [ Message content over the limit has been removed. ]
-...hromedriver                        0x0000000102d74a95 chromedriver + 584341
-12  chromedriver                        0x00000001030f455d chromedriver + 4253021
-13  chromedriver                        0x00000001030f93a1 chromedriver + 4273057
-14  chromedriver                        0x00000001030fe16f chromedriver + 4292975
-15  chromedriver                        0x00000001030f9dea chromedriver + 4275690
-16  chromedriver                        0x00000001030d354f chromedriver + 4117839
-17  chromedriver                        0x0000000103113ed8 chromedriver + 4382424
-18  chromedriver                        0x000000010311405f chromedriver + 4382815
-19  chromedriver                        0x000000010312a8d5 chromedriver + 4475093
+...hromedriver                        0x000000010a2bba95 chromedriver + 584341
+12  chromedriver                        0x000000010a63b55d chromedriver + 4253021
+13  chromedriver                        0x000000010a6403a1 chromedriver + 4273057
+14  chromedriver                        0x000000010a64516f chromedriver + 4292975
+15  chromedriver                        0x000000010a640dea chromedriver + 4275690
+16  chromedriver                        0x000000010a61a54f chromedriver + 4117839
+17  chromedriver                        0x000000010a65aed8 chromedriver + 4382424
+18  chromedriver                        0x000000010a65b05f chromedriver + 4382815
+19  chromedriver                        0x000000010a6718d5 chromedriver + 4475093
 20  libsystem_pthread.dylib             0x00007fff2035d8fc _pthread_start + 224
 21  libsystem_pthread.dylib             0x00007fff20359443 thread_start + 15</status>
 </test>
 <doc>Testing login with invalid e-mail.</doc>
-<status status="FAIL" starttime="20220715 12:45:52.768" endtime="20220715 12:46:03.270"/>
+<status status="FAIL" starttime="20220715 16:03:14.583" endtime="20220715 16:03:24.967"/>
 </suite>
 <statistics>
 <total>
 <stat pass="0" fail="1" skip="0">All Tests</stat>
-=======
-<msg timestamp="20220715 11:03:38.694" level="INFO">Slept 6 seconds</msg>
-<status status="PASS" starttime="20220715 11:03:32.692" endtime="20220715 11:03:38.695"/>
-</kw>
-<status status="PASS" starttime="20220715 11:03:27.785" endtime="20220715 11:03:38.695"/>
-</test>
-<test id="s1-t4" name="Fill form with email &quot;xxxxxx@xxxxx.com&quot; and password &quot;1111&quot;" line="31">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${PASSWORD_INPUT}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220715 11:03:38.698" endtime="20220715 11:03:38.733"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${EMAIL_INPUT}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220715 11:03:38.733" endtime="20220715 11:03:38.754"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${EMAIL_INPUT}</arg>
-<arg>${TEST_EMAIL}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220715 11:03:38.755" level="INFO">Typing text 'xxx@xxxx.com' into text field 'xpath://input[@id='email']'.</msg>
-<status status="PASS" starttime="20220715 11:03:38.754" endtime="20220715 11:03:38.920"/>
-</kw>
-<kw name="Input Password" library="SeleniumLibrary">
-<arg>${PASSWORD_INPUT}</arg>
-<arg>${TEST_PASSWORD}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20220715 11:03:38.921" level="INFO">Typing password into text field '//input[@type='password']'.</msg>
-<msg timestamp="20220715 11:03:38.951" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20220715 11:03:39.006" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20220715 11:03:38.921" endtime="20220715 11:03:39.006"/>
-</kw>
-<status status="PASS" starttime="20220715 11:03:38.696" endtime="20220715 11:03:39.007"/>
-</test>
-<test id="s1-t5" name="Click on button &quot;Sign In&quot;" line="37">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${SIGN_IN_BUTTON}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220715 11:03:39.008" endtime="20220715 11:03:39.035"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${SIGN_IN_BUTTON}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220715 11:03:39.035" level="INFO">Clicking element 'xpath://span[contains(.,'Sign in')]'.</msg>
-<status status="PASS" starttime="20220715 11:03:39.035" endtime="20220715 11:03:39.920"/>
-</kw>
-<status status="PASS" starttime="20220715 11:03:39.007" endtime="20220715 11:03:39.920"/>
-</test>
-<test id="s1-t6" name="Verify if error message appears &quot;There is 1 error&quot;" line="41">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${ERROR_MESSAGE}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220715 11:03:39.922" endtime="20220715 11:03:39.942"/>
-</kw>
-<status status="PASS" starttime="20220715 11:03:39.921" endtime="20220715 11:03:39.942"/>
-</test>
-<test id="s1-t7" name="Close All Browsers" line="44">
-<kw name="Close All Browsers" library="SeleniumLibrary">
-<doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220715 11:03:39.944" endtime="20220715 11:03:40.044"/>
-</kw>
-<status status="PASS" starttime="20220715 11:03:39.943" endtime="20220715 11:03:40.044"/>
-</test>
-<doc>Testing login with invalid e-mail.</doc>
-<status status="PASS" starttime="20220715 11:03:19.540" endtime="20220715 11:03:40.045"/>
-</suite>
-<statistics>
-<total>
-<stat pass="7" fail="0" skip="0">All Tests</stat>
->>>>>>> 56ecd8a (adding files to new branch)
 </total>
 <tag>
 </tag>
 <suite>
-<<<<<<< HEAD
-<stat pass="0" fail="1" skip="0" id="s1" name="LOGIN04 TEST">LOGIN04 TEST</stat>
-=======
-<stat pass="7" fail="0" skip="0" id="s1" name="Login04 Test">Login04 Test</stat>
->>>>>>> 56ecd8a (adding files to new branch)
+<stat pass="0" fail="1" skip="0" id="s1" name="Login04 Test">Login04 Test</stat>
 </suite>
 </statistics>
 <errors>
