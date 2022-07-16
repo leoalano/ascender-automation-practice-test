@@ -2,28 +2,38 @@
 Resource    ../page_objects/login_page.resource
 
 *** Keywords ***
-Acessar a home page do site automationpractice.com
+Type non-registered email in the email field
+    Wait Until Element Is Visible        id=${CAMPO_EMAIL}      timeout=2s    
+    Input Text                           id=${CAMPO_EMAIL}      ${EMAIL_NAO_CADASTRADO}
+
+Type non-registered password in the password field
+    Input Text                          id=${CAMPO_PASSWORD}    ${SENHA_NAO_CADASTRADA}
+    
+Check login error verification
+    Wait Until Element Is Visible       locator=${VALIDA_AUTENTICACAO}
+    Title Should Be                     ${TITULO_PAGINA_LOGIN}
+    Page Should Contain Element         locator=${VALIDA_AUTENTICACAO}
+
+Acess website automationpractice.com
     Maximize Browser Window
     Go To                               ${URL}
     Set Selenium Speed  0.3s   
-
-Entrar na opção Sign in no cabeçalho da página   
+    
+Enter menu "Sign in"
     Click Element                       locator=${SIGN_IN}
     Title Should Be                     ${TITULO_PAGINA_LOGIN}
     Page Should Contain Element         locator=${VALIDA_PAGINA_LOGIN}
     Page Should Contain Element         locator=${VALIDA_PAGINA_LOGIN_2}
 
-Digitar o email não cadastrado no campo Email address
-    Wait Until Element Is Visible        id=${CAMPO_EMAIL}      timeout=2s    
-    Input Text                           id=${CAMPO_EMAIL}      ${EMAIL_NAO_CADASTRADO}
+Fill form with email "xxxxxx@xxxxx.com" and password "1111"
+    Wait Until Element is Visible   ${PASSWORD_INPUT}
+    Wait Until Element is Visible   ${EMAIL_INPUT} 
+    Input Text      ${EMAIL_INPUT}      ${TEST_EMAIL}
+    Input password  ${PASSWORD_INPUT}   ${TEST_PASSWORD}  
 
-Digitar a senha não cadastrada no campo Password
-    Input Text                          id=${CAMPO_PASSWORD}    ${SENHA_NAO_CADASTRADA}
+Click on button "Sign In"
+    Wait Until Element is Visible   ${SIGN_IN_BUTTON}
+    Click Element                   ${SIGN_IN_BUTTON}
 
-Clicar no botão Sign in
-    Click Button                        id=${BOTAO_SUBMIT_LOGIN}
-    
-Verificação de falha no login
-    Wait Until Element Is Visible       locator=${VALIDA_AUTENTICACAO}
-    Title Should Be                     ${TITULO_PAGINA_LOGIN}
-    Page Should Contain Element         locator=${VALIDA_AUTENTICACAO}
+Verify if error message appears "There is 1 error"
+    Wait Until Element is Visible   ${ERROR_MESSAGE}    
