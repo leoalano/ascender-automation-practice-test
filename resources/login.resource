@@ -1,18 +1,29 @@
-*** Settings *** 
-Library     SeleniumLibrary
+*** Settings ***
 Resource    ../page_objects/login_page.resource
 
 *** Keywords ***
-Open up
-    Open Browser                    browser=chrome
+Type non-registered email in the email field
+    Wait Until Element Is Visible        id=${CAMPO_EMAIL}      timeout=2s    
+    Input Text                           id=${CAMPO_EMAIL}      ${EMAIL_NAO_CADASTRADO}
+
+Type non-registered password in the password field
+    Input Text                          id=${CAMPO_PASSWORD}    ${SENHA_NAO_CADASTRADA}
+    
+Check login error verification
+    Wait Until Element Is Visible       locator=${VALIDA_AUTENTICACAO}
+    Title Should Be                     ${TITULO_PAGINA_LOGIN}
+    Page Should Contain Element         locator=${VALIDA_AUTENTICACAO}
 
 Acess website automationpractice.com
-    Go To                           ${URL}
-
+    Maximize Browser Window
+    Go To                               ${URL}
+    Set Selenium Speed  0.3s   
+    
 Enter menu "Sign in"
-    Wait Until Element is Visible   ${SIGNIN}
-    Click Element                   ${SIGNIN} 
-    sleep                           6 seconds
+    Click Element                       locator=${SIGN_IN}
+    Title Should Be                     ${TITULO_PAGINA_LOGIN}
+    Page Should Contain Element         locator=${VALIDA_PAGINA_LOGIN}
+    Page Should Contain Element         locator=${VALIDA_PAGINA_LOGIN_2}
 
 Fill form with email "xxxxxx@xxxxx.com" and password "1111"
     Wait Until Element is Visible   ${PASSWORD_INPUT}
@@ -26,6 +37,3 @@ Click on button "Sign In"
 
 Verify if error message appears "There is 1 error"
     Wait Until Element is Visible   ${ERROR_MESSAGE}    
-
-Close All Browsers
-    Close all Browsers
