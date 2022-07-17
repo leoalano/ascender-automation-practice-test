@@ -2,7 +2,7 @@
 Documentation     Testing login with invalid e-mail.
 Library           SeleniumLibrary
 Resource          ../resources/login.resource
-#Resource         ../configs/configs.resource
+Resource          ../configs/configs.resource
 Test Setup        Open Browser          browser=chrome
 Test Teardown     Close All Browsers
 

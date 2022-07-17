@@ -1,6 +1,4 @@
 *** Variables ***
-${URL}                          http://automationpractice.com/index.php
-${SIGN_IN}                      //a[@class='login'][contains(.,'Sign in')]
 ${EMAIL_NAO_CADASTRADO}         christian00000@bloob.com
 ${SENHA_NAO_CADASTRADA}         0000000
 ${TITULO_PAGINA_LOGIN}          Login - My Store
@@ -10,3 +8,12 @@ ${VALIDA_AUTENTICACAO}          //li[contains(.,'Authentication failed.')]
 ${CAMPO_EMAIL}                  email
 ${CAMPO_PASSWORD}               passwd
 ${BOTAO_SUBMIT_LOGIN}           SubmitLogin
+${URL}                          http://www.automationpractice.com   
+${ERROR_MESSAGE}                xpath://p[contains(.,'There is 1 error')]
+${BROWSER}                      browser=chrome 
+${SIGN_IN}                      //a[@class='login']
+${PASSWORD_INPUT}               //input[@type='password']
+${EMAIL_INPUT}                  //input[@id='email']
+${SIGN_IN_BUTTON}               //span[contains(.,'Sign in')]
+${TEST_EMAIL}                   xxx@xxxx.com
+${TEST_PASSWORD}                123456 
