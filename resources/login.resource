@@ -6,13 +6,28 @@ Type non-registered email in the email field
     Wait Until Element Is Visible        id=${CAMPO_EMAIL}      timeout=2s    
     Input Text                           id=${CAMPO_EMAIL}      ${EMAIL_NAO_CADASTRADO}
 
+Type registered email in the email field                   #Keyword registered email para o TC#03
+    Wait Until Element Is Visible        id=${CAMPO_EMAIL}      timeout=2s    
+    Input Text                           id=${CAMPO_EMAIL}      ${EMAIL_CADASTRADO}
+
 Type non-registered password in the password field
     Input Text                          id=${CAMPO_PASSWORD}    ${SENHA_NAO_CADASTRADA}
+
+Type fake non-registered password in the password field     #Keyword Senha Fake para o TC#03
+    Input Text                          id=${CAMPO_PASSWORD}    ${SENHA_FAKE}
+
+Type empty registered password in the password field        #Keyword Senha Vazia para o TC#03
+    Input Text                          id=${CAMPO_PASSWORD}    ${SEM_SENHA}
     
 Check login error verification
     Wait Until Element Is Visible       locator=${VALIDA_AUTENTICACAO}
     Title Should Be                     ${TITULO_PAGINA_LOGIN}
     Page Should Contain Element         locator=${VALIDA_AUTENTICACAO}
+
+Check password error verification                  #Keyword Confirmacao Senha Vazia para o TC#03
+    Wait Until Element Is Visible       locator=${VALIDA_PASSWORD}
+    Title Should Be                     ${TITULO_PAGINA_LOGIN}
+    Page Should Contain Element         locator=${VALIDA_PASSWORD}
 
 Acess website automationpractice.com
     Maximize Browser Window
