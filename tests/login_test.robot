@@ -7,6 +7,14 @@ Test Setup        Open Browser          browser=chrome
 Test Teardown     Close All Browsers
 
 *** Test Cases ***
+Teste case 01 - login of website automationpractice.com/index.php                      
+    Access homepage of automationpractice.com
+    Enter menu "Sign in" at the header
+    Type the registered email in the field "email address"
+    Type the registered Password in the field "Password"
+    Click on the "Sign In" Button
+    Verify successful login
+    
 Test case 02 - Login with invalid user
     Acess website automationpractice.com
     Enter menu "Sign in"

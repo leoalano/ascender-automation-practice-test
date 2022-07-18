@@ -17,3 +17,9 @@ ${EMAIL_INPUT}                  //input[@id='email']
 ${SIGN_IN_BUTTON}               //span[contains(.,'Sign in')]
 ${TEST_EMAIL}                   xxx@xxxx.com
 ${TEST_PASSWORD}                123456 
+${TITULO_PAGINA_LOGIN}          Login - My Store
+${EMAIL_CADASTRADO}             christian.hernan@gmail.com
+${SENHA_CADASTRADA}             123456
+${LOGIN}                        //span[contains(.,'Sign in')]
+${TITULO_ACCOUNT}               My account - My Store
+${VALIDA_PAGINA_LOGIN1}         //h3[@class='page-subheading'][contains(.,'Already registered?')]
