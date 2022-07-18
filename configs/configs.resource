@@ -1,3 +1,3 @@
 *** Variables ***
-${URL}                   http://automationpractice.com/index.php
-${BROWSER}               chrome
+${URL}             http://www.automationpractice.com   
+${BROWSER}         browser=chrome 
