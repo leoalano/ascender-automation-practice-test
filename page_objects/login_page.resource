@@ -22,4 +22,3 @@ ${EMAIL_CADASTRADO}             christian.hernan@gmail.com
 ${SENHA_CADASTRADA}             123456
 ${LOGIN}                        //span[contains(.,'Sign in')]
 ${TITULO_ACCOUNT}               My account - My Store
-${VALIDA_PAGINA_LOGIN1}         //h3[@class='page-subheading'][contains(.,'Already registered?')]
