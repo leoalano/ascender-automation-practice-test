@@ -38,3 +38,11 @@ Test Case 04 - Invalid email
     Fill form with email "xxxxxx@xxxxx.com" and password "1111"
     Click on button "Sign In"
     Verify if error message appears "There is 1 error"
+
+Test case 05 - Login with empty passwd
+    Acess website automationpractice.com
+    Enter menu "Sign in"
+    Type the registered email in the field "email address"
+    Type empty password in the password field 
+    Click on button "Sign In"
+    Check login empty password error 
