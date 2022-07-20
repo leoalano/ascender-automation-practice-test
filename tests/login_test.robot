@@ -1,31 +1,48 @@
 *** Settings ***
-Documentation     Testing login with invalid e-mail.
+Documentation     Login Test Suite.
+
 Library           SeleniumLibrary
+
+Resource          ../configs/config.resource
 Resource          ../resources/login.resource
-Resource          ../configs/configs.resource
-Test Setup        Open Browser          browser=chrome
+Resource          ../resources/menu.resource
+Resource          ../resources/navegation.resource
+
+Test Setup        Open Browser    ${BROWSER}
 Test Teardown     Close All Browsers
 
+*** Variables ***
+${VALID_EMAIL}           compra_teste@gmail.com.br
+${VALID_PASSWORD}        12345
+${INVALID_EMAIL}         xurupitas
+${UNREGISTERED_EMAIL}    xurupitas@namanteiga.com.br
+${INCORRECT_PASSWORD}    wrong_password
+
 *** Test Cases ***
-Teste case 01 - login of website automationpractice.com/index.php                      
-    Access homepage of automationpractice.com
-    Enter menu "Sign in" at the header
-    Type the registered email in the field "email address"
-    Type the registered Password in the field "Password"
-    Click on the "Sign In" Button
-    Verify successful login
+Teste case 01 - Login successfully
+    Given I am at automationpractice.com
+      And I enter menu "Sign in"
+     When I fill login form with "${VALID_EMAIL}" and "${VALID_PASSWORD}"
+      And I submit login form
+     Then I should be loged in successfully
     
-Test case 02 - Login with invalid user
-    Acess website automationpractice.com
-    Enter menu "Sign in"
-    Type non-registered email in the email field
-    Type non-registered password in the password field 
-    Click on button "Sign In"
-    Check login error verification
+Test case 02 - Try login with unregistered e-mail
+    Given I am at automationpractice.com
+      And I enter menu "Sign in"
+     When I fill login form with "${UNREGISTERED_EMAIL}" and "${VALID_PASSWORD}"
+      And I submit login form
+     Then I should see an error message    Authentication failed
        
-Test Case 04 - Invalid email
-    Acess website automationpractice.com
-    Enter menu "Sign in"
-    Fill form with email "xxxxxx@xxxxx.com" and password "1111"
-    Click on button "Sign In"
-    Verify if error message appears "There is 1 error"
+Test case 03 - Try login with incorrect password
+    Given I am at automationpractice.com
+      And I enter menu "Sign in"
+     When I fill login form with "${INVALID_EMAIL}" and "${INCORRECT_PASSWORD}"
+      And I submit login form
+     Then I should see an error message   Authentication failed.
+
+Test case 04 - Try login with invalid e-mail           
+    Given I am at automationpractice.com
+      And I enter menu "Sign in"
+     When I fill login form with "${INVALID_EMAIL}" and "${VALID_PASSWORD}"
+      And I submit login form
+     Then I should see an error message   Invalid email address.
