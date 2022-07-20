@@ -1,6 +1,6 @@
 *** Settings ***
-Resource  ../menu_page.resource
+Resource  ../page_objects/menu_page.resource
 
 *** Keywords ***
 I enter menu "Sign in"
-    Click Element          ${SIGN_IN_BUTTON}
+    Click Element          ${SIGN_IN_MENU_BUTTON}

@@ -8,7 +8,7 @@ Resource          ../resources/login.resource
 Resource          ../resources/menu.resource
 Resource          ../resources/navegation.resource
 
-Test Setup        Open Browser    ${BROWSER}
+Test Setup        Open Browser    about:blank  ${BROWSER}
 Test Teardown     Close All Browsers
 
 *** Variables ***
