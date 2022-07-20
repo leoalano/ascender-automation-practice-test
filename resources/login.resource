@@ -11,7 +11,14 @@ Type non-registered password in the password field
 
 Type fake non-registered password in the password field  #Keyword Senha Fake TC#03-Login
     Input Text                          id=passwd    ${FAKE_PASSWORD}
-    
+
+Type empty password in the password field
+    Input Text                          id=passwd    ${EMPTY_PASSWORD}
+
+Check login empty password error 
+    Wait Until Element Is Visible       id=authentication
+    Page Should Contain Element         ${PASSWORD_EMPTY_VALIDATION}
+
 Check login error verification
     Wait Until Element Is Visible       locator=${VALIDA_AUTENTICACAO}
     Title Should Be                     ${TITULO_PAGINA_LOGIN}
