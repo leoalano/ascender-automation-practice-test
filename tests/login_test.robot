@@ -1,6 +1,7 @@
 *** Settings ***
 Documentation     Testing login with invalid e-mail.
 Library           SeleniumLibrary
+Library           FakerLibrary
 Resource          ../resources/login.resource
 Resource          ../configs/configs.resource
 Test Setup        Open Browser          browser=chrome
@@ -20,6 +21,14 @@ Test case 02 - Login with invalid user
     Enter menu "Sign in"
     Type non-registered email in the email field
     Type non-registered password in the password field 
+    Click on button "Sign In"
+    Check login error verification
+
+Test case 03 - Login with invalid passwd
+    Acess website automationpractice.com
+    Enter menu "Sign in"
+    Type the registered email in the field "email address"
+    Type fake non-registered password in the password field 
     Click on button "Sign In"
     Check login error verification
        
