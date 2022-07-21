@@ -8,3 +8,4 @@ report.html
 selenium-screenshot-*.png
 
 # End of https://www.toptal.com/developers/gitignore/api/robotframework
+.DS_Store
