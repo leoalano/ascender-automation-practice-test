@@ -29,3 +29,11 @@ Test Case 04 - Invalid email
     Fill form with email "xxxxxx@xxxxx.com" and password "1111"
     Click on button "Sign In"
     Verify if error message appears "There is 1 error"
+
+Test Case 06 - Forgot Password
+    Given I am at automationpractice.com
+    And I enter menu "Sign in"
+    And I click on "Forgot Password"
+    When I fill the email field with my email
+    And submit my email
+    Then I should see a successful message
