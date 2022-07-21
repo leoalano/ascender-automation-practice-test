@@ -4,7 +4,7 @@ Test Setup  Open Browser  browser=chrome
 Test Teardown  Close All Browsers
 
 Resource    ../resources/cart.resource
-Resource    ../config/config.resource
+Resource    ../configs/config.resource
 
 *** Test Cases ***
 Scenario Access Cart
