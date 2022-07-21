@@ -46,3 +46,28 @@ Type the registered Password in the field "Password"
 
 Verify successful login
     Title Should Be                 ${TITULO_ACCOUNT}
+
+Given I am at automationpractice.com
+    Maximize Browser Window
+    Go To                               ${URL} 
+    
+And I enter menu "Sign in"
+    Click Element                       locator=${SIGN_IN}
+    Title Should Be                     ${TITULO_PAGINA_LOGIN}
+    Page Should Contain Element         locator=${VALIDA_PAGINA_LOGIN}
+    Page Should Contain Element         locator=${VALIDA_PAGINA_LOGIN_2}
+
+And I click on "Forgot Password"
+    Wait Until Element is Visible   ${FORGOT_PASS}
+    Click Element                   ${FORGOT_PASS}
+
+When I fill the email field with my email
+    Wait Until Element Is Visible   id=email
+    Input Text                      id=email    ${EMAIL_CADASTRADO}
+
+And submit my email
+    Wait Until Element is Visible   ${RETRIEVE_PASSWORD_BUTTON}
+    Click Element                   ${RETRIEVE_PASSWORD_BUTTON}
+
+Then I should see a successful message
+    Page Should Contain Element   ${RETRIEVED_SUCCESS_MESS}

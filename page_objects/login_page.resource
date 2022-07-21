@@ -22,3 +22,6 @@ ${EMAIL_CADASTRADO}             christian.hernan@gmail.com
 ${SENHA_CADASTRADA}             123456
 ${LOGIN}                        //span[contains(.,'Sign in')]
 ${TITULO_ACCOUNT}               My account - My Store
+${FORGOT_PASS}                  //a[contains(.,'Forgot your password?')]
+${RETRIEVE_PASSWORD_BUTTON}     //span[contains(.,'Retrieve Password')]
+${RETRIEVED_SUCCESS_MESS}       //p[contains(@class,'alert alert-success')]
