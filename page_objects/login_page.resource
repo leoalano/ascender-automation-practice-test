@@ -23,5 +23,8 @@ ${TITLE_PAGE_LOGIN}             Login - My Store
 ${EMAIL_REGISTERED}             christian.hernan@gmail.com
 ${PASSWORD_REGISTERED}          123456
 ${LOGIN}                        //span[contains(.,'Sign in')]
+${FORGOT_PASS}                  //a[contains(.,'Forgot your password?')]
+${RETRIEVE_PASSWORD_BUTTON}     //span[contains(.,'Retrieve Password')]
+${RETRIEVED_SUCCESS_MESS}       //p[contains(@class,'alert alert-success')]
 ${TITLE_ACCOUNT}                My account - My Store
 ${VALIDATE_PAGE_LOGIN1}         //h3[@class='page-subheading'][contains(.,'Already registered?')]
