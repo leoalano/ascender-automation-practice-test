@@ -9,6 +9,7 @@ ${ADD_CART}                 //span[contains(.,'Add to cart')]
 ${TITLE_PAGE_ORDER}         Order - My Store
 ${VALID_MESSAGE_CART}       //h2[contains(.,'Product successfully added to your shopping cart')]    
 ${PROCEED}                  //span[contains(.,'Proceed to checkout')]
-${VALID_CART_PAGE}          cart_title
 ${ICON_TRASH}               //i[contains(@class,'icon-trash')]
 ${VALID_ALERT}              //p[@class='alert alert-warning'][contains(.,'Your shopping cart is empty.')]
+${MY_CART}                      //a[@title="View my shopping cart"]
+${CART_TITLE}                   cart_title

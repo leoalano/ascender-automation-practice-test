@@ -1,21 +1,28 @@
 *** Settings ***
-Library           SeleniumLibrary
-Test Setup        Open Browser          browser=chrome
-Test Teardown     Close All Browsers
-
+Library     SeleniumLibrary
+Test Setup  Open Browser  browser=chrome
+Test Teardown  Close All Browsers
 Resource          ../resources/cart.resource
 Resource          ../configs/config.resource
 
-
 *** Test Cases ***
-Teste case - Cart item delete                     
-    Access homepage of automationpractice.com
-    Enter menu "Sign in" at the header
+Teste case 02 - Cart item delete                     
+    Acess website automationpractice.com
+    Enter menu "Sign in"
     Type the registered email in the field "email address"
     Type the registered Password in the field "Password"
-    Click on the "Sign In" Button
+    Click on button "Sign In"
     Click on the "Women"
     Move the mouse over the item
     Click on Proceed to checkout Element
     Click on the "trash"
     Verify item deletion
+
+*** Test Cases ***
+Test Case 03 - Cart access
+    Acess website automationpractice.com
+    Enter menu "Sign in"
+    Enter the registered email in the Email address field
+    Enter the registered password in the Password field
+    Click on button "Sign In"
+    Click on My Cart Element
