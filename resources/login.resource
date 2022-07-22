@@ -19,10 +19,9 @@ Acess website automationpractice.com
     Go To                               ${URL} 
     
 Enter menu "Sign in"
+    Wait Until Element Is Visible locator=${SIGN_IN}
     Click Element                       locator=${SIGN_IN}
     Title Should Be                     ${TITULO_PAGINA_LOGIN}
-    Page Should Contain Element         locator=${VALIDA_PAGINA_LOGIN}
-    Page Should Contain Element         locator=${VALIDA_PAGINA_LOGIN_2}
 
 Fill form with email "xxxxxx@xxxxx.com" and password "1111"
     Wait Until Element is Visible   ${PASSWORD_INPUT}
@@ -52,6 +51,7 @@ Given I am at automationpractice.com
     Go To                               ${URL} 
     
 And I enter menu "Sign in"
+    Wait Until Element Is Visible       locator=${SIGN_IN}
     Click Element                       locator=${SIGN_IN}
     Title Should Be                     ${TITULO_PAGINA_LOGIN}
     Page Should Contain Element         locator=${VALIDA_PAGINA_LOGIN}
