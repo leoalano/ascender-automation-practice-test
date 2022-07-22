@@ -8,12 +8,12 @@ Test Setup        Open Browser          browser=chrome
 Test Teardown     Close All Browsers
 
 *** Test Cases ***
-Teste case 01 - login of website automationpractice.com/index.php                      
-    Access homepage of automationpractice.com
-    Enter menu "Sign in" at the header
+Teste case 01 - Successful Login                    
+    Acess website automationpractice.com
+    Enter menu "Sign in"
     Type the registered email in the field "email address"
     Type the registered Password in the field "Password"
-    Click on the "Sign In" Button
+    Click on button "Sign In"
     Verify successful login
     
 Test case 02 - Login with invalid user
@@ -46,3 +46,11 @@ Test case 05 - Login with empty passwd
     Type empty password in the password field 
     Click on button "Sign In"
     Check login empty password error 
+    
+Test Case 06 - Forgot Password
+    Given I am at automationpractice.com
+    And I enter menu "Sign in"
+    And I click on "Forgot Password"
+    When I fill the email field with my email
+    And submit my email
+    Then I should see a successful message

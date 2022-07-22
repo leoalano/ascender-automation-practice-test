@@ -26,10 +26,10 @@ Check login error verification
 
 Acess website automationpractice.com
     Maximize Browser Window
-    Go To                               ${URL}
-    Set Selenium Speed  0.3s   
+    Go To                               ${URL} 
     
 Enter menu "Sign in"
+    Wait Until Element Is Visible locator=${SIGN_IN}
     Click Element                       locator=${SIGN_IN}
     Title Should Be                     ${TITLE_PAGE_LOGIN}
     Page Should Contain Element         locator=${VALIDATE_PAGE_LOGIN}
@@ -46,7 +46,43 @@ Click on button "Sign In"
     Click Element                       ${SIGN_IN_BUTTON}
 
 Verify if error message appears "There is 1 error"
-    Wait Until Element is Visible       ${ERROR_MESSAGE}  
+    Wait Until Element is Visible   ${ERROR_MESSAGE}  
+
+Type the registered email in the field "email address"
+    Wait Until Element Is Visible   id=email
+    Input Text                      id=email    ${EMAIL_CADASTRADO}
+
+Type the registered Password in the field "Password"
+    Input Text                      id=passwd   ${SENHA_CADASTRADA}
+
+Verify successful login
+    Title Should Be                 ${TITLE_ACCOUNT}
+
+Given I am at automationpractice.com
+    Maximize Browser Window
+    Go To                               ${URL} 
+    
+And I enter menu "Sign in"
+    Wait Until Element Is Visible       locator=${SIGN_IN}
+    Click Element                       locator=${SIGN_IN}
+    Title Should Be                     ${TITULO_PAGINA_LOGIN}
+    Page Should Contain Element         locator=${VALIDA_PAGINA_LOGIN}
+    Page Should Contain Element         locator=${VALIDA_PAGINA_LOGIN_2}
+
+And I click on "Forgot Password"
+    Wait Until Element is Visible   ${FORGOT_PASS}
+    Click Element                   ${FORGOT_PASS}
+
+When I fill the email field with my email
+    Wait Until Element Is Visible   id=email
+    Input Text                      id=email    ${EMAIL_CADASTRADO}
+
+And submit my email
+    Wait Until Element is Visible   ${RETRIEVE_PASSWORD_BUTTON}
+    Click Element                   ${RETRIEVE_PASSWORD_BUTTON}
+
+Then I should see a successful message
+    Page Should Contain Element   ${RETRIEVED_SUCCESS_MESS} 
     
 Access homepage of automationpractice.com
     Go To                               ${URL}
