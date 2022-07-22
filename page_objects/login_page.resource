@@ -27,4 +27,6 @@ ${FORGOT_PASS}                  //a[contains(.,'Forgot your password?')]
 ${RETRIEVE_PASSWORD_BUTTON}     //span[contains(.,'Retrieve Password')]
 ${RETRIEVED_SUCCESS_MESS}       //p[contains(@class,'alert alert-success')]
 ${TITLE_ACCOUNT}                My account - My Store
+${BLOUSE_ADD_TO_CART_BUTTON}    xpath=//a[@data-id-product = 2]
+${SUCESS_ADD_TO_CART}           Product successfully added to your shopping cart
 ${VALIDATE_PAGE_LOGIN1}         //h3[@class='page-subheading'][contains(.,'Already registered?')]

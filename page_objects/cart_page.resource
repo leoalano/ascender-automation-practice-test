@@ -12,4 +12,8 @@ ${PROCEED}                  //span[contains(.,'Proceed to checkout')]
 ${ICON_TRASH}               //i[contains(@class,'icon-trash')]
 ${VALID_ALERT}              //p[@class='alert alert-warning'][contains(.,'Your shopping cart is empty.')]
 ${MY_CART}                      //a[@title="View my shopping cart"]
+${TITLE_PAGE_MY_CART}           Order - My Store
+${CART_TITLE}                   cart_title
+${BLOUSE_IMAGE}                 xpath=//img[@title = "Blouse"]
+${SUCESS_ADD_TO_CART}           Product successfully added to your shopping cart
 ${CART_TITLE}                   cart_title

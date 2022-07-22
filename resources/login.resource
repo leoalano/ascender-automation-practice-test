@@ -87,7 +87,8 @@ Then I should see a successful message
 Access homepage of automationpractice.com
     Go To                               ${URL}
     Maximize Browser Window
-    Sleep   2s
+    Set Selenium Speed  0.3s
+    #Sleep   2s
 
 Enter menu "Sign in" at the header
     Click Element                       locator=${SIGN_IN}
@@ -111,3 +112,10 @@ Click on the "Sign In" Button
 
 Verify successful login
     Title Should Be                     ${TITLE_ACCOUNT}
+
+Add product
+    Mouse Over                          ${BLOUSE_IMAGE}
+    Click Element                       ${BLOUSE_ADD_TO_CART_BUTTON}
+
+Confirm product add to cart
+    Page Should Contain                 ${SUCESS_ADD_TO_CART}

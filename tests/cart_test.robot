@@ -6,7 +6,12 @@ Resource          ../resources/cart.resource
 Resource          ../configs/config.resource
 
 *** Test Cases ***
-Teste case 02 - Cart item delete                     
+Test case 01 - Add Product to Cart
+    Given I am at automationpractice.com
+    And I Add product
+    Then Confirm product add to cart
+    
+Test case 02 - Cart item delete                     
     Acess website automationpractice.com
     Enter menu "Sign in"
     Type the registered email in the field "email address"
@@ -18,7 +23,6 @@ Teste case 02 - Cart item delete
     Click on the "trash"
     Verify item deletion
 
-*** Test Cases ***
 Test Case 03 - Cart access
     Acess website automationpractice.com
     Enter menu "Sign in"
