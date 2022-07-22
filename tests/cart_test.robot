@@ -7,10 +7,8 @@ Resource    ../resources/cart.resource
 Resource    ../configs/config.resource
 
 *** Test Cases ***
-Scenario Access Cart
-    Acess website automationpractice.com
-    Enter menu "Sign in"
-    Enter the registered email in the Email address field
-    Enter the registered password in the Password field
-    Click on button "Sign In"
-    Click on My Cart Element
+
+Test case 01 - Add Product to Cart
+    Given I am at automationpractice.com
+    And I Add product
+    Then Confirm product add to cart

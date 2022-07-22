@@ -25,3 +25,5 @@ ${PASSWORD_REGISTERED}          123456
 ${LOGIN}                        //span[contains(.,'Sign in')]
 ${TITLE_ACCOUNT}                My account - My Store
 ${VALIDATE_PAGE_LOGIN1}         //h3[@class='page-subheading'][contains(.,'Already registered?')]
+${BLOUSE_ADD_TO_CART_BUTTON}    xpath=//a[@data-id-product = 2]
+${SUCESS_ADD_TO_CART}           Product successfully added to your shopping cart

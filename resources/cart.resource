@@ -2,9 +2,10 @@
 Resource    ../page_objects/cart_page.resource
 
 *** Keywords ***
-Acess website automationpractice.com
+I am at automationpractice.com
     Maximize Browser Window
-    Go To                               ${URL}       
+    Go To                               ${URL} 
+    Set Selenium Speed  0.3s      
 
 Enter menu "Sign in"   
     Click Element                       locator=${SIGN_IN}
@@ -27,3 +28,10 @@ Click on My Cart Element
     Click Element                       locator=${MY_CART}
     Title Should Be                     ${TITLE_PAGE_MY_CART}
     Page Should Contain Element         id=${CART_TITLE}
+
+I Add product
+    Mouse Over                  ${BLOUSE_IMAGE}
+    Click Element               ${BLOUSE_ADD_TO_CART_BUTTON}
+    
+Confirm product add to cart
+    Page Should Contain         ${SUCESS_ADD_TO_CART}
