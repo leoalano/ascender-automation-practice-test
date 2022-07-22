@@ -3,16 +3,26 @@ Resource    ../page_objects/login_page.resource
 
 *** Keywords ***
 Type non-registered email in the email field
-    Wait Until Element Is Visible        id=${CAMPO_EMAIL}      timeout=2s    
-    Input Text                           id=${CAMPO_EMAIL}      ${EMAIL_NAO_CADASTRADO}
+    Wait Until Element Is Visible       id=${EMAIL_FIELD}      timeout=2s    
+    Input Text                          id=${EMAIL_FIELD}      ${EMAIL_NO_REGISTERED}
 
 Type non-registered password in the password field
-    Input Text                          id=${CAMPO_PASSWORD}    ${SENHA_NAO_CADASTRADA}
-    
+    Input Text                          id=${FIELD_PASSWORD}    ${PASSWORD_NO_REGISTERED}
+
+Type fake non-registered password in the password field  #Keyword Senha Fake TC#03-Login
+    Input Text                          id=passwd    ${FAKE_PASSWORD}
+
+Type empty password in the password field
+    Input Text                          id=passwd    ${EMPTY_PASSWORD}
+
+Check login empty password error 
+    Wait Until Element Is Visible       id=authentication
+    Page Should Contain Element         ${PASSWORD_EMPTY_VALIDATION}
+
 Check login error verification
-    Wait Until Element Is Visible       locator=${VALIDA_AUTENTICACAO}
-    Title Should Be                     ${TITULO_PAGINA_LOGIN}
-    Page Should Contain Element         locator=${VALIDA_AUTENTICACAO}
+    Wait Until Element Is Visible       locator=${VALIDATION_AUTHENTICATION}
+    Title Should Be                     ${TITLE_PAGE_LOGIN}
+    Page Should Contain Element         locator=${VALIDATION_AUTHENTICATION}
 
 Acess website automationpractice.com
     Maximize Browser Window
@@ -21,17 +31,19 @@ Acess website automationpractice.com
 Enter menu "Sign in"
     Wait Until Element Is Visible locator=${SIGN_IN}
     Click Element                       locator=${SIGN_IN}
-    Title Should Be                     ${TITULO_PAGINA_LOGIN}
+    Title Should Be                     ${TITLE_PAGE_LOGIN}
+    Page Should Contain Element         locator=${VALIDATE_PAGE_LOGIN}
+    Page Should Contain Element         locator=${VALIDATE_PAGE_LOGIN_2}
 
 Fill form with email "xxxxxx@xxxxx.com" and password "1111"
-    Wait Until Element is Visible   ${PASSWORD_INPUT}
-    Wait Until Element is Visible   ${EMAIL_INPUT} 
-    Input Text      ${EMAIL_INPUT}      ${TEST_EMAIL}
-    Input password  ${PASSWORD_INPUT}   ${TEST_PASSWORD}  
+    Wait Until Element is Visible       ${PASSWORD_INPUT}
+    Wait Until Element is Visible       ${EMAIL_INPUT} 
+    Input Text                          ${EMAIL_INPUT}      ${TEST_EMAIL}
+    Input password                      ${PASSWORD_INPUT}   ${TEST_PASSWORD}  
 
 Click on button "Sign In"
-    Wait Until Element is Visible   ${SIGN_IN_BUTTON}
-    Click Element                   ${SIGN_IN_BUTTON}
+    Wait Until Element is Visible       ${SIGN_IN_BUTTON}
+    Click Element                       ${SIGN_IN_BUTTON}
 
 Verify if error message appears "There is 1 error"
     Wait Until Element is Visible   ${ERROR_MESSAGE}  
@@ -44,7 +56,7 @@ Type the registered Password in the field "Password"
     Input Text                      id=passwd   ${SENHA_CADASTRADA}
 
 Verify successful login
-    Title Should Be                 ${TITULO_ACCOUNT}
+    Title Should Be                 ${TITLE_ACCOUNT}
 
 Given I am at automationpractice.com
     Maximize Browser Window
@@ -70,4 +82,32 @@ And submit my email
     Click Element                   ${RETRIEVE_PASSWORD_BUTTON}
 
 Then I should see a successful message
-    Page Should Contain Element   ${RETRIEVED_SUCCESS_MESS}
+    Page Should Contain Element   ${RETRIEVED_SUCCESS_MESS} 
+    
+Access homepage of automationpractice.com
+    Go To                               ${URL}
+    Maximize Browser Window
+    Sleep   2s
+
+Enter menu "Sign in" at the header
+    Click Element                       locator=${SIGN_IN}
+    Title Should Be                     ${TITLE_PAGE_LOGIN}
+    Page Should Contain Element         locator=${VALIDATE_PAGE_LOGIN}
+    Page Should Contain Element         locator=${VALIDATE_PAGE_LOGIN1}
+    Sleep   2s
+
+Type the registered email in the field "email address"
+    Wait Until Element Is Visible       id=email
+    Input Text                          id=email    ${EMAIL_REGISTERED}
+    Sleep   2s
+
+Type the registered Password in the field "Password"
+    Input Text                          id=passwd   ${PASSWORD_REGISTERED}
+    Sleep   2s
+
+Click on the "Sign In" Button
+    Click Button                        id=SubmitLogin
+    Sleep   2s
+
+Verify successful login
+    Title Should Be                     ${TITLE_ACCOUNT}
