@@ -1,16 +1,26 @@
 *** Settings ***
-Library     SeleniumLibrary
-Test Setup  Open Browser  browser=chrome
+Documentation  Shopping cart feature test suite.
+
+Library        SeleniumLibrary
+
+Test Setup     Open Browser    about:blank  ${BROWSER}
 Test Teardown  Close All Browsers
 
-Resource    ../resources/cart.resource
-Resource    ../configs/config.resource
+Resource       ../configs/config.resource
+Resource       ../resources/navegation.resource
+Resource       ../resources/menu.resource
+Resource       ../resources/login.resource
+Resource       ../resources/cart.resource
+
+*** Variables ***
+${VALID_EMAIL}           compra_teste@gmail.com
+${VALID_PASSWORD}        12345
 
 *** Test Cases ***
-Scenario Access Cart
-    Acess website automationpractice.com
-    Enter menu "Sign in"
-    Enter the registered email in the Email address field
-    Enter the registered password in the Password field
-    Click on button "Sign In"
-    Click on My Cart Element
+Test case 02 - Checkout empty Cart
+    Given I am at automationpractice.com
+      And I enter menu "Sign in"
+     When I fill login form with "${VALID_EMAIL}" and "${VALID_PASSWORD}"
+      And I submit login form
+     When I click on My Cart Button
+     Then Title Should Be    Order - My Store
