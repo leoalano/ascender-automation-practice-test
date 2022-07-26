@@ -1,48 +1,64 @@
 *** Settings ***
-Documentation     Testing login with invalid e-mail.
-Library           SeleniumLibrary
-Library           FakerLibrary
-Resource          ../resources/login.resource
-Resource          ../configs/configs.resource
-Test Setup        Open Browser          browser=chrome
-Test Teardown     Close All Browsers
+Documentation   Login feature tests suit.
+Library         SeleniumLibrary
+Library         FakerLibrary
+
+Test Setup     Open Browser    about:blank  ${BROWSER}
+Test Teardown  Close All Browsers
+
+Resource       ../configs/config.resource
+Resource       ../resources/cart.resource
+Resource       ../resources/login.resource
+Resource       ../resources/menu.resource
+Resource       ../resources/navegation.resource
+
+*** Variables ***
+${EMAIL_REGISTERED}           christian.hernan@gmail.com
+${PASSWORD_REGISTERED}        123456
+${UNREGISTERED_EMAIL}         christian00000@bloob.com
+${INVALID_EMAIL}              xxx@xxxx.com
+${INVALID_PASSWORD}           1111111
 
 *** Test Cases ***
-Teste case 01 - login of website automationpractice.com/index.php                      
-    Access homepage of automationpractice.com
-    Enter menu "Sign in" at the header
-    Type the registered email in the field "email address"
-    Type the registered Password in the field "Password"
-    Click on the "Sign In" Button
-    Verify successful login
-    
-Test case 02 - Login with invalid user
-    Acess website automationpractice.com
-    Enter menu "Sign in"
-    Type non-registered email in the email field
-    Type non-registered password in the password field 
-    Click on button "Sign In"
-    Check login error verification
+Teste case 01 - Successful Login                    
+    Given I am at automationpractice.com
+      And I enter menu "Sign in"
+     When I fill login form with correct "${EMAIL_REGISTERED}" and correct"${PASSWORD_REGISTERED}"
+      And I click on button submit "Sign In"
+     Then I verify successful login
+
+Test case 02 - Login with unregistered user
+    Given I am at automationpractice.com
+      And I enter menu "Sign in"
+     When I fill login form with unregistered "${UNREGISTERED_EMAIL}" and correct"${PASSWORD_REGISTERED}"  
+      And I click on button submit "Sign In"
+     Then I check login error verification
 
 Test case 03 - Login with invalid passwd
-    Acess website automationpractice.com
-    Enter menu "Sign in"
-    Type the registered email in the field "email address"
-    Type fake non-registered password in the password field 
-    Click on button "Sign In"
-    Check login error verification
-       
+    Given I am at automationpractice.com
+      And I enter menu "Sign in"
+     When I fill login form with correct"${EMAIL_REGISTERED}" and fake"${FAKE_PASSWORD}"
+      And I click on button submit "Sign In"
+     Then I check login error verification
+
 Test Case 04 - Invalid email
-    Acess website automationpractice.com
-    Enter menu "Sign in"
-    Fill form with email "xxxxxx@xxxxx.com" and password "1111"
-    Click on button "Sign In"
-    Verify if error message appears "There is 1 error"
+    Given I am at automationpractice.com
+      And I enter menu "Sign in"
+     When I fill form with invalid"${INVALID_EMAIL}" and invalid"${INVALID_PASSWORD}"
+      And I click on button submit "Sign In"
+     Then I verify if error message appears "There is 1 error"
 
 Test case 05 - Login with empty passwd
-    Acess website automationpractice.com
-    Enter menu "Sign in"
-    Type the registered email in the field "email address"
-    Type empty password in the password field 
-    Click on button "Sign In"
-    Check login empty password error 
+    Given I am at automationpractice.com
+      And I enter menu "Sign in"
+     When I fill login form with correct"${EMAIL_REGISTERED}" and empty"${EMPTY_PASSWORD}"
+      And I click on button submit "Sign In"
+     Then I check login empty password error
+
+Test Case 06 - Forgot Password
+    Given I am at automationpractice.com
+      And I enter menu "Sign in"
+     When I click on "Forgot Password"
+      And I fill the email field with my email
+     When I submit my email
+     Then I should see a successful message

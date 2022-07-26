@@ -1,127 +1,121 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.4 on win32)" generated="20220725 19:24:42.316" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0.1 (Python 3.10.4 on win32)" generated="20220726 19:31:05.033" rpa="false" schemaversion="3">
 <suite id="s1" name="Cart Test" source="C:\Users\Jacques Teixeira\Documents\ascender-automation-practice-test\tests\cart_test.robot">
-<test id="s1-t1" name="Test case 02 - Checkout empty Cart" line="20">
+<test id="s1-t1" line="20">
+<status status="FAIL" starttime="20220726 19:31:05.371" endtime="20220726 19:31:05.378">Test name cannot be empty.</status>
+</test>
+<test id="s1-t2" name="Test case 02 - Cart item delete" line="24">
 <kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
 <arg>about:blank</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220725 19:24:42.610" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
-<status status="PASS" starttime="20220725 19:24:42.610" endtime="20220725 19:24:43.930"/>
+<msg timestamp="20220726 19:31:05.380" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20220726 19:31:05.380" endtime="20220726 19:31:06.734"/>
 </kw>
 <kw name="Given I am at automationpractice.com" library="navegation">
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220725 19:24:43.932" endtime="20220725 19:24:44.052"/>
+<status status="PASS" starttime="20220726 19:31:06.736" endtime="20220726 19:31:06.856"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220725 19:24:44.052" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
-<status status="PASS" starttime="20220725 19:24:44.052" endtime="20220725 19:24:50.285"/>
+<msg timestamp="20220726 19:31:06.856" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
+<status status="PASS" starttime="20220726 19:31:06.856" endtime="20220726 19:31:07.314"/>
 </kw>
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <arg>0.3s</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20220725 19:24:50.286" endtime="20220725 19:24:50.287"/>
+<status status="PASS" starttime="20220726 19:31:07.314" endtime="20220726 19:31:07.315"/>
 </kw>
-<status status="PASS" starttime="20220725 19:24:43.931" endtime="20220725 19:24:50.287"/>
+<status status="PASS" starttime="20220726 19:31:06.735" endtime="20220726 19:31:07.315"/>
 </kw>
 <kw name="And I enter menu &quot;Sign in&quot;" library="menu">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${SIGN_IN_MENU_BUTTON}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220725 19:24:50.292" endtime="20220725 19:24:50.955"/>
+<msg timestamp="20220726 19:31:12.926" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-38.png"&gt;&lt;img src="selenium-screenshot-38.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220726 19:31:12.926" level="FAIL">Element '//a[@class='login']' not visible after 5 seconds.</msg>
+<status status="FAIL" starttime="20220726 19:31:07.316" endtime="20220726 19:31:12.926"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${SIGN_IN_MENU_BUTTON}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220725 19:24:50.955" level="INFO">Clicking element 'class=login'.</msg>
-<status status="PASS" starttime="20220725 19:24:50.955" endtime="20220725 19:24:54.694"/>
+<status status="NOT RUN" starttime="20220726 19:31:12.926" endtime="20220726 19:31:12.926"/>
 </kw>
-<status status="PASS" starttime="20220725 19:24:50.291" endtime="20220725 19:24:54.694"/>
+<status status="FAIL" starttime="20220726 19:31:07.316" endtime="20220726 19:31:12.926"/>
 </kw>
-<kw name="When I fill login form with &quot;${VALID_EMAIL}&quot; and &quot;${VALID_PASSWORD}&quot;" library="login" sourcename="I fill login form with &quot;${EMAIL_TEST_DATA}&quot; and &quot;${PASSWORD_TEST_DATA}&quot;">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${EMAIL_INPUT}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220725 19:24:54.697" endtime="20220725 19:24:55.374"/>
+<kw name="When I fill login form with &quot;${EMAIL_REGISTERED}&quot; and &quot;${PASSWORD_REGISTERED}&quot;" library="login" sourcename="I fill login form with &quot;${EMAIL_REGISTERED}&quot; and &quot;${PASSWORD_REGISTERED}&quot;">
+<status status="NOT RUN" starttime="20220726 19:31:12.926" endtime="20220726 19:31:12.926"/>
 </kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${PASSWORD_INPUT}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220725 19:24:55.374" endtime="20220725 19:24:56.030"/>
+<kw name="And I click on button submit &quot;Sign In&quot;" library="login">
+<status status="NOT RUN" starttime="20220726 19:31:12.932" endtime="20220726 19:31:12.932"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${EMAIL_INPUT}</arg>
-<arg>${EMAIL_TEST_DATA}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220725 19:24:56.030" level="INFO">Typing text 'compra_teste@gmail.com' into text field 'id=email'.</msg>
-<status status="PASS" starttime="20220725 19:24:56.030" endtime="20220725 19:24:57.089"/>
+<kw name="When I click on the &quot;Women&quot;" library="cart">
+<status status="NOT RUN" starttime="20220726 19:31:12.932" endtime="20220726 19:31:12.932"/>
 </kw>
-<kw name="Input Password" library="SeleniumLibrary">
-<arg>${PASSWORD_INPUT}</arg>
-<arg>${PASSWORD_TEST_DATA}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20220725 19:24:57.089" level="INFO">Typing password into text field 'id=passwd'.</msg>
-<msg timestamp="20220725 19:24:57.751" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20220725 19:24:58.127" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20220725 19:24:57.089" endtime="20220725 19:24:58.127"/>
+<kw name="And I move the mouse over the item" library="cart">
+<status status="NOT RUN" starttime="20220726 19:31:12.933" endtime="20220726 19:31:12.933"/>
 </kw>
-<status status="PASS" starttime="20220725 19:24:54.694" endtime="20220725 19:24:58.127"/>
+<kw name="When I click on Proceed to checkout Element" library="cart">
+<status status="NOT RUN" starttime="20220726 19:31:12.933" endtime="20220726 19:31:12.933"/>
 </kw>
-<kw name="And I submit login form" library="login">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${SIGN_IN_BUTTON}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220725 19:24:58.129" level="INFO">Clicking element 'id=SubmitLogin'.</msg>
-<status status="PASS" starttime="20220725 19:24:58.127" endtime="20220725 19:25:01.260"/>
+<kw name="And I click on the &quot;trash&quot;" library="cart">
+<status status="NOT RUN" starttime="20220726 19:31:12.933" endtime="20220726 19:31:12.933"/>
 </kw>
-<status status="PASS" starttime="20220725 19:24:58.127" endtime="20220725 19:25:01.260"/>
+<kw name="Then I verify item deletion" library="cart">
+<status status="NOT RUN" starttime="20220726 19:31:12.933" endtime="20220726 19:31:12.933"/>
 </kw>
-<kw name="When I click on My Cart Button" library="cart">
-<kw name="Page Should Contain Element" library="SeleniumLibrary">
-<arg>${MY_ACCOUNTY_MSG}</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<msg timestamp="20220725 19:25:01.583" level="INFO">Current page contains element 'class=info-account'.</msg>
-<status status="PASS" starttime="20220725 19:25:01.261" endtime="20220725 19:25:01.583"/>
+<kw name="Given I am at automationpractice.com" library="navegation">
+<status status="NOT RUN" starttime="20220726 19:31:12.933" endtime="20220726 19:31:12.933"/>
 </kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${MY_CART}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220725 19:25:01.583" endtime="20220725 19:25:02.234"/>
+<kw name="And I enter menu &quot;Sign in&quot;" library="menu">
+<status status="NOT RUN" starttime="20220726 19:31:12.933" endtime="20220726 19:31:12.933"/>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${MY_CART}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220725 19:25:02.234" level="INFO">Clicking element '//a[@title="View my shopping cart"]'.</msg>
-<status status="PASS" starttime="20220725 19:25:02.234" endtime="20220725 19:25:04.773"/>
+<kw name="When I fill login form with &quot;${EMAIL_REGISTERED}&quot; and &quot;${PASSWORD_REGISTERED}&quot;" library="login" sourcename="I fill login form with &quot;${EMAIL_REGISTERED}&quot; and &quot;${PASSWORD_REGISTERED}&quot;">
+<status status="NOT RUN" starttime="20220726 19:31:12.933" endtime="20220726 19:31:12.933"/>
 </kw>
-<status status="PASS" starttime="20220725 19:25:01.261" endtime="20220725 19:25:04.773"/>
+<kw name="And I click on button submit &quot;Sign In&quot;" library="login">
+<status status="NOT RUN" starttime="20220726 19:31:12.933" endtime="20220726 19:31:12.933"/>
 </kw>
-<kw name="Then Title Should Be" library="SeleniumLibrary">
-<arg>Order - My Store</arg>
-<doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20220725 19:25:05.094" level="INFO">Page title is 'Order - My Store'.</msg>
-<status status="PASS" starttime="20220725 19:25:04.773" endtime="20220725 19:25:05.094"/>
+<kw name="Then I click on My Cart Element" library="cart">
+<status status="NOT RUN" starttime="20220726 19:31:12.933" endtime="20220726 19:31:12.933"/>
+</kw>
+<kw name="Given I am at automationpractice.com" library="navegation">
+<status status="NOT RUN" starttime="20220726 19:31:12.933" endtime="20220726 19:31:12.933"/>
+</kw>
+<kw name="And I enter menu &quot;Sign in&quot;" library="menu">
+<status status="NOT RUN" starttime="20220726 19:31:12.933" endtime="20220726 19:31:12.933"/>
+</kw>
+<kw name="When I fill login form with &quot;${EMAIL_REGISTERED}&quot; and &quot;${PASSWORD_REGISTERED}&quot;" library="login" sourcename="I fill login form with &quot;${EMAIL_REGISTERED}&quot; and &quot;${PASSWORD_REGISTERED}&quot;">
+<status status="NOT RUN" starttime="20220726 19:31:12.933" endtime="20220726 19:31:12.933"/>
+</kw>
+<kw name="And I click on button submit &quot;Sign In&quot;" library="login">
+<status status="NOT RUN" starttime="20220726 19:31:12.933" endtime="20220726 19:31:12.933"/>
+</kw>
+<kw name="When I click on My Cart Element" library="cart">
+<status status="NOT RUN" starttime="20220726 19:31:12.933" endtime="20220726 19:31:12.933"/>
+</kw>
+<kw name="Then Title Page Should Be" library="cart">
+<status status="NOT RUN" starttime="20220726 19:31:12.933" endtime="20220726 19:31:12.933"/>
 </kw>
 <kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220725 19:25:05.094" endtime="20220725 19:25:07.492"/>
+<status status="PASS" starttime="20220726 19:31:12.933" endtime="20220726 19:31:15.321"/>
 </kw>
-<status status="PASS" starttime="20220725 19:24:42.608" endtime="20220725 19:25:07.492"/>
+<status status="FAIL" starttime="20220726 19:31:05.379" endtime="20220726 19:31:15.321">Element '//a[@class='login']' not visible after 5 seconds.</status>
 </test>
-<doc>Shopping cart feature test suite.</doc>
-<status status="PASS" starttime="20220725 19:24:42.316" endtime="20220725 19:25:07.497"/>
+<doc>Shopping cart feature tests suite.</doc>
+<status status="FAIL" starttime="20220726 19:31:05.033" endtime="20220726 19:31:15.327"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Cart Test">Cart Test</stat>
+<stat pass="0" fail="2" skip="0" id="s1" name="Cart Test">Cart Test</stat>
 </suite>
 </statistics>
 <errors>

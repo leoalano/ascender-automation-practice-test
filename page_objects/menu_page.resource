@@ -1,2 +1,2 @@
 *** Variables ***
-${SIGN_IN_MENU_BUTTON}      class=login
+${SIGN_IN_MENU_BUTTON}          //a[@class='login']
