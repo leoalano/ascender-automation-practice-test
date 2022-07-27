@@ -62,7 +62,7 @@ I should see an error message
     Wait Until Page Contains            ${ERROR_MESSAGE}
 
 I click on button submit "Sign In"
-    Click Button                         ${BUTTON_SUBMIT_LOGIN}
+    Click Button                        ${BUTTON_SUBMIT_LOGIN}
 
 I verify successful login
     Title Should Be                     ${TITLE_ACCOUNT}
@@ -71,40 +71,7 @@ I verify if error message appears "There is 1 error"
     Wait Until Element is Visible       ${ERROR_MESSAGE}
 
 I fill login form with "${EMAIL_REGISTERED}" and "${PASSWORD_REGISTERED}"
-    Wait Until Element is Visible        ${EMAIL_INPUT} 
-    Wait Until Element is Visible        ${PASSWORD_INPUT}
-    Input Text       ${EMAIL_INPUT}      ${EMAIL_REGISTERED}
-    Input Password   ${PASSWORD_INPUT}   ${PASSWORD_REGISTERED}
-#...............................................................................#
-#Keywords que não são mais necessárias.
-I type the registered email in the field "email address"
-    Wait Until Element Is Visible       id=email
-    Input Text                          id=email    ${EMAIL_REGISTERED}
-
-I type the registered Password in the field "Password"
-    Input Text                          id=passwd   ${PASSWORD_REGISTERED}
-
-I enter the registered email in the Email address field
-    Wait Until Element Is Visible       id=${EMAIL_FIELD}
-    Input Text                          id=${EMAIL_FIELD}   ${EMAIL_REGISTERED}
-
-I enter the registered password in the Password field
-    Input Text                           id=${FIELD_PASSWORD}    ${PASSWORD_REGISTERED}
-
-I submit login form
-    Click Element   ${SIGN_IN_BUTTON}
-
-I type non-registered password in the password field
+    Wait Until Element is Visible       ${EMAIL_INPUT} 
     Wait Until Element is Visible       ${PASSWORD_INPUT}
-    Input Password   ${PASSWORD_INPUT}  ${PASSWORD_NO_REGISTERED}
-
-I type fake non-registered password in the password field
-    Input Text                          id=passwd  ${FAKE_PASSWORD}
-
-I type empty password in the password field
-    Input Text                          id=passwd  ${EMPTY_PASSWORD}
-
-I should be loged in successfully
-    Wait Until Page Contains            MY ACCOUNT
-    Page Should Contain                 MY ACCOUNT
-#...............................................................................#
+    Input Text       ${EMAIL_INPUT}     ${EMAIL_REGISTERED}
+    Input Password   ${PASSWORD_INPUT}  ${PASSWORD_REGISTERED}

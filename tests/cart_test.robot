@@ -45,4 +45,4 @@ Test case 04 - Verify empty Cart
      When I fill login form with "${EMAIL_REGISTERED}" and "${PASSWORD_REGISTERED}"
       And I click on button submit "Sign In"
      When I click on My Cart Element
-     Then Title Page Should Be
+     Then I verify page should be contain text
