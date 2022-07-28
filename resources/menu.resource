@@ -10,5 +10,5 @@ I click on My Cart Button
     Wait Until Element Is Visible       ${MY_CART}
     Click Element                       ${MY_CART}
 
-I enter menu "Contact Us" via the menu
+I enter "Contact Us" via the menu
     Click Element                       ${CONTACT_US}
