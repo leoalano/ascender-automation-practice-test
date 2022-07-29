@@ -37,20 +37,20 @@ Acess website automationpractice.com
     Set Selenium Speed  0.3s      
 
 Enter menu "Sign in"   
-    Click Element                       locator=${SIGN_IN}
+    Click Element                       locator=${SIGN_IN_MENU_BUTTON}
     Title Should Be                     ${TITLE_PAGE_LOGIN}
-    Page Should Contain Element         locator=${VALIDATE_PAGE_LOGIN}
-    Page Should Contain Element         locator=${VALIDATE_PAGE_LOGIN_2}
+    Page Should Contain Element         locator=${VALIDATE_PAGE_LOGIN1}
+    #Page Should Contain Element         locator=${VALIDATE_PAGE_LOGIN_2}
 
 Enter the registered email in the Email address field
-    Wait Until Element Is Visible        id=${EMAIL_FIELD}      timeout=2s    
-    Input Text                           id=${EMAIL_FIELD}      ${EMAIL_REGISTERED}
+    Wait Until Element Is Visible        id=${EMAIL_INPUT}      timeout=2s    
+    Input Text                           id=${EMAIL_INPUT}      ${VALID_EMAIL}
 
 Enter the registered password in the Password field
-    Input Text                          id=${FIELD_PASSWORD}    ${PASSWORD_REGISTERED}
+    Input Text                          id=${PASSWORD_INPUT}    ${VALID_PASSWORD}
 
 Click on button "Sign In"
-    Click Button                        id=${BUTTON_SUBMIT_LOGIN}
+    Click Button                        id=${SIGN_IN_BUTTON}
 
 Click on My Cart Element
     Wait Until Element Is Visible       locator=${MY_CART}

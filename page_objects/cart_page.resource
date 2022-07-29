@@ -1,5 +1,6 @@
 *** Settings ***
 Resource    ../page_objects/login_page.resource
+Resource    ../page_objects/menu_page.resource
 
 *** Variables ***
 ${WOMEN}                    //a[contains(@title,'Women')]
