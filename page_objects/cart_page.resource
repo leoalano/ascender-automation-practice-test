@@ -1,15 +1,22 @@
+*** Settings ***
+Resource    ../page_objects/login_page.resource
+
 *** Variables ***
-${URL}                          http://automationpractice.com/index.php
-${SIGN_IN}                      //a[@class='login'][contains(.,'Sign in')]
-${EMAIL_CADASTRADO}             christian.hernan@gmail.com
-${SENHA_CADASTRADA}             123456
-${TITULO_PAGINA_LOGIN}          Login - My Store
-${VALIDA_PAGINA_LOGIN}          //h1[@class='page-heading'][contains(.,'Authentication')]
-${VALIDA_PAGINA_LOGIN_2}        //h3[@class='page-subheading'][contains(.,'Create an account')]
-${VALIDA_AUTENTICACAO}          //li[contains(.,'Authentication failed.')]
-${CAMPO_EMAIL}                  email
-${CAMPO_PASSWORD}               passwd
-${BOTAO_SUBMIT_LOGIN}           SubmitLogin
+${WOMEN}                    //a[contains(@title,'Women')]
+${TITLE_PAGE_WOMAN}         Women - My Store
+${FLOAT_ABOUT_ELEMENT}      //img[@src='http://automationpractice.com/img/p/1/1-home_default.jpg']
+${ADD_CART}                 //span[contains(.,'Add to cart')]
+${TITLE_PAGE_ORDER}         Order - My Store
+${VALID_MESSAGE_CART}       //h2[contains(.,'Product successfully added to your shopping cart')]    
+${PROCEED}                  //span[contains(.,'Proceed to checkout')]
+${ICON_TRASH}               //i[contains(@class,'icon-trash')]
+${VALID_ALERT}              //p[@class='alert alert-warning'][contains(.,'Your shopping cart is empty.')]
 ${MY_CART}                      //a[@title="View my shopping cart"]
-${TITULO_PAGINA_MY_CART}        Order - My Store
+${TITLE_PAGE_MY_CART}           Order - My Store
 ${CART_TITLE}                   cart_title
+${BLOUSE_IMAGE}                 xpath=//img[@title = "Blouse"]
+${SUCESS_ADD_TO_CART}           Product successfully added to your shopping cart
+${CART_TITLE}                   cart_title
+${BLOUSE_ADD_TO_CART_BUTTON}    xpath=//a[@data-id-product = 2]
+${SUCESS_ADD_TO_CART}           Product successfully added to your shopping cart
+${VALIDATE_PAGE_LOGIN1}         //h3[@class='page-subheading'][contains(.,'Already registered?')]
