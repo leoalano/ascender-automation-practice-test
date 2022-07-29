@@ -2,11 +2,7 @@
 Resource    ../page_objects/cart_page.resource
 Resource    ../resources/login.resource
 
-*** Keywords ***
-I am at automationpractice.com
-    Maximize Browser Window
-    Go To                               ${URL} 
-    Set Selenium Speed  0.3s      
+*** Keywords ***     
 
 Click on the "Women"
     Wait Until Element is Visible      ${WOMEN}
