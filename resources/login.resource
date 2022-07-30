@@ -18,11 +18,11 @@ I submit my email
 I should see a successful message
     Page Should Contain Element          ${RETRIEVED_SUCCESS_MESS} 
 
-I fill login form with "${EMAIL_TEST_DATA}" and "${PASSWORD_TEST_DATA}"
+I fill login form with "${VALID_EMAIL}" and "${VALID_PASSWORD}"
     Wait Until Element is Visible        ${EMAIL_INPUT} 
     Wait Until Element is Visible        ${PASSWORD_INPUT}
-    Input Text       ${EMAIL_INPUT}      ${EMAIL_TEST_DATA}
-    Input Password   ${PASSWORD_INPUT}   ${PASSWORD_TEST_DATA}  
+    Input Text       ${EMAIL_INPUT}      ${VALID_EMAIL}
+    Input Password   ${PASSWORD_INPUT}   ${VALID_PASSWORD}  
 
 I submit login form
     Wait Until Element is Visible        ${SIGN_IN_BUTTON}

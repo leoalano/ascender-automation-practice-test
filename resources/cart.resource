@@ -2,12 +2,7 @@
 Resource    ../page_objects/cart_page.resource
 Resource    ../resources/login.resource
 
-*** Keywords ***
-I am at automationpractice.com
-    Maximize Browser Window
-    Go To                               ${URL} 
-    Set Selenium Speed  0.3s      
-
+*** Keywords ***    
 Click on the "Women"
     Wait Until Element is Visible      ${WOMEN}
     Click Element                      ${WOMEN}
@@ -35,12 +30,6 @@ Acess website automationpractice.com
     Maximize Browser Window
     Go To                               ${URL} 
     Set Selenium Speed  0.3s      
-
-Enter menu "Sign in"   
-    Click Element                       locator=${SIGN_IN}
-    Title Should Be                     ${TITLE_PAGE_LOGIN}
-    Page Should Contain Element         locator=${VALIDATE_PAGE_LOGIN}
-    Page Should Contain Element         locator=${VALIDATE_PAGE_LOGIN_2}
 
 Enter the registered email in the Email address field
     Wait Until Element Is Visible        id=${EMAIL_FIELD}      timeout=2s    

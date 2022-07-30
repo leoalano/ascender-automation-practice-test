@@ -1,579 +1,225 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.5 on darwin)" generated="20220725 10:52:32.046" rpa="false" schemaversion="3">
-<suite id="s1" name="Login Test" source="/Users/leoalano/developer/Ascender/Automação de testes/04 Login/ascender-automation-practice-test/tests/login_test.robot">
-<test id="s1-t1" name="Teste case 01 - Login successfully" line="21">
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20220721 21:54:40.381" rpa="false" schemaversion="3">
+<suite id="s1" name="Cart Test" source="C:\Users\Thais\workspace\ascender-automation-practice-test\tests\cart_test.robot">
+<test id="s1-t1" name="Teste case - Cart item delete" line="11">
 <kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
 <arg>browser=chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220725 10:52:32.348" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20220725 10:52:32.348" endtime="20220725 10:52:34.100"/>
+<msg timestamp="20220721 21:54:44.770" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220721 21:54:44.768" endtime="20220721 21:54:54.450"/>
 </kw>
-<kw name="Given I am at automationpractice.com" library="navigation">
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220725 10:52:34.101" endtime="20220725 10:52:34.236"/>
-</kw>
+<kw name="Access homepage of automationpractice.com" library="login">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220725 10:52:34.236" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
-<status status="PASS" starttime="20220725 10:52:34.236" endtime="20220725 10:52:41.331"/>
+<msg timestamp="20220721 21:54:54.649" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
+<status status="PASS" starttime="20220721 21:54:54.647" endtime="20220721 21:55:57.039"/>
 </kw>
-<status status="PASS" starttime="20220725 10:52:34.101" endtime="20220725 10:52:41.331"/>
-</kw>
-<kw name="And I enter menu &quot;Sign in&quot;" library="menu">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${SIGN_IN_MENU_BUTTON}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220725 10:52:41.333" level="INFO">Clicking element 'class=login'.</msg>
-<status status="PASS" starttime="20220725 10:52:41.332" endtime="20220725 10:52:43.419"/>
-</kw>
-<status status="PASS" starttime="20220725 10:52:41.332" endtime="20220725 10:52:43.419"/>
-</kw>
-<kw name="When I fill login form with &quot;${VALID_EMAIL}&quot; and &quot;${VALID_PASSWORD}&quot;" library="login" sourcename="I fill login form with &quot;${EMAIL_TEST_DATA}&quot; and &quot;${PASSWORD_TEST_DATA}&quot;">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${EMAIL_INPUT}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220725 10:52:43.420" endtime="20220725 10:52:43.441"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${PASSWORD_INPUT}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220725 10:52:43.441" endtime="20220725 10:52:43.459"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${EMAIL_INPUT}</arg>
-<arg>${EMAIL_TEST_DATA}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220725 10:52:43.460" level="INFO">Typing text 'compra_teste@gmail.com' into text field 'id=email'.</msg>
-<status status="PASS" starttime="20220725 10:52:43.459" endtime="20220725 10:52:43.606"/>
-</kw>
-<kw name="Input Password" library="SeleniumLibrary">
-<arg>${PASSWORD_INPUT}</arg>
-<arg>${PASSWORD_TEST_DATA}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20220725 10:52:43.606" level="INFO">Typing password into text field 'id=passwd'.</msg>
-<msg timestamp="20220725 10:52:43.631" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20220725 10:52:43.670" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20220725 10:52:43.606" endtime="20220725 10:52:43.670"/>
-</kw>
-<status status="PASS" starttime="20220725 10:52:43.419" endtime="20220725 10:52:43.670"/>
-</kw>
-<kw name="And I submit login form" library="login">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${SIGN_IN_BUTTON}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220725 10:52:43.671" endtime="20220725 10:52:43.685"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${SIGN_IN_BUTTON}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220725 10:52:43.686" level="INFO">Clicking element 'id=SubmitLogin'.</msg>
-<status status="PASS" starttime="20220725 10:52:43.685" endtime="20220725 10:52:45.875"/>
-</kw>
-<status status="PASS" starttime="20220725 10:52:43.671" endtime="20220725 10:52:45.875"/>
-</kw>
-<kw name="Then I should be logged in successfully" library="login">
-<kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<arg>My account</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20220725 10:52:45.876" endtime="20220725 10:52:45.889"/>
-</kw>
-<kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>My account</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20220725 10:52:45.899" level="INFO">Current page contains text 'My account'.</msg>
-<status status="PASS" starttime="20220725 10:52:45.890" endtime="20220725 10:52:45.899"/>
-</kw>
-<status status="PASS" starttime="20220725 10:52:45.875" endtime="20220725 10:52:45.899"/>
-</kw>
-<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
-<doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220725 10:52:45.900" endtime="20220725 10:52:46.009"/>
-</kw>
-<status status="PASS" starttime="20220725 10:52:32.347" endtime="20220725 10:52:46.009"/>
-</test>
-<test id="s1-t2" name="Test case 02 - Try login with unregistered e-mail" line="28">
-<kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
-<arg>browser=chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220725 10:52:46.013" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20220725 10:52:46.012" endtime="20220725 10:52:47.505"/>
-</kw>
-<kw name="Given I am at automationpractice.com" library="navigation">
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220725 10:52:47.506" endtime="20220725 10:52:47.635"/>
+<status status="PASS" starttime="20220721 21:55:57.040" endtime="20220721 21:56:01.558"/>
 </kw>
-<kw name="Go To" library="SeleniumLibrary">
-<arg>${URL}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220725 10:52:47.635" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
-<status status="PASS" starttime="20220725 10:52:47.635" endtime="20220725 10:52:53.370"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220721 21:56:03.560" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220721 21:56:01.559" endtime="20220721 21:56:03.560"/>
 </kw>
-<status status="PASS" starttime="20220725 10:52:47.505" endtime="20220725 10:52:53.370"/>
+<status status="PASS" starttime="20220721 21:54:54.643" endtime="20220721 21:56:03.561"/>
 </kw>
-<kw name="And I enter menu &quot;Sign in&quot;" library="menu">
+<kw name="Enter menu &quot;Sign in&quot; at the header" library="login">
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>${SIGN_IN_MENU_BUTTON}</arg>
+<arg>locator=${SIGN_IN}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220725 10:52:53.372" level="INFO">Clicking element 'class=login'.</msg>
-<status status="PASS" starttime="20220725 10:52:53.371" endtime="20220725 10:52:58.561"/>
+<msg timestamp="20220721 21:56:03.610" level="INFO">Clicking element '//a[@class='login']'.</msg>
+<status status="PASS" starttime="20220721 21:56:03.605" endtime="20220721 21:56:20.339"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${TITULO_PAGINA_LOGIN}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20220721 21:56:20.608" level="INFO">Page title is 'Login - My Store'.</msg>
+<status status="PASS" starttime="20220721 21:56:20.339" endtime="20220721 21:56:20.608"/>
 </kw>
-<status status="PASS" starttime="20220725 10:52:53.371" endtime="20220725 10:52:58.562"/>
-</kw>
-<kw name="When I fill login form with &quot;${UNREGISTERED_EMAIL}&quot; and &quot;${VALID_PASSWORD}&quot;" library="login" sourcename="I fill login form with &quot;${EMAIL_TEST_DATA}&quot; and &quot;${PASSWORD_TEST_DATA}&quot;">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${EMAIL_INPUT}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220725 10:52:58.563" endtime="20220725 10:52:58.583"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${PASSWORD_INPUT}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220725 10:52:58.583" endtime="20220725 10:52:58.600"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${EMAIL_INPUT}</arg>
-<arg>${EMAIL_TEST_DATA}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220725 10:52:58.601" level="INFO">Typing text 'xurupitas@namanteiga.com.br' into text field 'id=email'.</msg>
-<status status="PASS" starttime="20220725 10:52:58.601" endtime="20220725 10:52:58.755"/>
-</kw>
-<kw name="Input Password" library="SeleniumLibrary">
-<arg>${PASSWORD_INPUT}</arg>
-<arg>${PASSWORD_TEST_DATA}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20220725 10:52:58.755" level="INFO">Typing password into text field 'id=passwd'.</msg>
-<msg timestamp="20220725 10:52:58.783" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20220725 10:52:58.823" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20220725 10:52:58.755" endtime="20220725 10:52:58.823"/>
-</kw>
-<status status="PASS" starttime="20220725 10:52:58.562" endtime="20220725 10:52:58.823"/>
-</kw>
-<kw name="And I submit login form" library="login">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${SIGN_IN_BUTTON}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220725 10:52:58.824" endtime="20220725 10:52:58.841"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${SIGN_IN_BUTTON}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220725 10:52:58.841" level="INFO">Clicking element 'id=SubmitLogin'.</msg>
-<status status="PASS" starttime="20220725 10:52:58.841" endtime="20220725 10:53:00.164"/>
-</kw>
-<status status="PASS" starttime="20220725 10:52:58.823" endtime="20220725 10:53:00.164"/>
-</kw>
-<kw name="Then I should see an error message" library="login">
-<arg>Authentication failed</arg>
-<kw name="Log" library="BuiltIn">
-<arg>${ERROR_MESSAGE}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220725 10:53:00.165" level="INFO">Authentication failed</msg>
-<status status="PASS" starttime="20220725 10:53:00.165" endtime="20220725 10:53:00.166"/>
-</kw>
-<kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<arg>${ERROR_MESSAGE}</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20220725 10:53:00.166" endtime="20220725 10:53:00.182"/>
-</kw>
-<status status="PASS" starttime="20220725 10:53:00.165" endtime="20220725 10:53:00.182"/>
-</kw>
-<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
-<doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220725 10:53:00.182" endtime="20220725 10:53:00.320"/>
-</kw>
-<status status="PASS" starttime="20220725 10:52:46.010" endtime="20220725 10:53:00.320"/>
-</test>
-<test id="s1-t3" name="Test case 03 - Try login with incorrect password" line="35">
-<kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
-<arg>browser=chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220725 10:53:00.322" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20220725 10:53:00.322" endtime="20220725 10:53:01.831"/>
-</kw>
-<kw name="Given I am at automationpractice.com" library="navigation">
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220725 10:53:01.833" endtime="20220725 10:53:01.966"/>
-</kw>
-<kw name="Go To" library="SeleniumLibrary">
-<arg>${URL}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220725 10:53:01.967" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
-<status status="PASS" starttime="20220725 10:53:01.967" endtime="20220725 10:53:09.909"/>
-</kw>
-<status status="PASS" starttime="20220725 10:53:01.832" endtime="20220725 10:53:09.909"/>
-</kw>
-<kw name="And I enter menu &quot;Sign in&quot;" library="menu">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${SIGN_IN_MENU_BUTTON}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220725 10:53:09.911" level="INFO">Clicking element 'class=login'.</msg>
-<status status="PASS" starttime="20220725 10:53:09.910" endtime="20220725 10:53:12.187"/>
-</kw>
-<status status="PASS" starttime="20220725 10:53:09.909" endtime="20220725 10:53:12.187"/>
-</kw>
-<kw name="When I fill login form with &quot;${VALID_EMAIL}&quot; and &quot;${INCORRECT_PASSWORD}&quot;" library="login" sourcename="I fill login form with &quot;${EMAIL_TEST_DATA}&quot; and &quot;${PASSWORD_TEST_DATA}&quot;">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${EMAIL_INPUT}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220725 10:53:12.188" endtime="20220725 10:53:12.212"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${PASSWORD_INPUT}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220725 10:53:12.212" endtime="20220725 10:53:12.229"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${EMAIL_INPUT}</arg>
-<arg>${EMAIL_TEST_DATA}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220725 10:53:12.230" level="INFO">Typing text 'compra_teste@gmail.com' into text field 'id=email'.</msg>
-<status status="PASS" starttime="20220725 10:53:12.229" endtime="20220725 10:53:12.385"/>
-</kw>
-<kw name="Input Password" library="SeleniumLibrary">
-<arg>${PASSWORD_INPUT}</arg>
-<arg>${PASSWORD_TEST_DATA}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20220725 10:53:12.386" level="INFO">Typing password into text field 'id=passwd'.</msg>
-<msg timestamp="20220725 10:53:12.413" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20220725 10:53:12.458" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20220725 10:53:12.385" endtime="20220725 10:53:12.458"/>
-</kw>
-<status status="PASS" starttime="20220725 10:53:12.188" endtime="20220725 10:53:12.459"/>
-</kw>
-<kw name="And I submit login form" library="login">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${SIGN_IN_BUTTON}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220725 10:53:12.459" endtime="20220725 10:53:12.475"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${SIGN_IN_BUTTON}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220725 10:53:12.475" level="INFO">Clicking element 'id=SubmitLogin'.</msg>
-<status status="PASS" starttime="20220725 10:53:12.475" endtime="20220725 10:53:15.545"/>
-</kw>
-<status status="PASS" starttime="20220725 10:53:12.459" endtime="20220725 10:53:15.546"/>
-</kw>
-<kw name="Then I should see an error message" library="login">
-<arg>Authentication failed</arg>
-<kw name="Log" library="BuiltIn">
-<arg>${ERROR_MESSAGE}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220725 10:53:15.548" level="INFO">Authentication failed</msg>
-<status status="PASS" starttime="20220725 10:53:15.547" endtime="20220725 10:53:15.548"/>
-</kw>
-<kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<arg>${ERROR_MESSAGE}</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20220725 10:53:15.548" endtime="20220725 10:53:15.570"/>
-</kw>
-<status status="PASS" starttime="20220725 10:53:15.546" endtime="20220725 10:53:15.571"/>
-</kw>
-<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
-<doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220725 10:53:15.571" endtime="20220725 10:53:15.674"/>
-</kw>
-<status status="PASS" starttime="20220725 10:53:00.321" endtime="20220725 10:53:15.674"/>
-</test>
-<test id="s1-t4" name="Test case 04 - Try login with invalid e-mail" line="42">
-<kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
-<arg>browser=chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220725 10:53:15.678" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20220725 10:53:15.677" endtime="20220725 10:53:17.293"/>
-</kw>
-<kw name="Given I am at automationpractice.com" library="navigation">
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220725 10:53:17.295" endtime="20220725 10:53:17.436"/>
-</kw>
-<kw name="Go To" library="SeleniumLibrary">
-<arg>${URL}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220725 10:53:17.437" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
-<status status="PASS" starttime="20220725 10:53:17.436" endtime="20220725 10:53:22.722"/>
-</kw>
-<status status="PASS" starttime="20220725 10:53:17.294" endtime="20220725 10:53:22.722"/>
-</kw>
-<kw name="And I enter menu &quot;Sign in&quot;" library="menu">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${SIGN_IN_MENU_BUTTON}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220725 10:53:22.724" level="INFO">Clicking element 'class=login'.</msg>
-<status status="PASS" starttime="20220725 10:53:22.723" endtime="20220725 10:53:24.384"/>
-</kw>
-<status status="PASS" starttime="20220725 10:53:22.722" endtime="20220725 10:53:24.384"/>
-</kw>
-<kw name="When I fill login form with &quot;${INVALID_EMAIL}&quot; and &quot;${VALID_PASSWORD}&quot;" library="login" sourcename="I fill login form with &quot;${EMAIL_TEST_DATA}&quot; and &quot;${PASSWORD_TEST_DATA}&quot;">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${EMAIL_INPUT}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220725 10:53:24.386" endtime="20220725 10:53:24.406"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${PASSWORD_INPUT}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220725 10:53:24.406" endtime="20220725 10:53:24.424"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${EMAIL_INPUT}</arg>
-<arg>${EMAIL_TEST_DATA}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220725 10:53:24.425" level="INFO">Typing text 'xurupitas' into text field 'id=email'.</msg>
-<status status="PASS" starttime="20220725 10:53:24.424" endtime="20220725 10:53:24.559"/>
-</kw>
-<kw name="Input Password" library="SeleniumLibrary">
-<arg>${PASSWORD_INPUT}</arg>
-<arg>${PASSWORD_TEST_DATA}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20220725 10:53:24.560" level="INFO">Typing password into text field 'id=passwd'.</msg>
-<msg timestamp="20220725 10:53:24.587" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20220725 10:53:24.626" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20220725 10:53:24.559" endtime="20220725 10:53:24.626"/>
-</kw>
-<status status="PASS" starttime="20220725 10:53:24.385" endtime="20220725 10:53:24.626"/>
-</kw>
-<kw name="And I submit login form" library="login">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${SIGN_IN_BUTTON}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220725 10:53:24.626" endtime="20220725 10:53:24.641"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${SIGN_IN_BUTTON}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220725 10:53:24.641" level="INFO">Clicking element 'id=SubmitLogin'.</msg>
-<status status="PASS" starttime="20220725 10:53:24.641" endtime="20220725 10:53:26.939"/>
-</kw>
-<status status="PASS" starttime="20220725 10:53:24.626" endtime="20220725 10:53:26.940"/>
-</kw>
-<kw name="Then I should see an error message" library="login">
-<arg>Invalid email address.</arg>
-<kw name="Log" library="BuiltIn">
-<arg>${ERROR_MESSAGE}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220725 10:53:26.941" level="INFO">Invalid email address.</msg>
-<status status="PASS" starttime="20220725 10:53:26.941" endtime="20220725 10:53:26.941"/>
-</kw>
-<kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<arg>${ERROR_MESSAGE}</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20220725 10:53:26.942" endtime="20220725 10:53:26.955"/>
-</kw>
-<status status="PASS" starttime="20220725 10:53:26.940" endtime="20220725 10:53:26.955"/>
-</kw>
-<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
-<doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220725 10:53:26.956" endtime="20220725 10:53:27.058"/>
-</kw>
-<status status="PASS" starttime="20220725 10:53:15.675" endtime="20220725 10:53:27.058"/>
-</test>
-<test id="s1-t5" name="Test case 05 - Login with empty passwd" line="49">
-<kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
-<arg>browser=chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220725 10:53:27.062" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20220725 10:53:27.061" endtime="20220725 10:53:28.525"/>
-</kw>
-<kw name="Given I am at automationpractice.com" library="navigation">
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220725 10:53:28.526" endtime="20220725 10:53:28.660"/>
-</kw>
-<kw name="Go To" library="SeleniumLibrary">
-<arg>${URL}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220725 10:53:28.660" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
-<status status="PASS" starttime="20220725 10:53:28.660" endtime="20220725 10:53:33.887"/>
-</kw>
-<status status="PASS" starttime="20220725 10:53:28.526" endtime="20220725 10:53:33.887"/>
-</kw>
-<kw name="And I enter menu &quot;Sign in&quot;" library="menu">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${SIGN_IN_MENU_BUTTON}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220725 10:53:33.888" level="INFO">Clicking element 'class=login'.</msg>
-<status status="PASS" starttime="20220725 10:53:33.888" endtime="20220725 10:53:35.643"/>
-</kw>
-<status status="PASS" starttime="20220725 10:53:33.888" endtime="20220725 10:53:35.643"/>
-</kw>
-<kw name="When I fill login form with &quot;${VALID_EMAIL}&quot; and &quot;${EMPTY_PASSWORD}&quot;" library="login" sourcename="I fill login form with &quot;${EMAIL_TEST_DATA}&quot; and &quot;${PASSWORD_TEST_DATA}&quot;">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${EMAIL_INPUT}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220725 10:53:35.644" endtime="20220725 10:53:35.669"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${PASSWORD_INPUT}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220725 10:53:35.669" endtime="20220725 10:53:35.687"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${EMAIL_INPUT}</arg>
-<arg>${EMAIL_TEST_DATA}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220725 10:53:35.687" level="INFO">Typing text 'compra_teste@gmail.com' into text field 'id=email'.</msg>
-<status status="PASS" starttime="20220725 10:53:35.687" endtime="20220725 10:53:35.864"/>
-</kw>
-<kw name="Input Password" library="SeleniumLibrary">
-<arg>${PASSWORD_INPUT}</arg>
-<arg>${PASSWORD_TEST_DATA}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20220725 10:53:35.864" level="INFO">Typing password into text field 'id=passwd'.</msg>
-<msg timestamp="20220725 10:53:35.891" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20220725 10:53:35.926" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20220725 10:53:35.864" endtime="20220725 10:53:35.926"/>
-</kw>
-<status status="PASS" starttime="20220725 10:53:35.643" endtime="20220725 10:53:35.927"/>
-</kw>
-<kw name="And I submit login form" library="login">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${SIGN_IN_BUTTON}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220725 10:53:35.927" endtime="20220725 10:53:35.942"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${SIGN_IN_BUTTON}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220725 10:53:35.942" level="INFO">Clicking element 'id=SubmitLogin'.</msg>
-<status status="PASS" starttime="20220725 10:53:35.942" endtime="20220725 10:53:37.929"/>
-</kw>
-<status status="PASS" starttime="20220725 10:53:35.927" endtime="20220725 10:53:37.929"/>
-</kw>
-<kw name="Then I should see an error message" library="login">
-<arg>Password is required.</arg>
-<kw name="Log" library="BuiltIn">
-<arg>${ERROR_MESSAGE}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220725 10:53:37.931" level="INFO">Password is required.</msg>
-<status status="PASS" starttime="20220725 10:53:37.931" endtime="20220725 10:53:37.931"/>
-</kw>
-<kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<arg>${ERROR_MESSAGE}</arg>
-<doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20220725 10:53:37.932" endtime="20220725 10:53:37.950"/>
-</kw>
-<status status="PASS" starttime="20220725 10:53:37.930" endtime="20220725 10:53:37.951"/>
-</kw>
-<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
-<doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220725 10:53:37.951" endtime="20220725 10:53:38.098"/>
-</kw>
-<status status="PASS" starttime="20220725 10:53:27.060" endtime="20220725 10:53:38.099"/>
-</test>
-<test id="s1-t6" name="Test Case 06 - Forgot Password" line="56">
-<kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
-<arg>browser=chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220725 10:53:38.101" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20220725 10:53:38.100" endtime="20220725 10:53:39.629"/>
-</kw>
-<kw name="Given I am at automationpractice.com" library="navigation">
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220725 10:53:39.630" endtime="20220725 10:53:39.748"/>
-</kw>
-<kw name="Go To" library="SeleniumLibrary">
-<arg>${URL}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220725 10:53:39.749" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
-<status status="PASS" starttime="20220725 10:53:39.748" endtime="20220725 10:53:47.623"/>
-</kw>
-<status status="PASS" starttime="20220725 10:53:39.630" endtime="20220725 10:53:47.623"/>
-</kw>
-<kw name="And I enter menu &quot;Sign in&quot;" library="menu">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${SIGN_IN_MENU_BUTTON}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220725 10:53:47.624" level="INFO">Clicking element 'class=login'.</msg>
-<status status="PASS" starttime="20220725 10:53:47.624" endtime="20220725 10:53:53.764"/>
-</kw>
-<status status="PASS" starttime="20220725 10:53:47.623" endtime="20220725 10:53:53.764"/>
-</kw>
-<kw name="And I click on &quot;Forgot Password&quot;" library="login">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${FORGOT_PASS}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220725 10:53:53.765" endtime="20220725 10:53:53.785"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${FORGOT_PASS}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220725 10:53:53.785" level="INFO">Clicking element '//a[contains(.,'Forgot your password?')]'.</msg>
-<status status="PASS" starttime="20220725 10:53:53.785" endtime="20220725 10:53:58.788"/>
-</kw>
-<status status="PASS" starttime="20220725 10:53:53.764" endtime="20220725 10:53:58.789"/>
-</kw>
-<kw name="When I fill the email field with my email" library="login">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>id=email</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220725 10:53:58.790" endtime="20220725 10:53:58.816"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=email</arg>
-<arg>${VALID_EMAIL}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220725 10:53:58.817" level="INFO">Typing text 'compra_teste@gmail.com' into text field 'id=email'.</msg>
-<status status="PASS" starttime="20220725 10:53:58.816" endtime="20220725 10:53:58.971"/>
-</kw>
-<status status="PASS" starttime="20220725 10:53:58.790" endtime="20220725 10:53:58.972"/>
-</kw>
-<kw name="And I submit my email" library="login">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${RETRIEVE_PASSWORD_BUTTON}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220725 10:53:58.973" endtime="20220725 10:53:58.998"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${RETRIEVE_PASSWORD_BUTTON}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220725 10:53:58.999" level="INFO">Clicking element '//span[contains(.,'Retrieve Password')]'.</msg>
-<status status="PASS" starttime="20220725 10:53:58.999" endtime="20220725 10:54:01.398"/>
-</kw>
-<status status="PASS" starttime="20220725 10:53:58.972" endtime="20220725 10:54:01.398"/>
-</kw>
-<kw name="Then I should see a successful message" library="login">
 <kw name="Page Should Contain Element" library="SeleniumLibrary">
-<arg>${RETRIEVED_SUCCESS_MESS}</arg>
+<arg>locator=${VALIDA_PAGINA_LOGIN}</arg>
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
-<msg timestamp="20220725 10:54:01.411" level="INFO">Current page contains element '//p[contains(@class,'alert alert-success')]'.</msg>
-<status status="PASS" starttime="20220725 10:54:01.400" endtime="20220725 10:54:01.411"/>
+<msg timestamp="20220721 21:56:20.736" level="INFO">Current page contains element '//h1[@class='page-heading'][contains(.,'Authentication')]'.</msg>
+<status status="PASS" starttime="20220721 21:56:20.610" endtime="20220721 21:56:20.736"/>
 </kw>
-<status status="PASS" starttime="20220725 10:54:01.399" endtime="20220725 10:54:01.412"/>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>locator=${VALIDA_PAGINA_LOGIN1}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220721 21:56:20.928" level="INFO">Current page contains element '//h3[@class='page-subheading'][contains(.,'Already registered?')]'.</msg>
+<status status="PASS" starttime="20220721 21:56:20.737" endtime="20220721 21:56:20.929"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220721 21:56:22.945" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220721 21:56:20.929" endtime="20220721 21:56:22.946"/>
+</kw>
+<status status="PASS" starttime="20220721 21:56:03.601" endtime="20220721 21:56:22.946"/>
+</kw>
+<kw name="Type the registered email in the field &quot;email address&quot;" library="login">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id=email</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220721 21:56:22.951" endtime="20220721 21:56:23.538"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=email</arg>
+<arg>${EMAIL_CADASTRADO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220721 21:56:23.543" level="INFO">Typing text 'christian.hernan@gmail.com' into text field 'id=email'.</msg>
+<status status="PASS" starttime="20220721 21:56:23.540" endtime="20220721 21:56:24.980"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220721 21:56:26.985" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220721 21:56:24.981" endtime="20220721 21:56:26.986"/>
+</kw>
+<status status="PASS" starttime="20220721 21:56:22.949" endtime="20220721 21:56:26.987"/>
+</kw>
+<kw name="Type the registered Password in the field &quot;Password&quot;" library="login">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=passwd</arg>
+<arg>${SENHA_CADASTRADA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220721 21:56:27.007" level="INFO">Typing text '123456' into text field 'id=passwd'.</msg>
+<status status="PASS" starttime="20220721 21:56:27.005" endtime="20220721 21:56:28.160"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220721 21:56:30.174" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220721 21:56:28.161" endtime="20220721 21:56:30.174"/>
+</kw>
+<status status="PASS" starttime="20220721 21:56:27.000" endtime="20220721 21:56:30.175"/>
+</kw>
+<kw name="Click on the &quot;Sign In&quot; Button" library="login">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id=SubmitLogin</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220721 21:56:30.180" level="INFO">Clicking button 'id=SubmitLogin'.</msg>
+<status status="PASS" starttime="20220721 21:56:30.179" endtime="20220721 21:56:48.928"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220721 21:56:51.022" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220721 21:56:48.929" endtime="20220721 21:56:51.023"/>
+</kw>
+<status status="PASS" starttime="20220721 21:56:30.177" endtime="20220721 21:56:51.024"/>
+</kw>
+<kw name="Click on the &quot;Women&quot;" library="cart">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${WOMEN}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220721 21:56:51.174" endtime="20220721 21:56:52.502"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${WOMEN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220721 21:56:52.506" level="INFO">Clicking element '//a[contains(@title,'Women')]'.</msg>
+<status status="PASS" starttime="20220721 21:56:52.503" endtime="20220721 21:57:15.119"/>
+</kw>
+<status status="PASS" starttime="20220721 21:56:51.172" endtime="20220721 21:57:15.120"/>
+</kw>
+<kw name="Move the mouse over the item" library="cart">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${TITLE_PAGE_WOMAN}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20220721 21:57:15.596" level="INFO">Page title is 'Women - My Store'.</msg>
+<status status="PASS" starttime="20220721 21:57:15.126" endtime="20220721 21:57:15.597"/>
+</kw>
+<kw name="Mouse Down On Image" library="SeleniumLibrary">
+<arg>${FLOAT_ABOUT_ELEMENT}</arg>
+<doc>Simulates a mouse down event on an image identified by ``locator``.</doc>
+<status status="PASS" starttime="20220721 21:57:15.598" endtime="20220721 21:57:16.249"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ADD_CART}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220721 21:57:16.252" level="INFO">Clicking element '//span[contains(.,'Add to cart')]'.</msg>
+<status status="PASS" starttime="20220721 21:57:16.250" endtime="20220721 21:57:16.860"/>
+</kw>
+<status status="PASS" starttime="20220721 21:57:15.122" endtime="20220721 21:57:16.861"/>
+</kw>
+<kw name="Click on Proceed to checkout Element" library="cart">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PROCEED}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220721 21:57:16.907" endtime="20220721 21:57:20.849"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>locator=${VALID_MESSAGE_CART}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220721 21:57:21.019" level="INFO">Current page contains element '//h2[contains(.,'Product successfully added to your shopping cart')]'.</msg>
+<status status="PASS" starttime="20220721 21:57:20.850" endtime="20220721 21:57:21.020"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${PROCEED}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220721 21:57:21.022" level="INFO">Clicking element '//span[contains(.,'Proceed to checkout')]'.</msg>
+<status status="PASS" starttime="20220721 21:57:21.020" endtime="20220721 21:57:29.948"/>
+</kw>
+<status status="PASS" starttime="20220721 21:57:16.901" endtime="20220721 21:57:29.949"/>
+</kw>
+<kw name="Click on the &quot;trash&quot;" library="cart">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${TITLE_PAGE_ORDER}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20220721 21:57:30.569" level="INFO">Page title is 'Order - My Store'.</msg>
+<status status="PASS" starttime="20220721 21:57:29.959" endtime="20220721 21:57:30.569"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>id=cart_title</arg>
+<arg>${VALID_CART_PAGE}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220721 21:57:30.629" level="INFO">Current page contains element 'id=cart_title'.</msg>
+<status status="PASS" starttime="20220721 21:57:30.570" endtime="20220721 21:57:30.629"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ICON_TRASH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220721 21:57:30.631" level="INFO">Clicking element '//i[contains(@class,'icon-trash')]'.</msg>
+<status status="PASS" starttime="20220721 21:57:30.630" endtime="20220721 21:57:31.241"/>
+</kw>
+<status status="PASS" starttime="20220721 21:57:29.957" endtime="20220721 21:57:31.242"/>
+</kw>
+<kw name="Verify item deletion" library="cart">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${VALID_ALERT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220721 21:57:31.337" endtime="20220721 21:57:44.936"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${VALID_ALERT}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220721 21:57:44.970" level="INFO">Current page contains element '//p[@class='alert alert-warning'][contains(.,'Your shopping cart is empty.')]'.</msg>
+<status status="PASS" starttime="20220721 21:57:44.937" endtime="20220721 21:57:44.971"/>
+</kw>
+<status status="PASS" starttime="20220721 21:57:31.335" endtime="20220721 21:57:44.972"/>
 </kw>
 <kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220725 10:54:01.412" endtime="20220725 10:54:01.533"/>
+<status status="PASS" starttime="20220721 21:57:44.979" endtime="20220721 21:57:50.567"/>
 </kw>
-<status status="PASS" starttime="20220725 10:53:38.099" endtime="20220725 10:54:01.534"/>
+<status status="PASS" starttime="20220721 21:54:44.510" endtime="20220721 21:57:50.570"/>
 </test>
-<doc>Testing login with invalid e-mail.</doc>
-<status status="PASS" starttime="20220725 10:52:32.049" endtime="20220725 10:54:01.536"/>
+<status status="PASS" starttime="20220721 21:54:40.401" endtime="20220721 21:57:51.143"/>
 </suite>
 <statistics>
 <total>
-<stat pass="6" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="6" fail="0" skip="0" id="s1" name="Login Test">Login Test</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Cart Test">Cart Test</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20220725 10:52:32.332" level="ERROR">Error in file '/Users/leoalano/developer/Ascender/Automação de testes/04 Login/ascender-automation-practice-test/tests/login_test.robot' on line 4: Importing library 'FakerLibrary' failed: ModuleNotFoundError: No module named 'FakerLibrary'
-Traceback (most recent call last):
-  None
-PYTHONPATH:
-  /Library/Frameworks/Python.framework/Versions/3.10/bin
-  /Library/Frameworks/Python.framework/Versions/3.10/lib/python310.zip
-  /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10
-  /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/lib-dynload
-  /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages</msg>
 </errors>
 </robot>
