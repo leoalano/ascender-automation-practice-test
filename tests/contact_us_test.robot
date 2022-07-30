@@ -1,5 +1,5 @@
 ***Settings***
-Documentation     Testing login with invalid e-mail.
+Documentation     Testing Contact us functionality. 
 Library           SeleniumLibrary
 Library           FakerLibrary
 Resource          ../resources/login.resource
@@ -24,7 +24,7 @@ ${MESSAGE}               This is a test message.
 Teste case 01 - Successful contact via the menu
     Given I am at automationpractice.com
       And I enter "Contact Us" via the menu
-     When I fill contact us form with "${VALID_EMAIL}" and "${ORDER_REF}" and "${MESSAGE}"
+     When I fill contact us form with "${VALID_EMAIL}" and "${ORDER_REF}" and "${MESSAGE}" (subject heading 1)
       And I submit the contact us form
      Then I should have successfully sent the message
 
