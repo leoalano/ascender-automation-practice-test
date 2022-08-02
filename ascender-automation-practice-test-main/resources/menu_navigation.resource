@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    ../page_objects/navigation_page.resource
+Resource    ../page_objects/menu_navigation_page.resource
 
 *** Keywords ***
 I put mouse over title "women"
