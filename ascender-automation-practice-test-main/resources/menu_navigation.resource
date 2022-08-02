@@ -2,23 +2,23 @@
 Resource    ../page_objects/navigation_page.resource
 
 *** Keywords ***
+I put mouse over title "women"
+    Mouse Over         ${TITLE_WOMEN}
+
 I click the title "women"
     Click Element      ${TITLE_WOMEN}
     
 I verify the page contain title_block "women"
     Page Should Contain         You will find here all woman fashion collections.
 
-I put mouse over title "women"
-    Mouse Over         ${TITLE_WOMEN}   
-
 I click on title "tops"
     Click Element      ${TITLE_TOPS}
 
-I click on title "T-shirts"
-    Click Element      ${TITLE}
-
 I verify the page contain title "Tops"
     Page Should Contain         Tops
+
+I click on title "T-shirts"
+    Click Element      ${TITLE}
 
 I verify the page contain T-shirts
     Page Should Contain         T-shirts
