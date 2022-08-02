@@ -20,7 +20,7 @@ ${INVALID_EMAIL}              xxx@xxxx.com
 ${INVALID_PASSWORD}           1111111
 
 *** Test Cases ***
-Teste case 01 - Successful Login                    
+Teste case 01 - Successful login                    
     Given I am at automationpractice.com
       And I enter menu "Sign in"
      When I fill login form with correct "${EMAIL_REGISTERED}" and correct"${PASSWORD_REGISTERED}"
@@ -34,28 +34,28 @@ Test case 02 - Login with unregistered user
       And I click on button submit "Sign In"
      Then I check login error verification
 
-Test case 03 - Login with invalid passwd
+Test case 03 - Login with invalid password
     Given I am at automationpractice.com
       And I enter menu "Sign in"
      When I fill login form with correct"${EMAIL_REGISTERED}" and fake"${FAKE_PASSWORD}"
       And I click on button submit "Sign In"
      Then I check login error verification
 
-Test Case 04 - Invalid email
+Test case 04 - Invalid email
     Given I am at automationpractice.com
       And I enter menu "Sign in"
      When I fill form with invalid"${INVALID_EMAIL}" and invalid"${INVALID_PASSWORD}"
       And I click on button submit "Sign In"
      Then I verify if error message appears "There is 1 error"
 
-Test case 05 - Login with empty passwd
+Test case 05 - Login with empty password
     Given I am at automationpractice.com
       And I enter menu "Sign in"
      When I fill login form with correct"${EMAIL_REGISTERED}" and empty"${EMPTY_PASSWORD}"
       And I click on button submit "Sign In"
      Then I check login empty password error
 
-Test Case 06 - Forgot Password
+Test case 06 - Forgot password
     Given I am at automationpractice.com
       And I enter menu "Sign in"
      When I click on "Forgot Password"
