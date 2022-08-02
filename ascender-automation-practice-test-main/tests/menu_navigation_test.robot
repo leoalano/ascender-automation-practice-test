@@ -15,7 +15,7 @@ Test case 01 - Test link Women
       And I click the title "women"
      Then I verify the page contain title_block "women"
 
-Test case 02 - Test link tops
+Test case 02 - Test link Tops
     Given I am at automationpractice.com
       And I put mouse over title "women"
      When I click on title "tops"
