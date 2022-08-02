@@ -16,7 +16,7 @@ ${EMAIL_REGISTERED}           christian.hernan@gmail.com
 ${PASSWORD_REGISTERED}        123456
 
 *** Test Cases ***
-Test case 01 - Add Product to Cart
+Test case 01 - Add product to cart
     Given I am at automationpractice.com
       And I Add product
      Then I confirm product add to cart
@@ -32,14 +32,14 @@ Test case 02 - Cart item delete
       And I click on the "trash"
      Then I verify item deletion
 
-Test Case 03 - Cart access
+Test case 03 - Cart access
     Given I am at automationpractice.com
       And I enter menu "Sign in"
      When I fill login form with "${EMAIL_REGISTERED}" and "${PASSWORD_REGISTERED}"
       And I click on button submit "Sign In"
      Then I click on My Cart Element
 
-Test case 04 - Verify empty Cart
+Test case 04 - Verify empty cart
     Given I am at automationpractice.com
       And I enter menu "Sign in"
      When I fill login form with "${EMAIL_REGISTERED}" and "${PASSWORD_REGISTERED}"
