@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation     Testing login with invalid e-mail.
+Documentation     Login Test Suite.
 Library           SeleniumLibrary
 Library           FakerLibrary
 
