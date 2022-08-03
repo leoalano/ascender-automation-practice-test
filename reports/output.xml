@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0 (Python 3.8.1 on win32)" generated="20220730 16:27:09.920" rpa="false" schemaversion="3">
+<suite id="s1" name="Navigation Test" source="C:\Users\Hector\Documents\ascender-automation-practice-test-main\tests\navigation_test.robot">
+<test id="s1-t1" name="Test case 01 - test link Women" line="11">
+<kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220730 16:27:10.257" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220730 16:27:10.257" endtime="20220730 16:27:11.894"/>
+</kw>
+<kw name="Given I am at automationpractice.com" library="navigation">
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220730 16:27:11.896" endtime="20220730 16:27:12.011"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220730 16:27:12.012" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
+<status status="PASS" starttime="20220730 16:27:12.011" endtime="20220730 16:27:17.194"/>
+</kw>
+<status status="PASS" starttime="20220730 16:27:11.895" endtime="20220730 16:27:17.194"/>
+</kw>
+<kw name="And I click the title &quot;women&quot;" library="menu_navigation">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${TITLE_WOMEN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220730 16:27:17.196" level="INFO">Clicking element '//a[contains(@title,'Women')]'.</msg>
+<msg timestamp="20220730 16:27:20.125" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220730 16:27:20.126" level="FAIL">WebDriverException: Message: unknown error: unexpected command response
+  (Session info: chrome=103.0.5060.134)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00426463+2188387]
+	Ordinal0 [0x003BE461+1762401]
+	Ordinal0 [0x002D3D78+802168]
+	Ordinal0 [0x002C7210+750096]
+	Ordinal0 [0x002C675A+747354]
+	Ordinal0 [0x002C5D3F+744767]
+	Ordinal0 [0x002C557C+742780]
+	Ordinal0 [0x002D9BF3+826355]
+	Ordinal0 [0x0032CF6D+1167213]
+	Ordinal0 [0x0031C5F6+1099254]
+	Ordinal0 [0x002F6BE0+945120]
+	Ordinal0 [0x002F7AD6+948950]
+	GetHandleVerifier [0x006C71F2+2712546]
+	GetHandleVerifier [0x006B886D+2652765]
+	GetHandleVerifier [0x004B002A+520730]
+	GetHandleVerifier [0x004AEE06+516086]
+	Ordinal0 [0x003C468B+1787531]
+	Ordinal0 [0x003C8E88+1805960]
+	Ordinal0 [0x003C8F75+1806197]
+	Ordinal0 [0x003D1DF1+1842673]
+	BaseThreadInitThunk [0x759C336A+18]
+	RtlInitializeExceptionChain [0x77DF9902+99]
+	RtlInitializeExceptionChain [0x77DF98D5+54]
+</msg>
+<status status="FAIL" starttime="20220730 16:27:17.195" endtime="20220730 16:27:20.128"/>
+</kw>
+<status status="FAIL" starttime="20220730 16:27:17.194" endtime="20220730 16:27:20.129"/>
+</kw>
+<kw name="Then I verify the page contain title_block &quot;women&quot;" library="menu_navigation">
+<status status="NOT RUN" starttime="20220730 16:27:20.130" endtime="20220730 16:27:20.130"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220730 16:27:20.131" endtime="20220730 16:27:22.216"/>
+</kw>
+<status status="FAIL" starttime="20220730 16:27:10.255" endtime="20220730 16:27:22.216">WebDriverException: Message: unknown error: unexpected command response
+  (Session info: chrome=103.0.5060.134)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00426463+2188387]
+	Ordinal0 [0x003BE461+1762401]
+	Ordinal0 [0x002D3D78+802168]
+	Ordinal0 [0x002C7210+750096]
+	Ordinal0 [0x002C675A+747354]
+	Ordinal0 [0x002C5D3F+744767]
+	Ordinal0 [0x002C557C+742780]
+	Ordinal0 [0x002D9BF3+826355]
+	Ordinal0 [0x0032CF6D+1167213]
+	Ordinal0 [0x0031C5F6+1099254]
+	Ordinal0 [0x002F6BE0+945120]
+	Ordinal0 [0x002F7AD6+948950]
+	GetHandleVerifier [0x006C71F2+2712546]
+	GetHandleVerifier [0x006B886D+2652765]
+	GetHandleVerifier [0x004B002A+520730]
+	GetHandleVerifier [0x004AEE06+516086]
+	Ordinal0 [0x003C468B+1787531]
+	Ordinal0 [0x003C8E88+1805960]
+	Ordinal0 [0x003C8F75+1806197]
+	Ordinal0 [0x003D1DF1+1842673]
+	BaseThreadInitThunk [0x759C336A+18]
+	RtlInitializeExceptionChain [0x77DF9902+99]
+	RtlInitializeExceptionChain [0x77DF98D5+54]
+</status>
+</test>
+<test id="s1-t2" name="Test case 02 - test link tops" line="16">
+<kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220730 16:27:22.219" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220730 16:27:22.219" endtime="20220730 16:27:23.915"/>
+</kw>
+<kw name="Given I am at automationpractice.com" library="navigation">
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220730 16:27:23.917" endtime="20220730 16:27:24.107"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220730 16:27:24.108" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
+<status status="PASS" starttime="20220730 16:27:24.107" endtime="20220730 16:27:29.259"/>
+</kw>
+<status status="PASS" starttime="20220730 16:27:23.916" endtime="20220730 16:27:29.259"/>
+</kw>
+<kw name="And I put mouse over title &quot;women&quot;" library="menu_navigation">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${TITLE_WOMEN}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220730 16:27:29.260" level="INFO">Simulating Mouse Over on element '//a[contains(@title,'Women')]'.</msg>
+<status status="PASS" starttime="20220730 16:27:29.260" endtime="20220730 16:27:29.566"/>
+</kw>
+<status status="PASS" starttime="20220730 16:27:29.259" endtime="20220730 16:27:29.566"/>
+</kw>
+<kw name="When I click on title &quot;tops&quot;" library="menu_navigation">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${TITLE_TOPS}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220730 16:27:29.573" level="INFO">Clicking element 'XPATH=//a[@title='Tops']'.</msg>
+<status status="PASS" starttime="20220730 16:27:29.572" endtime="20220730 16:27:31.703"/>
+</kw>
+<status status="PASS" starttime="20220730 16:27:29.571" endtime="20220730 16:27:31.704"/>
+</kw>
+<kw name="Then I verify the page contain title &quot;Tops&quot;" library="menu_navigation">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Tops</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20220730 16:27:31.727" level="INFO">Current page contains text 'Tops'.</msg>
+<status status="PASS" starttime="20220730 16:27:31.705" endtime="20220730 16:27:31.727"/>
+</kw>
+<status status="PASS" starttime="20220730 16:27:31.705" endtime="20220730 16:27:31.727"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220730 16:27:31.728" endtime="20220730 16:27:34.852"/>
+</kw>
+<status status="PASS" starttime="20220730 16:27:22.218" endtime="20220730 16:27:34.854"/>
+</test>
+<test id="s1-t3" name="Test case 03 - test link T-shirts" line="22">
+<kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220730 16:27:34.862" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220730 16:27:34.861" endtime="20220730 16:27:36.510"/>
+</kw>
+<kw name="Given I am at automationpractice.com" library="navigation">
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220730 16:27:36.523" endtime="20220730 16:27:36.651"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220730 16:27:36.652" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
+<status status="PASS" starttime="20220730 16:27:36.651" endtime="20220730 16:27:43.529"/>
+</kw>
+<status status="PASS" starttime="20220730 16:27:36.522" endtime="20220730 16:27:43.530"/>
+</kw>
+<kw name="And I put mouse over title &quot;women&quot;" library="menu_navigation">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${TITLE_WOMEN}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220730 16:27:43.532" level="INFO">Simulating Mouse Over on element '//a[contains(@title,'Women')]'.</msg>
+<status status="PASS" starttime="20220730 16:27:43.531" endtime="20220730 16:27:43.855"/>
+</kw>
+<status status="PASS" starttime="20220730 16:27:43.531" endtime="20220730 16:27:43.856"/>
+</kw>
+<kw name="When I click on title &quot;T-shirts&quot;" library="menu_navigation">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${TITLE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220730 16:27:43.857" level="INFO">Clicking element '//a[contains(@title,'T-shirts')]'.</msg>
+<status status="PASS" starttime="20220730 16:27:43.857" endtime="20220730 16:27:46.864"/>
+</kw>
+<status status="PASS" starttime="20220730 16:27:43.856" endtime="20220730 16:27:46.864"/>
+</kw>
+<kw name="Then I verify the page contain T-shirts" library="menu_navigation">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>T-shirts</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20220730 16:27:46.893" level="INFO">Current page contains text 'T-shirts'.</msg>
+<status status="PASS" starttime="20220730 16:27:46.865" endtime="20220730 16:27:46.893"/>
+</kw>
+<status status="PASS" starttime="20220730 16:27:46.865" endtime="20220730 16:27:46.893"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220730 16:27:46.894" endtime="20220730 16:27:49.014"/>
+</kw>
+<status status="PASS" starttime="20220730 16:27:34.858" endtime="20220730 16:27:49.016"/>
+</test>
+<test id="s1-t4" name="Test case 04 - test link Blouses" line="28">
+<kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220730 16:27:49.024" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220730 16:27:49.024" endtime="20220730 16:27:50.726"/>
+</kw>
+<kw name="Given I am at automationpractice.com" library="navigation">
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220730 16:27:50.728" endtime="20220730 16:27:50.843"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220730 16:27:50.844" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
+<status status="PASS" starttime="20220730 16:27:50.844" endtime="20220730 16:27:58.705"/>
+</kw>
+<status status="PASS" starttime="20220730 16:27:50.727" endtime="20220730 16:27:58.705"/>
+</kw>
+<kw name="And I put mouse over title &quot;women&quot;" library="menu_navigation">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${TITLE_WOMEN}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220730 16:27:58.706" level="INFO">Simulating Mouse Over on element '//a[contains(@title,'Women')]'.</msg>
+<status status="PASS" starttime="20220730 16:27:58.706" endtime="20220730 16:27:59.021"/>
+</kw>
+<status status="PASS" starttime="20220730 16:27:58.706" endtime="20220730 16:27:59.021"/>
+</kw>
+<kw name="When I click on title &quot;Blouses&quot;" library="menu_navigation">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${TITLE_BLOUSES}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220730 16:27:59.023" level="INFO">Clicking element '//a[@title='Blouses']'.</msg>
+<status status="PASS" starttime="20220730 16:27:59.022" endtime="20220730 16:28:02.049"/>
+</kw>
+<status status="PASS" starttime="20220730 16:27:59.022" endtime="20220730 16:28:02.049"/>
+</kw>
+<kw name="Then I verify the page contain blouses" library="menu_navigation">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Blouses</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20220730 16:28:02.082" level="INFO">Current page contains text 'Blouses'.</msg>
+<status status="PASS" starttime="20220730 16:28:02.051" endtime="20220730 16:28:02.082"/>
+</kw>
+<status status="PASS" starttime="20220730 16:28:02.050" endtime="20220730 16:28:02.083"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220730 16:28:02.083" endtime="20220730 16:28:05.194"/>
+</kw>
+<status status="PASS" starttime="20220730 16:27:49.021" endtime="20220730 16:28:05.196"/>
+</test>
+<test id="s1-t5" name="Test case 05 - test link Dresses" line="34">
+<kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220730 16:28:05.204" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220730 16:28:05.203" endtime="20220730 16:28:06.846"/>
+</kw>
+<kw name="Given I am at automationpractice.com" library="navigation">
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220730 16:28:06.847" endtime="20220730 16:28:06.965"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220730 16:28:06.966" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
+<status status="PASS" starttime="20220730 16:28:06.966" endtime="20220730 16:28:14.835"/>
+</kw>
+<status status="PASS" starttime="20220730 16:28:06.847" endtime="20220730 16:28:14.836"/>
+</kw>
+<kw name="And I put mouse over title &quot;women&quot;" library="menu_navigation">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${TITLE_WOMEN}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220730 16:28:14.839" level="INFO">Simulating Mouse Over on element '//a[contains(@title,'Women')]'.</msg>
+<status status="PASS" starttime="20220730 16:28:14.838" endtime="20220730 16:28:15.154"/>
+</kw>
+<status status="PASS" starttime="20220730 16:28:14.838" endtime="20220730 16:28:15.154"/>
+</kw>
+<kw name="When I click on title &quot;Dresses&quot;" library="menu_navigation">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${TITLE_DRESSES}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220730 16:28:15.156" level="INFO">Clicking element '//a[@title='Dresses']'.</msg>
+<status status="PASS" starttime="20220730 16:28:15.155" endtime="20220730 16:28:17.229"/>
+</kw>
+<status status="PASS" starttime="20220730 16:28:15.155" endtime="20220730 16:28:17.229"/>
+</kw>
+<kw name="Then I verify the page contain Dresses" library="menu_navigation">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Dresses</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20220730 16:28:17.267" level="INFO">Current page contains text 'Dresses'.</msg>
+<status status="PASS" starttime="20220730 16:28:17.231" endtime="20220730 16:28:17.267"/>
+</kw>
+<status status="PASS" starttime="20220730 16:28:17.230" endtime="20220730 16:28:17.267"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220730 16:28:17.268" endtime="20220730 16:28:19.357"/>
+</kw>
+<status status="PASS" starttime="20220730 16:28:05.200" endtime="20220730 16:28:19.358"/>
+</test>
+<test id="s1-t6" name="Test case 06 - test link Casual Dresses" line="40">
+<kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220730 16:28:19.362" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220730 16:28:19.361" endtime="20220730 16:28:21.075"/>
+</kw>
+<kw name="Given I am at automationpractice.com" library="navigation">
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220730 16:28:21.077" endtime="20220730 16:28:21.198"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220730 16:28:21.198" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
+<status status="PASS" starttime="20220730 16:28:21.198" endtime="20220730 16:28:29.364"/>
+</kw>
+<status status="PASS" starttime="20220730 16:28:21.077" endtime="20220730 16:28:29.364"/>
+</kw>
+<kw name="And I put mouse over title &quot;women&quot;" library="menu_navigation">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${TITLE_WOMEN}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220730 16:28:29.366" level="INFO">Simulating Mouse Over on element '//a[contains(@title,'Women')]'.</msg>
+<status status="PASS" starttime="20220730 16:28:29.366" endtime="20220730 16:28:29.683"/>
+</kw>
+<status status="PASS" starttime="20220730 16:28:29.365" endtime="20220730 16:28:29.683"/>
+</kw>
+<kw name="When I click on title &quot;Casual Dresses&quot;" library="menu_navigation">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${TITLE_CASUAL_DRESSES}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220730 16:28:29.685" level="INFO">Clicking element '//a[@title='Casual Dresses']'.</msg>
+<status status="PASS" starttime="20220730 16:28:29.685" endtime="20220730 16:28:31.697"/>
+</kw>
+<status status="PASS" starttime="20220730 16:28:29.684" endtime="20220730 16:28:31.697"/>
+</kw>
+<kw name="Then I verify the page contain Casual Dresses" library="menu_navigation">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Casual Dresses</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20220730 16:28:31.726" level="INFO">Current page contains text 'Casual Dresses'.</msg>
+<status status="PASS" starttime="20220730 16:28:31.700" endtime="20220730 16:28:31.726"/>
+</kw>
+<status status="PASS" starttime="20220730 16:28:31.699" endtime="20220730 16:28:31.726"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220730 16:28:31.727" endtime="20220730 16:28:34.846"/>
+</kw>
+<status status="PASS" starttime="20220730 16:28:19.360" endtime="20220730 16:28:34.848"/>
+</test>
+<test id="s1-t7" name="Test case 07 - test link Evening Dresses" line="46">
+<kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220730 16:28:34.856" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220730 16:28:34.855" endtime="20220730 16:28:36.533"/>
+</kw>
+<kw name="Given I am at automationpractice.com" library="navigation">
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220730 16:28:36.537" endtime="20220730 16:28:36.711"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220730 16:28:36.712" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
+<status status="PASS" starttime="20220730 16:28:36.711" endtime="20220730 16:28:43.986"/>
+</kw>
+<status status="PASS" starttime="20220730 16:28:36.536" endtime="20220730 16:28:43.986"/>
+</kw>
+<kw name="And I put mouse over title &quot;women&quot;" library="menu_navigation">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${TITLE_WOMEN}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220730 16:28:43.988" level="INFO">Simulating Mouse Over on element '//a[contains(@title,'Women')]'.</msg>
+<status status="PASS" starttime="20220730 16:28:43.988" endtime="20220730 16:28:44.305"/>
+</kw>
+<status status="PASS" starttime="20220730 16:28:43.987" endtime="20220730 16:28:44.306"/>
+</kw>
+<kw name="When I click on title &quot;Evening Dresses&quot;" library="menu_navigation">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${TITLE_EVENING}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220730 16:28:44.307" level="INFO">Clicking element '//a[@title='Evening Dresses']'.</msg>
+<status status="PASS" starttime="20220730 16:28:44.307" endtime="20220730 16:28:46.754"/>
+</kw>
+<status status="PASS" starttime="20220730 16:28:44.306" endtime="20220730 16:28:46.754"/>
+</kw>
+<kw name="Then I verify the page contain Evening Dresses" library="menu_navigation">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Evening Dresses</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20220730 16:28:46.788" level="INFO">Current page contains text 'Evening Dresses'.</msg>
+<status status="PASS" starttime="20220730 16:28:46.756" endtime="20220730 16:28:46.788"/>
+</kw>
+<status status="PASS" starttime="20220730 16:28:46.755" endtime="20220730 16:28:46.789"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220730 16:28:46.794" endtime="20220730 16:28:48.915"/>
+</kw>
+<status status="PASS" starttime="20220730 16:28:34.852" endtime="20220730 16:28:48.916"/>
+</test>
+<test id="s1-t8" name="Test case 08 - test link Summer Dresses" line="52">
+<kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220730 16:28:48.919" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220730 16:28:48.919" endtime="20220730 16:28:50.534"/>
+</kw>
+<kw name="Given I am at automationpractice.com" library="navigation">
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220730 16:28:50.536" endtime="20220730 16:28:50.692"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220730 16:28:50.693" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
+<status status="PASS" starttime="20220730 16:28:50.692" endtime="20220730 16:28:58.249"/>
+</kw>
+<status status="PASS" starttime="20220730 16:28:50.535" endtime="20220730 16:28:58.250"/>
+</kw>
+<kw name="And I put mouse over title &quot;women&quot;" library="menu_navigation">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${TITLE_WOMEN}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220730 16:28:58.252" level="INFO">Simulating Mouse Over on element '//a[contains(@title,'Women')]'.</msg>
+<status status="PASS" starttime="20220730 16:28:58.251" endtime="20220730 16:28:58.565"/>
+</kw>
+<status status="PASS" starttime="20220730 16:28:58.250" endtime="20220730 16:28:58.565"/>
+</kw>
+<kw name="When I click on title &quot;Summer Dresses&quot;" library="menu_navigation">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${TITLE_SUMMER}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220730 16:28:58.567" level="INFO">Clicking element '//a[@title='Summer Dresses']'.</msg>
+<msg timestamp="20220730 16:29:01.200" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220730 16:29:01.201" level="FAIL">WebDriverException: Message: unknown error: unexpected command response
+  (Session info: chrome=103.0.5060.134)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x002B6463+2188387]
+	Ordinal0 [0x0024E461+1762401]
+	Ordinal0 [0x00163D78+802168]
+	Ordinal0 [0x00157210+750096]
+	Ordinal0 [0x0015675A+747354]
+	Ordinal0 [0x00155D3F+744767]
+	Ordinal0 [0x0015557C+742780]
+	Ordinal0 [0x00169BF3+826355]
+	Ordinal0 [0x001BCF6D+1167213]
+	Ordinal0 [0x001AC5F6+1099254]
+	Ordinal0 [0x00186BE0+945120]
+	Ordinal0 [0x00187AD6+948950]
+	GetHandleVerifier [0x005571F2+2712546]
+	GetHandleVerifier [0x0054886D+2652765]
+	GetHandleVerifier [0x0034002A+520730]
+	GetHandleVerifier [0x0033EE06+516086]
+	Ordinal0 [0x0025468B+1787531]
+	Ordinal0 [0x00258E88+1805960]
+	Ordinal0 [0x00258F75+1806197]
+	Ordinal0 [0x00261DF1+1842673]
+	BaseThreadInitThunk [0x759C336A+18]
+	RtlInitializeExceptionChain [0x77DF9902+99]
+	RtlInitializeExceptionChain [0x77DF98D5+54]
+</msg>
+<status status="FAIL" starttime="20220730 16:28:58.567" endtime="20220730 16:29:01.201"/>
+</kw>
+<status status="FAIL" starttime="20220730 16:28:58.566" endtime="20220730 16:29:01.202"/>
+</kw>
+<kw name="Then I verify the page contain Summer Dresses" library="menu_navigation">
+<status status="NOT RUN" starttime="20220730 16:29:01.203" endtime="20220730 16:29:01.203"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220730 16:29:01.203" endtime="20220730 16:29:03.375"/>
+</kw>
+<status status="FAIL" starttime="20220730 16:28:48.918" endtime="20220730 16:29:03.377">WebDriverException: Message: unknown error: unexpected command response
+  (Session info: chrome=103.0.5060.134)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x002B6463+2188387]
+	Ordinal0 [0x0024E461+1762401]
+	Ordinal0 [0x00163D78+802168]
+	Ordinal0 [0x00157210+750096]
+	Ordinal0 [0x0015675A+747354]
+	Ordinal0 [0x00155D3F+744767]
+	Ordinal0 [0x0015557C+742780]
+	Ordinal0 [0x00169BF3+826355]
+	Ordinal0 [0x001BCF6D+1167213]
+	Ordinal0 [0x001AC5F6+1099254]
+	Ordinal0 [0x00186BE0+945120]
+	Ordinal0 [0x00187AD6+948950]
+	GetHandleVerifier [0x005571F2+2712546]
+	GetHandleVerifier [0x0054886D+2652765]
+	GetHandleVerifier [0x0034002A+520730]
+	GetHandleVerifier [0x0033EE06+516086]
+	Ordinal0 [0x0025468B+1787531]
+	Ordinal0 [0x00258E88+1805960]
+	Ordinal0 [0x00258F75+1806197]
+	Ordinal0 [0x00261DF1+1842673]
+	BaseThreadInitThunk [0x759C336A+18]
+	RtlInitializeExceptionChain [0x77DF9902+99]
+	RtlInitializeExceptionChain [0x77DF98D5+54]
+</status>
+</test>
+<status status="FAIL" starttime="20220730 16:27:09.923" endtime="20220730 16:29:03.385"/>
+</suite>
+<statistics>
+<total>
+<stat pass="6" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="6" fail="2" skip="0" id="s1" name="Navigation Test">Navigation Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
