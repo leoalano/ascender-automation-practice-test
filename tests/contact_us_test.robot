@@ -2,12 +2,14 @@
 Documentation     Testing Contact us functionality. 
 Library           SeleniumLibrary
 Library           FakerLibrary
+
 Resource          ../resources/login.resource
 Resource          ../configs/config.resource
 Resource          ../resources/menu.resource
 Resource          ../resources/navigation.resource
 Resource          ../resources/contact.resource
 Resource          ../resources/footer.resource
+
 Test Setup        Open Browser          browser=chrome
 Test Teardown     Close All Browsers
 
@@ -42,16 +44,16 @@ Teste case 03 - Invalid email address
       And I submit the contact us form
      Then I should receive an error message       Invalid email address
 
-Teste case 04 - blank message error
+Teste case 04 - Blank message error
     Given I am at automationpractice.com
       And I enter "Contact Us" via the menu
      When I fill contact us form with "${VALID_EMAIL}" and "${ORDER_REF}" and ""
       And I submit the contact us form
-     Then I should receive an error message         The message cannot be blank.
+     Then I should receive an error message       The message cannot be blank.
 
-Teste case 05 - no subject heading selected
+Teste case 05 - No subject heading selected
     Given I am at automationpractice.com
       And I enter "Contact Us" via the menu
      When I fill contact us form without subject heading 
       And I submit the contact us form
-     Then I should receive an error message            Please select a subject from the list provided. 
+     Then I should receive an error message       Please select a subject from the list provided. 

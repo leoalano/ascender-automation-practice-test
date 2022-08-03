@@ -1,5 +1,6 @@
 *** Settings ***
 Resource    ../page_objects/cart_page.resource
+Resource    ../page_objects/menu_page.resource
 Resource    ../resources/login.resource
 
 *** Keywords ***
@@ -37,10 +38,10 @@ Acess website automationpractice.com
     Set Selenium Speed  0.3s      
 
 Enter menu "Sign in"   
-    Click Element                       locator=${SIGN_IN}
+    Click Element                       locator=${SIGN_IN_MENU_BUTTON}
     Title Should Be                     ${TITLE_PAGE_LOGIN}
     Page Should Contain Element         locator=${VALIDATE_PAGE_LOGIN}
-    Page Should Contain Element         locator=${VALIDATE_PAGE_LOGIN_2}
+    
 
 Enter the registered email in the Email address field
     Wait Until Element Is Visible        id=${EMAIL_FIELD}      timeout=2s    

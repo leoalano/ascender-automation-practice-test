@@ -20,3 +20,6 @@ ${CART_TITLE}                   cart_title
 ${BLOUSE_ADD_TO_CART_BUTTON}    xpath=//a[@data-id-product = 2]
 ${SUCESS_ADD_TO_CART}           Product successfully added to your shopping cart
 ${VALIDATE_PAGE_LOGIN1}         //h3[@class='page-subheading'][contains(.,'Already registered?')]
+${SIGN_IN}                      //a[@class='login']
+${TITLE_PAGE_LOGIN}             Login - My Store
+${VALIDATE_PAGE_LOGIN}          //h1[contains(.,'Authentication')]
