@@ -9,6 +9,13 @@ Resource          ../resources/navigation.resource
 Test Setup        Open Browser          browser=chrome
 Test Teardown     Close All Browsers
 
+*** Variables ***
+${VALID_EMAIL}                  compra_teste@gmail.com
+${VALID_PASSWORD}               12345
+${INVALID_EMAIL}                xurupitas
+${UNREGISTERED_EMAIL}           xurupitas@namanteiga.com.br
+${INCORRECT_PASSWORD}           wrong_password
+
 
 *** Test Cases ***
 Teste case 01 - Login successfully
