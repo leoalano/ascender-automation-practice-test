@@ -1,21 +1,23 @@
 *** Settings ***
-Documentation     Testing login with invalid e-mail.
+Documentation     Login Test Suite.
 Library           SeleniumLibrary
 Library           FakerLibrary
+
 Resource          ../resources/login.resource
 Resource          ../configs/config.resource
 Resource          ../resources/menu.resource
 Resource          ../resources/navigation.resource
+
 Test Setup        Open Browser          browser=chrome
 Test Teardown     Close All Browsers
 
 *** Variables ***
-${VALID_EMAIL}                  compra_teste@gmail.com
-${VALID_PASSWORD}               12345
-${INVALID_EMAIL}                xurupitas
-${UNREGISTERED_EMAIL}           xurupitas@namanteiga.com.br
-${INCORRECT_PASSWORD}           wrong_password
-
+${VALID_EMAIL}           compra_teste@gmail.com
+${VALID_PASSWORD}        12345
+${INVALID_EMAIL}         xurupitas
+${UNREGISTERED_EMAIL}    xurupitas@namanteiga.com.br
+${INCORRECT_PASSWORD}    wrong_password
+${EMPTY_PASSWORD}        #Sem atribuição de valor para variavel. TC#05-Login
 
 *** Test Cases ***
 Teste case 01 - Login successfully
@@ -46,14 +48,14 @@ Test case 04 - Try login with invalid e-mail
       And I submit login form
      Then I should see an error message   Invalid email address.
 
-Test case 05 - Login with empty passwd
+Test case 05 - Login with empty password
     Given I am at automationpractice.com
       And I enter menu "Sign in"
      When I fill login form with "${VALID_EMAIL}" and "${EMPTY_PASSWORD}"
       And I submit login form 
      Then I should see an error message  Password is required.
     
-Test Case 06 - Forgot Password
+Test case 06 - Forgot password
     Given I am at automationpractice.com
       And I enter menu "Sign in"
       And I click on "Forgot Password"

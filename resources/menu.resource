@@ -9,3 +9,6 @@ I enter menu "Sign in"
 I click on My Cart Button
     Wait Until Element Is Visible       ${MY_CART}
     Click Element                       ${MY_CART}
+
+I enter "Contact Us" via the menu
+    Click Element                       ${CONTACT_US}

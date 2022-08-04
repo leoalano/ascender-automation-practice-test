@@ -1,5 +1,6 @@
 *** Settings ***
 Resource    ../page_objects/cart_page.resource
+Resource    ../page_objects/menu_page.resource
 Resource    ../resources/login.resource
 
 *** Keywords ***     
