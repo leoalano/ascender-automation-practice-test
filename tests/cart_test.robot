@@ -6,6 +6,8 @@ Test Teardown  Close All Browsers
 
 Resource          ../resources/cart.resource
 Resource          ../configs/config.resource
+Resource          ../resources/navigation.resource
+Resource          ../resources/menu.resource
 
 *** Test Cases ***
 Test case 01 - Add product to cart
@@ -16,8 +18,8 @@ Test case 01 - Add product to cart
 Test case 02 - Cart item delete                     
     Acess website automationpractice.com
     Enter menu "Sign in"
-    Type the registered email in the field "email address"
-    Type the registered Password in the field "Password"
+    Enter the registered email in the Email address field
+    Enter the registered password in the Password field
     Click on button "Sign In"
     Click on the "Women"
     Move the mouse over the item
@@ -31,4 +33,3 @@ Test case 03 - Cart access
     Enter the registered email in the Email address field
     Enter the registered password in the Password field
     Click on button "Sign In"
-    Click on My Cart Element
