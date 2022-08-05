@@ -1,169 +1,239 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.4 on win32)" generated="20220803 21:46:50.041" rpa="false" schemaversion="3">
-<suite id="s1" name="Create An Account Test" source="C:\Users\CHRISTIAN\workspace\ascender-automation-practice-test\tests\create_an_account_test.robot">
-<test id="s1-t1" name="Test case 09 - Create an account error zip code invalid format" line="79">
+<robot generator="Robot 5.0.1 (Python 3.10.5 on darwin)" generated="20220804 22:34:29.335" rpa="false" schemaversion="3">
+<suite id="s1" name="Search Test" source="/Users/leoalano/developer/Ascender/Automação de testes/04 Login/ascender-automation-practice-test/tests/search_test.robot">
+<test id="s1-t1" name="Test case 01 - Search with existing website term" line="22">
 <kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
 <arg>browser=chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220803 21:46:51.460" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20220803 21:46:51.459" endtime="20220803 21:46:54.394"/>
-</kw>
-<kw name="Email" library="FakerLibrary">
-<var>${NEW_EMAIL}</var>
-<msg timestamp="20220803 21:46:54.397" level="INFO">${NEW_EMAIL} = llewis@example.com</msg>
-<status status="PASS" starttime="20220803 21:46:54.395" endtime="20220803 21:46:54.397"/>
+<msg timestamp="20220804 22:34:29.647" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220804 22:34:29.647" endtime="20220804 22:34:31.879"/>
 </kw>
 <kw name="Given I am at automationpractice.com" library="navigation">
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220803 21:46:54.399" endtime="20220803 21:46:54.528"/>
+<status status="PASS" starttime="20220804 22:34:31.882" endtime="20220804 22:34:32.035"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220803 21:46:54.529" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
-<status status="PASS" starttime="20220803 21:46:54.528" endtime="20220803 21:47:00.778"/>
+<msg timestamp="20220804 22:34:32.036" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
+<status status="PASS" starttime="20220804 22:34:32.036" endtime="20220804 22:34:38.382"/>
 </kw>
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <arg>0.3s</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20220803 21:47:00.779" endtime="20220803 21:47:00.780"/>
+<status status="PASS" starttime="20220804 22:34:38.383" endtime="20220804 22:34:38.383"/>
 </kw>
-<status status="PASS" starttime="20220803 21:46:54.398" endtime="20220803 21:47:00.780"/>
+<status status="PASS" starttime="20220804 22:34:31.881" endtime="20220804 22:34:38.383"/>
 </kw>
-<kw name="And I enter menu &quot;Create an account&quot;" library="create_an_account">
-<arg>${NEW_EMAIL}</arg>
-<kw name="I enter menu &quot;Sign in&quot;" library="menu">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${SIGN_IN_MENU_BUTTON}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220803 21:47:00.786" level="INFO">Clicking element 'class=login'.</msg>
-<status status="PASS" starttime="20220803 21:47:00.784" endtime="20220803 21:47:06.270"/>
-</kw>
-<status status="PASS" starttime="20220803 21:47:00.783" endtime="20220803 21:47:06.271"/>
-</kw>
+<kw name="When I fill the field with &quot;${VALID_WORD}&quot;" library="search" sourcename="I fill the field with &quot;${VALID_WORD}&quot;">
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>${EMAIL_CREATE_INPUT}</arg>
-<arg>${NEW_EMAIL}</arg>
+<arg>${SEARCH_FIELD}</arg>
+<arg>${VALID_WORD}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220803 21:47:06.274" level="INFO">Typing text 'llewis@example.com' into text field 'id=email_create'.</msg>
-<status status="PASS" starttime="20220803 21:47:06.272" endtime="20220803 21:47:07.426"/>
+<msg timestamp="20220804 22:34:38.386" level="INFO">Typing text 'blouse' into text field '//input[@name='search_query']'.</msg>
+<status status="PASS" starttime="20220804 22:34:38.384" endtime="20220804 22:34:39.663"/>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${CREATE_EMAIL_BUTTON}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220803 21:47:07.427" level="INFO">Clicking element 'id=SubmitCreate'.</msg>
-<status status="PASS" starttime="20220803 21:47:07.426" endtime="20220803 21:47:08.155"/>
+<status status="PASS" starttime="20220804 22:34:38.384" endtime="20220804 22:34:39.663"/>
 </kw>
-<status status="PASS" starttime="20220803 21:47:00.782" endtime="20220803 21:47:08.155"/>
-</kw>
-<kw name="When I do not inform zip code field correctly" library="create_an_account">
+<kw name="And I submit the search" library="search">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${FIRST_NAME_FIELD}</arg>
+<arg>${SEARCH_BUTTON}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220803 21:47:08.157" endtime="20220803 21:47:11.439"/>
+<status status="PASS" starttime="20220804 22:34:39.665" endtime="20220804 22:34:40.309"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>${INPUT_GENDER}</arg>
+<arg>${SEARCH_BUTTON}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220803 21:47:11.440" level="INFO">Clicking element 'xpath=//input[@type='radio'][contains(@id,'gender1')]'.</msg>
-<status status="PASS" starttime="20220803 21:47:11.439" endtime="20220803 21:47:12.152"/>
+<msg timestamp="20220804 22:34:40.311" level="INFO">Clicking element '//button[@name='submit_search']'.</msg>
+<status status="PASS" starttime="20220804 22:34:40.310" endtime="20220804 22:34:43.786"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${FIRST_NAME_FIELD}</arg>
-<arg>${FIRST_NAME}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220803 21:47:12.153" level="INFO">Typing text 'Xurupita' into text field 'id=customer_firstname'.</msg>
-<status status="PASS" starttime="20220803 21:47:12.152" endtime="20220803 21:47:13.246"/>
+<status status="PASS" starttime="20220804 22:34:39.664" endtime="20220804 22:34:43.786"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${LAST_NAME_FIELD}</arg>
-<arg>${LAST_NAME}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220803 21:47:13.247" level="INFO">Typing text 'Cabulosa' into text field 'id=customer_lastname'.</msg>
-<status status="PASS" starttime="20220803 21:47:13.246" endtime="20220803 21:47:14.369"/>
+<kw name="Then I should receive valid results" library="search">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${BLOUSE_IMAGE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220804 22:34:43.787" endtime="20220804 22:34:44.434"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${PASSWORD_FIELD}</arg>
-<arg>${PASSWORD}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220803 21:47:14.370" level="INFO">Typing text '123456' into text field 'id=passwd'.</msg>
-<status status="PASS" starttime="20220803 21:47:14.369" endtime="20220803 21:47:15.455"/>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${BLOUSE_IMAGE}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220804 22:34:44.744" level="INFO">Current page contains element '//img[@alt='Blouse']'.</msg>
+<status status="PASS" starttime="20220804 22:34:44.434" endtime="20220804 22:34:44.744"/>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${COMPANY_FIELD}</arg>
-<arg>${COMPANY}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220803 21:47:15.456" level="INFO">Typing text 'Ascender TI' into text field 'id=company'.</msg>
-<status status="PASS" starttime="20220803 21:47:15.455" endtime="20220803 21:47:16.591"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${ADDRESS_FIELD}</arg>
-<arg>${ADDRESS}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220803 21:47:16.592" level="INFO">Typing text 'Rua das Xurupitas 1234' into text field 'id=address1'.</msg>
-<status status="PASS" starttime="20220803 21:47:16.591" endtime="20220803 21:47:17.749"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${CITY_FIELD}</arg>
-<arg>${CITY}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220803 21:47:17.750" level="INFO">Typing text 'Xurupitanopolis' into text field 'id=city'.</msg>
-<status status="PASS" starttime="20220803 21:47:17.749" endtime="20220803 21:47:18.921"/>
-</kw>
-<kw name="Select From List By Label" library="SeleniumLibrary">
-<arg>${STATE_FIELD}</arg>
-<arg>${STATE_NAME}</arg>
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<msg timestamp="20220803 21:47:18.922" level="INFO">Selecting options from selection list 'id=id_state' by label Alabama.</msg>
-<status status="PASS" starttime="20220803 21:47:18.921" endtime="20220803 21:47:21.240"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${PHONE_NUMBER_FIELD}</arg>
-<arg>${PHONE}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220803 21:47:21.242" level="INFO">Typing text '984739866' into text field 'id=phone'.</msg>
-<status status="PASS" starttime="20220803 21:47:21.241" endtime="20220803 21:47:22.411"/>
-</kw>
-<status status="PASS" starttime="20220803 21:47:08.156" endtime="20220803 21:47:22.411"/>
-</kw>
-<kw name="And I submit register form" library="create_an_account">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${REGISTER_BUTTON}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220803 21:47:22.414" level="INFO">Clicking element 'id=submitAccount'.</msg>
-<status status="PASS" starttime="20220803 21:47:22.413" endtime="20220803 21:47:25.855"/>
-</kw>
-<status status="PASS" starttime="20220803 21:47:22.412" endtime="20220803 21:47:25.855"/>
-</kw>
-<kw name="Then The error message &quot;The Zip/Postal code you've entered is invalid. It must follow this format: 00000&quot; is displayed." library="create_an_account">
-<kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>${ZIP_CODE_IS_REQUIRED}</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20220803 21:47:26.505" level="INFO">Current page contains text 'The Zip/Postal code you've entered is invalid. It must follow this format: 00000'.</msg>
-<status status="PASS" starttime="20220803 21:47:25.860" endtime="20220803 21:47:26.505"/>
-</kw>
-<status status="PASS" starttime="20220803 21:47:25.859" endtime="20220803 21:47:26.505"/>
+<status status="PASS" starttime="20220804 22:34:43.787" endtime="20220804 22:34:44.745"/>
 </kw>
 <kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220803 21:47:26.507" endtime="20220803 21:47:29.513"/>
+<status status="PASS" starttime="20220804 22:34:44.745" endtime="20220804 22:34:45.121"/>
 </kw>
-<status status="PASS" starttime="20220803 21:46:51.457" endtime="20220803 21:47:29.514"/>
+<status status="PASS" starttime="20220804 22:34:29.646" endtime="20220804 22:34:45.121"/>
 </test>
-<doc>Testing Create an email function.</doc>
-<status status="PASS" starttime="20220803 21:46:50.044" endtime="20220803 21:47:29.519"/>
+<test id="s1-t2" name="Test case 02 - Search with nonexistent website term" line="28">
+<kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220804 22:34:45.124" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220804 22:34:45.124" endtime="20220804 22:34:47.100"/>
+</kw>
+<kw name="Given I am at automationpractice.com" library="navigation">
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220804 22:34:47.101" endtime="20220804 22:34:47.571"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220804 22:34:47.572" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
+<status status="PASS" starttime="20220804 22:34:47.571" endtime="20220804 22:34:55.261"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.3s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20220804 22:34:55.261" endtime="20220804 22:34:55.262"/>
+</kw>
+<status status="PASS" starttime="20220804 22:34:47.101" endtime="20220804 22:34:55.262"/>
+</kw>
+<kw name="When I fill the field with &quot;${INVALID_WORD}&quot;" library="search" sourcename="I fill the field with &quot;${VALID_WORD}&quot;">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${SEARCH_FIELD}</arg>
+<arg>${VALID_WORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220804 22:34:55.265" level="INFO">Typing text 'xfdtf' into text field '//input[@name='search_query']'.</msg>
+<status status="PASS" starttime="20220804 22:34:55.264" endtime="20220804 22:34:56.373"/>
+</kw>
+<status status="PASS" starttime="20220804 22:34:55.263" endtime="20220804 22:34:56.374"/>
+</kw>
+<kw name="And I submit the search" library="search">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${SEARCH_BUTTON}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220804 22:34:56.375" endtime="20220804 22:34:57.017"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SEARCH_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220804 22:34:57.019" level="INFO">Clicking element '//button[@name='submit_search']'.</msg>
+<status status="PASS" starttime="20220804 22:34:57.018" endtime="20220804 22:34:59.899"/>
+</kw>
+<status status="PASS" starttime="20220804 22:34:56.374" endtime="20220804 22:34:59.899"/>
+</kw>
+<kw name="Then I should receive an error message" library="contact">
+<arg>No results were found for your search</arg>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${ERROR_MESSAGE}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220804 22:34:59.901" endtime="20220804 22:35:00.225"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${ERROR_MESSAGE}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20220804 22:35:00.851" level="INFO">Current page contains text 'No results were found for your search'.</msg>
+<status status="PASS" starttime="20220804 22:35:00.225" endtime="20220804 22:35:00.851"/>
+</kw>
+<status status="PASS" starttime="20220804 22:34:59.900" endtime="20220804 22:35:00.851"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220804 22:35:00.852" endtime="20220804 22:35:01.211"/>
+</kw>
+<status status="PASS" starttime="20220804 22:34:45.122" endtime="20220804 22:35:01.211"/>
+</test>
+<test id="s1-t3" name="Test case 03 - Empty search" line="34">
+<kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220804 22:35:01.215" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220804 22:35:01.214" endtime="20220804 22:35:02.823"/>
+</kw>
+<kw name="Given I am at automationpractice.com" library="navigation">
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220804 22:35:02.825" endtime="20220804 22:35:03.242"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220804 22:35:03.243" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
+<status status="PASS" starttime="20220804 22:35:03.243" endtime="20220804 22:35:09.486"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.3s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20220804 22:35:09.486" endtime="20220804 22:35:09.487"/>
+</kw>
+<status status="PASS" starttime="20220804 22:35:02.824" endtime="20220804 22:35:09.487"/>
+</kw>
+<kw name="When I fill the field with &quot;&quot;" library="search" sourcename="I fill the field with &quot;${VALID_WORD}&quot;">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${SEARCH_FIELD}</arg>
+<arg>${VALID_WORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220804 22:35:09.490" level="INFO">Typing text '' into text field '//input[@name='search_query']'.</msg>
+<status status="PASS" starttime="20220804 22:35:09.489" endtime="20220804 22:35:10.560"/>
+</kw>
+<status status="PASS" starttime="20220804 22:35:09.488" endtime="20220804 22:35:10.560"/>
+</kw>
+<kw name="And I submit the search" library="search">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${SEARCH_BUTTON}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220804 22:35:10.562" endtime="20220804 22:35:11.210"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SEARCH_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220804 22:35:11.211" level="INFO">Clicking element '//button[@name='submit_search']'.</msg>
+<status status="PASS" starttime="20220804 22:35:11.210" endtime="20220804 22:35:13.767"/>
+</kw>
+<status status="PASS" starttime="20220804 22:35:10.561" endtime="20220804 22:35:13.767"/>
+</kw>
+<kw name="Then I should receive an error message" library="contact">
+<arg>Please enter a search keyword</arg>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${ERROR_MESSAGE}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220804 22:35:13.769" endtime="20220804 22:35:14.093"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${ERROR_MESSAGE}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20220804 22:35:14.721" level="INFO">Current page contains text 'Please enter a search keyword'.</msg>
+<status status="PASS" starttime="20220804 22:35:14.093" endtime="20220804 22:35:14.721"/>
+</kw>
+<status status="PASS" starttime="20220804 22:35:13.768" endtime="20220804 22:35:14.721"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220804 22:35:14.722" endtime="20220804 22:35:15.083"/>
+</kw>
+<status status="PASS" starttime="20220804 22:35:01.213" endtime="20220804 22:35:15.083"/>
+</test>
+<doc>Testing Search functionality.</doc>
+<status status="PASS" starttime="20220804 22:34:29.339" endtime="20220804 22:35:15.085"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Create An Account Test">Create An Account Test</stat>
+<stat pass="3" fail="0" skip="0" id="s1" name="Search Test">Search Test</stat>
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20220804 22:34:29.615" level="ERROR">Error in file '/Users/leoalano/developer/Ascender/Automação de testes/04 Login/ascender-automation-practice-test/tests/search_test.robot' on line 4: Importing library 'FakerLibrary' failed: ModuleNotFoundError: No module named 'FakerLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  /Library/Frameworks/Python.framework/Versions/3.10/bin
+  /Library/Frameworks/Python.framework/Versions/3.10/lib/python310.zip
+  /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10
+  /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/lib-dynload
+  /Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/site-packages</msg>
+<msg timestamp="20220804 22:34:29.621" level="ERROR">Error in file '/Users/leoalano/developer/Ascender/Automação de testes/04 Login/ascender-automation-practice-test/page_objects/login_page.resource' on line 14: Setting variable '======' failed: Invalid variable name '======='.</msg>
+<msg timestamp="20220804 22:34:29.622" level="ERROR">Error in file '/Users/leoalano/developer/Ascender/Automação de testes/04 Login/ascender-automation-practice-test/page_objects/login_page.resource' on line 25: Setting variable '&gt;&gt;&gt;&gt;&gt;&gt;&gt; main' failed: Invalid variable name '&gt;&gt;&gt;&gt;&gt;&gt;&gt; main'.</msg>
 </errors>
 </robot>
