@@ -1,7 +1,18 @@
 *** Settings ***
 Resource    ../page_objects/login_page.resource
+Resource    ../page_objects/menu_page.resource
 
 *** Keywords ***
+#TC02-Cart item delete(Corrigido)
+I fill login form with email registered"${EMAIL_REGISTERED}" and password registered"${PASSWORD_REGISTERED}"
+    Wait Until Element is Visible       ${EMAIL_INPUT} 
+    Wait Until Element is Visible       ${PASSWORD_INPUT}
+    Input Text       ${EMAIL_INPUT}     ${EMAIL_REGISTERED}
+    Input Password   ${PASSWORD_INPUT}  ${PASSWORD_REGISTERED}
+#...............................................................................#
+I click on button submit "Sign In"
+    Click Button                        ${BUTTON_SUBMIT_LOGIN}
+
 I fill login form with correct "${EMAIL_REGISTERED}" and correct"${PASSWORD_REGISTERED}"
     Wait Until Element is Visible       ${EMAIL_INPUT} 
     Wait Until Element is Visible       ${PASSWORD_INPUT}
@@ -38,7 +49,7 @@ I click on "Forgot Password"
 
 I fill the email field with my email
     Wait Until Element Is Visible       id=email
-    Input Text                          id=email    ${EMAIL_REGISTERED}  
+    Input Text                          id=email    ${EMAIL_REGISTERED}
 
 I submit my email
     Wait Until Element is Visible       ${RETRIEVE_PASSWORD_BUTTON}
@@ -61,17 +72,16 @@ I should see an error message
     Log                                 ${ERROR_MESSAGE}
     Wait Until Page Contains            ${ERROR_MESSAGE}
 
-I click on button submit "Sign In"
-    Click Button                        ${BUTTON_SUBMIT_LOGIN}
-
 I verify successful login
     Title Should Be                     ${TITLE_ACCOUNT}
 
 I verify if error message appears "There is 1 error"
     Wait Until Element is Visible       ${ERROR_MESSAGE}
 
-I fill login form with "${EMAIL_REGISTERED}" and "${PASSWORD_REGISTERED}"
-    Wait Until Element is Visible       ${EMAIL_INPUT} 
-    Wait Until Element is Visible       ${PASSWORD_INPUT}
-    Input Text       ${EMAIL_INPUT}     ${EMAIL_REGISTERED}
-    Input Password   ${PASSWORD_INPUT}  ${PASSWORD_REGISTERED}
+I should be logged in successfully
+    Wait Until Page Contains             My account
+    Page Should Contain                  My account
+
+I submit login form
+    Wait Until Element is Visible        ${SIGN_IN_BUTTON}
+    Click Element                        ${SIGN_IN_BUTTON}

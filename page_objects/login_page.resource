@@ -4,6 +4,7 @@ ${TITLE_ACCOUNT}                My account - My Store  #TC01-Successful Login
 ${FAKE_PASSWORD}                FakerLibrary.passwd     #TC03-Login with invalid passwd
 ${EMPTY_PASSWORD}               #Sem atribuição de valor para variavel. TC#05-Login
 ${EMAIL_INPUT}                  id=email    #TC01-Successful Login
+${EMAIL_CREATE_INPUT}           id=email_create  #TC01-Create an account(Chritian)
 ${PASSWORD_INPUT}               id=passwd   #TC01-Successful Login
 ${VALIDATION_AUTHENTICATION}    //li[contains(.,'Authentication failed.')]  #TC02-Cart item delete
 ${TITLE_PAGE_LOGIN}             Login - My Store    #TC02-Cart item delete

@@ -1,5 +1,6 @@
 *** Settings ***
 Resource    ../page_objects/cart_page.resource
+Resource    ../page_objects/menu_page.resource
 Resource    ../resources/login.resource
 
 *** Keywords ***
@@ -21,12 +22,12 @@ I move the mouse over the item          #TC02-Cart item delete
 
 I click on Proceed to checkout Element  #TC02-Cart item delete
     Wait Until Element is Visible      ${PROCEED}
-    Page Should Contain Element        locator=${VALID_MESSAGE_CART}
+    Page Should Contain Element        ${VALID_MESSAGE_CART}
     Click Element                      ${PROCEED}
 
 I click on the "trash"                  #TC02-Cart item delete
     Title Should Be                    ${TITLE_PAGE_ORDER}
-    Page Should Contain Element        id=cart_title   ${CART_TITLE} 
+    Page Should Contain Element        ${CART_TITLE} 
     Click Element                      ${ICON_TRASH}
 
 I verify item deletion                  #TC02-Cart item delete

@@ -2,12 +2,12 @@
 Documentation   Catalog feature tests suite.
 Library         SeleniumLibrary
 
-Test Setup     Open Browser    about:blank  ${BROWSER}
-Test Teardown  Close All Browsers
+Test Setup      Open Browser    about:blank  ${BROWSER}
+Test Teardown   Close All Browsers
 
-Resource       ../configs/config.resource
-Resource       ../resources/catalog.resource
-Resource       ../resources/navegation.resource
+Resource        ../configs/config.resource
+Resource        ../resources/catalog.resource
+Resource        ../resources/navigation.resource
 
 *** Test Cases ***
 Test case 01 - Click on image "couple"

@@ -2,14 +2,14 @@
 Documentation   Shopping cart feature tests suite.
 Library         SeleniumLibrary
 
-Test Setup     Open Browser    about:blank  ${BROWSER}
-Test Teardown  Close All Browsers
+Test Setup      Open Browser    about:blank  ${BROWSER}
+Test Teardown   Close All Browsers
 
-Resource       ../configs/config.resource
-Resource       ../resources/cart.resource
-Resource       ../resources/login.resource
-Resource       ../resources/menu.resource
-Resource       ../resources/navegation.resource
+Resource        ../configs/config.resource
+Resource        ../resources/cart.resource
+Resource        ../resources/login.resource
+Resource        ../resources/menu.resource
+Resource        ../resources/navigation.resource
 
 *** Variables ***
 ${EMAIL_REGISTERED}           christian.hernan@gmail.com
@@ -24,7 +24,7 @@ Test case 01 - Add product to cart
 Test case 02 - Cart item delete                     
     Given I am at automationpractice.com
       And I enter menu "Sign in"
-     When I fill login form with "${EMAIL_REGISTERED}" and "${PASSWORD_REGISTERED}"
+     When I fill login form with email registered"${EMAIL_REGISTERED}" and password registered"${PASSWORD_REGISTERED}"
       And I click on button submit "Sign In"
      When I click on the "Women"
       And I move the mouse over the item
@@ -35,14 +35,14 @@ Test case 02 - Cart item delete
 Test case 03 - Cart access
     Given I am at automationpractice.com
       And I enter menu "Sign in"
-     When I fill login form with "${EMAIL_REGISTERED}" and "${PASSWORD_REGISTERED}"
+     When I fill login form with email registered"${EMAIL_REGISTERED}" and password registered"${PASSWORD_REGISTERED}"
       And I click on button submit "Sign In"
      Then I click on My Cart Element
 
 Test case 04 - Verify empty cart
     Given I am at automationpractice.com
       And I enter menu "Sign in"
-     When I fill login form with "${EMAIL_REGISTERED}" and "${PASSWORD_REGISTERED}"
+     When I fill login form with email registered"${EMAIL_REGISTERED}" and password registered"${PASSWORD_REGISTERED}"
       And I click on button submit "Sign In"
      When I click on My Cart Element
      Then I verify page should be contain text

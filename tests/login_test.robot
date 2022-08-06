@@ -1,16 +1,16 @@
 *** Settings ***
-Documentation   Login feature tests suit.
+Documentation   Login feature tests suite.
 Library         SeleniumLibrary
 Library         FakerLibrary
 
-Test Setup     Open Browser    about:blank  ${BROWSER}
-Test Teardown  Close All Browsers
+Test Setup      Open Browser    about:blank  ${BROWSER}
+Test Teardown   Close All Browsers
 
-Resource       ../configs/config.resource
-Resource       ../resources/cart.resource
-Resource       ../resources/login.resource
-Resource       ../resources/menu.resource
-Resource       ../resources/navegation.resource
+Resource        ../configs/config.resource
+Resource        ../resources/cart.resource
+Resource        ../resources/login.resource
+Resource        ../resources/menu.resource
+Resource        ../resources/navigation.resource
 
 *** Variables ***
 ${EMAIL_REGISTERED}           christian.hernan@gmail.com
