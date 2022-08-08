@@ -1,8 +1,4 @@
 *** Settings ***
-Resource    ../page_objects/login_page.resource
-Resource    ../page_objects/menu_page.resource
-Resource    ../page_objects/contact_page.resource
-Resource    ../page_objects/footer_page.resource
 Resource    ../page_objects/search_page.resource
 
 *** Keywords ***

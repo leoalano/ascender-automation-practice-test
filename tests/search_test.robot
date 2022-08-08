@@ -36,6 +36,3 @@ Test case 03 - Empty search
      When I fill the field with ""
       And I submit the search
      Then I should receive an error message   Please enter a search keyword
-
-
-
