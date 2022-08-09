@@ -24,7 +24,7 @@ I fill login form with "${EMAIL_TEST_DATA}" and "${PASSWORD_TEST_DATA}"
     Input Text       ${EMAIL_INPUT}      ${EMAIL_TEST_DATA}
     Input Password   ${PASSWORD_INPUT}   ${PASSWORD_TEST_DATA}  
 
-I submit login form
+I submit login form                      #TC02-Cart item delete
     Wait Until Element is Visible        ${SIGN_IN_BUTTON}
     Click Element                        ${SIGN_IN_BUTTON}
 
@@ -36,3 +36,10 @@ I should see an error message
 I should be logged in successfully
     Wait Until Page Contains             My account
     Page Should Contain                  My account
+
+#TC02-Cart item delete(Corrigido)
+I fill login form with email registered"${EMAIL_REGISTERED}" and password registered"${PASSWORD_REGISTERED}"
+    Wait Until Element is Visible       ${EMAIL_INPUT} 
+    Wait Until Element is Visible       ${PASSWORD_INPUT}
+    Input Text       ${EMAIL_INPUT}     ${EMAIL_REGISTERED}
+    Input Password   ${PASSWORD_INPUT}  ${PASSWORD_REGISTERED}
