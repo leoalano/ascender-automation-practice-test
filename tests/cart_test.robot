@@ -1,13 +1,14 @@
 *** Settings ***
 Documentation     Shopping cart feature tests suite.
 Library           SeleniumLibrary
-Test Setup        Open Browser  browser=chrome
-Test Teardown     Close All Browsers
 
 Resource          ../resources/cart.resource
 Resource          ../configs/config.resource
 Resource          ../resources/navigation.resource
 Resource          ../resources/menu.resource
+
+Test Setup        Open Browser  browser=chrome
+Test Teardown     Close All Browsers
 
 *** Variables ***
 ${EMAIL_REGISTERED}           christian.hernan@gmail.com
