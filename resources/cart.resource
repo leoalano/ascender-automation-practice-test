@@ -4,60 +4,42 @@ Resource    ../page_objects/menu_page.resource
 Resource    ../resources/login.resource
 
 *** Keywords ***     
+I add product                          #TC01-Add product to cart
+    Mouse Over                         ${BLOUSE_IMAGE}
+    Click Element                      ${BLOUSE_ADD_TO_CART_BUTTON}
+    
+I confirm product add to cart          #TC01-Add product to cart
+    Page Should Contain                ${SUCESS_ADD_TO_CART}
 
-Click on the "Women"
+I click on the "Women"                 #TC02-Cart item delete
     Wait Until Element is Visible      ${WOMEN}
     Click Element                      ${WOMEN}
 
-Move the mouse over the item
+I move the mouse over the item         #TC02-Cart item delete
     Title Should Be                    ${TITLE_PAGE_WOMAN}
     Mouse Down On Image                ${FLOAT_ABOUT_ELEMENT}
     Click Element                      ${ADD_CART}
 
-Click on Proceed to checkout Element
-    Wait Until Element is Visible      ${PROCEED}
+I click on Proceed to checkout Element  #TC02-Cart item delete
     Page Should Contain Element        ${VALID_MESSAGE_CART}
+    Wait Until Element is Visible      ${PROCEED}
     Click Element                      ${PROCEED}
 
-Click on the "trash"
+I click on the "trash"                 #TC02-Cart item delete
     Title Should Be                    ${TITLE_PAGE_ORDER}
     Page Should Contain Element        ${CART_TITLE} 
     Click Element                      ${ICON_TRASH}
 
-Verify item deletion
+I verify item deletion                 #TC02-Cart item delete
     Wait Until Element is Visible      ${VALID_ALERT}
     Page Should Contain Element        ${VALID_ALERT}
 
-Acess website automationpractice.com
-    Maximize Browser Window
-    Go To                               ${URL} 
-    Set Selenium Speed                  0.3s      
+I click on My Cart Element             #TC03-Cart access
+    Wait Until Element Is Visible      ${MY_CART}
+    Click Element                      ${MY_CART}
+    Title Should Be                    ${TITLE_PAGE_ORDER} 
+    Page Should Contain Element        ${CART_TITLE}
 
-Enter menu "Sign in"   
-    Click Element                       ${SIGN_IN_MENU_BUTTON}
-    Title Should Be                     ${TITLE_PAGE_LOGIN}
-    Page Should Contain Element         ${VALIDATE_PAGE_LOGIN1}
-    #Page Should Contain Element         locator=${VALIDATE_PAGE_LOGIN_2}
-
-Enter the registered email in the Email address field
-    Wait Until Element Is Visible        ${EMAIL_INPUT}      timeout=2s    
-    Input Text                           ${EMAIL_INPUT}      ${VALID_EMAIL}
-
-Enter the registered password in the Password field
-    Input Text                          ${PASSWORD_INPUT}    ${VALID_PASSWORD}
-
-Click on button "Sign In"
-    Click Button                        ${SIGN_IN_BUTTON}
-
-Click on My Cart Element
-    Wait Until Element Is Visible       ${MY_CART}
-    Click Element                       ${MY_CART}
-    Title Should Be                     ${TITLE_PAGE_ORDER} 
-    Page Should Contain Element         ${CART_TITLE}
-
-I Add product
-    Mouse Over                  ${BLOUSE_IMAGE}
-    Click Element               ${BLOUSE_ADD_TO_CART_BUTTON}
-    
-Confirm product add to cart
-    Page Should Contain         ${SUCESS_ADD_TO_CART}
+I verify page should be contain text    #TC04-Verify empty Cart
+    Title Should Be                    ${TITLE_PAGE_ORDER}
+    Page Should Contain                ${EMPTY_CART_MSG}
