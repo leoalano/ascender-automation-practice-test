@@ -1,1028 +1,1025 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.4 on win32)" generated="20220809 20:49:04.008" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0.1 (Python 3.10.4 on win32)" generated="20220810 17:49:28.208" rpa="false" schemaversion="3">
 <suite id="s1" name="Catalog Test" source="C:\Users\Jacques Teixeira\Documents\ascender-automation-practice-test\tests\catalog_test.robot">
-<test id="s1-t1" name="Test case 01 - Click on image &quot;couple&quot;" line="13">
+<test id="s1-t1" name="Test case 01 - Click on image &quot;couple&quot;" line="14">
 <kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
 <arg>browser=chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220809 20:49:04.300" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20220809 20:49:04.300" endtime="20220809 20:49:05.614"/>
+<msg timestamp="20220810 17:49:28.494" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220810 17:49:28.493" endtime="20220810 17:49:29.924"/>
 </kw>
 <kw name="Given I am at automationpractice.com" library="navigation">
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220809 20:49:05.618" endtime="20220809 20:49:05.748"/>
+<status status="PASS" starttime="20220810 17:49:29.926" endtime="20220810 17:49:30.053"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220809 20:49:05.748" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
-<status status="PASS" starttime="20220809 20:49:05.748" endtime="20220809 20:49:12.309"/>
+<msg timestamp="20220810 17:49:30.053" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
+<status status="PASS" starttime="20220810 17:49:30.053" endtime="20220810 17:49:38.564"/>
 </kw>
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <arg>0.3s</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20220809 20:49:12.309" endtime="20220809 20:49:12.310"/>
+<status status="PASS" starttime="20220810 17:49:38.564" endtime="20220810 17:49:38.565"/>
 </kw>
-<status status="PASS" starttime="20220809 20:49:05.618" endtime="20220809 20:49:12.310"/>
+<status status="PASS" starttime="20220810 17:49:29.925" endtime="20220810 17:49:38.565"/>
 </kw>
-<kw name="And I click on image &quot;sample-1&quot;" library="catalog">
+<kw name="And I wait until element is visible &quot;${IMG_SAMPLE_1}&quot;" library="catalog" sourcename="I wait until element is visible &quot;${IMG}&quot;">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${IMG_SAMPLE_1}</arg>
+<arg>${IMG}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220809 20:49:12.312" endtime="20220809 20:49:12.954"/>
+<status status="PASS" starttime="20220810 17:49:38.567" endtime="20220810 17:49:39.230"/>
 </kw>
+<status status="PASS" starttime="20220810 17:49:38.566" endtime="20220810 17:49:39.230"/>
+</kw>
+<kw name="When I click on element slider_row" library="catalog">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${SLIDER_ROW}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220809 20:49:12.954" level="INFO">Clicking element '//div[@id='slider_row']'.</msg>
-<status status="PASS" starttime="20220809 20:49:12.954" endtime="20220809 20:49:19.354"/>
+<msg timestamp="20220810 17:49:39.233" level="INFO">Clicking element '//div[@id='slider_row']'.</msg>
+<status status="PASS" starttime="20220810 17:49:39.230" endtime="20220810 17:49:44.433"/>
 </kw>
-<status status="PASS" starttime="20220809 20:49:12.311" endtime="20220809 20:49:19.354"/>
+<status status="PASS" starttime="20220810 17:49:39.230" endtime="20220810 17:49:44.433"/>
 </kw>
-<kw name="Then I verify a successful redirect" library="catalog">
+<kw name="Then I verify a successful redirect!" library="catalog">
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>${TITLE_PAGE_PRESTASHOP}</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20220809 20:49:19.661" level="INFO">Page title is 'Crie e construa a sua loja online com PrestaShop'.</msg>
-<status status="PASS" starttime="20220809 20:49:19.354" endtime="20220809 20:49:19.661"/>
+<msg timestamp="20220810 17:49:44.746" level="INFO">Page title is 'Crie e construa a sua loja online com PrestaShop'.</msg>
+<status status="PASS" starttime="20220810 17:49:44.434" endtime="20220810 17:49:44.746"/>
 </kw>
-<status status="PASS" starttime="20220809 20:49:19.354" endtime="20220809 20:49:19.661"/>
+<status status="PASS" starttime="20220810 17:49:44.434" endtime="20220810 17:49:44.746"/>
 </kw>
 <kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220809 20:49:19.663" endtime="20220809 20:49:22.091"/>
+<status status="PASS" starttime="20220810 17:49:44.746" endtime="20220810 17:49:47.150"/>
 </kw>
-<status status="PASS" starttime="20220809 20:49:04.297" endtime="20220809 20:49:22.091"/>
+<status status="PASS" starttime="20220810 17:49:28.482" endtime="20220810 17:49:47.150"/>
 </test>
-<test id="s1-t2" name="Test case 02 - Click on image &quot;girls&quot;" line="18">
+<test id="s1-t2" name="Test case 02 - Click on image &quot;girls&quot;" line="20">
 <kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
 <arg>browser=chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220809 20:49:22.098" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20220809 20:49:22.097" endtime="20220809 20:49:23.362"/>
+<msg timestamp="20220810 17:49:47.157" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220810 17:49:47.156" endtime="20220810 17:49:48.422"/>
 </kw>
 <kw name="Given I am at automationpractice.com" library="navigation">
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220809 20:49:23.363" endtime="20220809 20:49:23.793"/>
+<status status="PASS" starttime="20220810 17:49:48.423" endtime="20220810 17:49:48.857"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220809 20:49:23.793" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
-<status status="PASS" starttime="20220809 20:49:23.793" endtime="20220809 20:49:29.690"/>
+<msg timestamp="20220810 17:49:48.857" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
+<status status="PASS" starttime="20220810 17:49:48.857" endtime="20220810 17:49:55.306"/>
 </kw>
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <arg>0.3s</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20220809 20:49:29.690" endtime="20220809 20:49:29.691"/>
+<status status="PASS" starttime="20220810 17:49:55.306" endtime="20220810 17:49:55.307"/>
 </kw>
-<status status="PASS" starttime="20220809 20:49:23.363" endtime="20220809 20:49:29.691"/>
+<status status="PASS" starttime="20220810 17:49:48.422" endtime="20220810 17:49:55.307"/>
 </kw>
-<kw name="And I click on image &quot;sample-2&quot;" library="catalog">
+<kw name="And I click on element button_next" library="catalog">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${BUTTON_NEXT}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220809 20:49:29.694" level="INFO">Clicking element '//a[@class='bx-next']'.</msg>
-<status status="PASS" starttime="20220809 20:49:29.693" endtime="20220809 20:49:30.404"/>
+<msg timestamp="20220810 17:49:55.311" level="INFO">Clicking element '//a[@class='bx-next']'.</msg>
+<status status="PASS" starttime="20220810 17:49:55.310" endtime="20220810 17:49:56.024"/>
 </kw>
+<status status="PASS" starttime="20220810 17:49:55.308" endtime="20220810 17:49:56.024"/>
+</kw>
+<kw name="When I wait until element is visible &quot;${IMG_SAMPLE_2}&quot;" library="catalog" sourcename="I wait until element is visible &quot;${IMG}&quot;">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${IMG_SAMPLE_2}</arg>
+<arg>${IMG}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220809 20:49:30.404" endtime="20220809 20:49:31.074"/>
+<status status="PASS" starttime="20220810 17:49:56.025" endtime="20220810 17:49:56.665"/>
 </kw>
+<status status="PASS" starttime="20220810 17:49:56.024" endtime="20220810 17:49:56.665"/>
+</kw>
+<kw name="And I click on element slider_row" library="catalog">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${SLIDER_ROW}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220809 20:49:31.074" level="INFO">Clicking element '//div[@id='slider_row']'.</msg>
-<status status="PASS" starttime="20220809 20:49:31.074" endtime="20220809 20:49:35.729"/>
+<msg timestamp="20220810 17:49:56.667" level="INFO">Clicking element '//div[@id='slider_row']'.</msg>
+<status status="PASS" starttime="20220810 17:49:56.665" endtime="20220810 17:50:01.468"/>
 </kw>
-<status status="PASS" starttime="20220809 20:49:29.692" endtime="20220809 20:49:35.729"/>
+<status status="PASS" starttime="20220810 17:49:56.665" endtime="20220810 17:50:01.468"/>
 </kw>
-<kw name="Then I verify a successful redirect" library="catalog">
+<kw name="Then I verify a successful redirect!" library="catalog">
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>${TITLE_PAGE_PRESTASHOP}</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20220809 20:49:36.042" level="INFO">Page title is 'Crie e construa a sua loja online com PrestaShop'.</msg>
-<status status="PASS" starttime="20220809 20:49:35.730" endtime="20220809 20:49:36.042"/>
+<msg timestamp="20220810 17:50:01.787" level="INFO">Page title is 'Crie e construa a sua loja online com PrestaShop'.</msg>
+<status status="PASS" starttime="20220810 17:50:01.470" endtime="20220810 17:50:01.787"/>
 </kw>
-<status status="PASS" starttime="20220809 20:49:35.730" endtime="20220809 20:49:36.042"/>
+<status status="PASS" starttime="20220810 17:50:01.469" endtime="20220810 17:50:01.787"/>
 </kw>
 <kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220809 20:49:36.042" endtime="20220809 20:49:38.432"/>
+<status status="PASS" starttime="20220810 17:50:01.787" endtime="20220810 17:50:04.191"/>
 </kw>
-<status status="PASS" starttime="20220809 20:49:22.095" endtime="20220809 20:49:38.433"/>
+<status status="PASS" starttime="20220810 17:49:47.155" endtime="20220810 17:50:04.191"/>
 </test>
-<test id="s1-t3" name="Test case 03 - Click on image &quot;girl&quot;" line="23">
+<test id="s1-t3" name="Test case 03 - Click on image &quot;girl&quot;" line="27">
 <kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
 <arg>browser=chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220809 20:49:38.438" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20220809 20:49:38.438" endtime="20220809 20:49:39.744"/>
+<msg timestamp="20220810 17:50:04.199" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220810 17:50:04.198" endtime="20220810 17:50:05.417"/>
 </kw>
 <kw name="Given I am at automationpractice.com" library="navigation">
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220809 20:49:39.745" endtime="20220809 20:49:40.185"/>
+<status status="PASS" starttime="20220810 17:50:05.419" endtime="20220810 17:50:05.854"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220809 20:49:40.185" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
-<status status="PASS" starttime="20220809 20:49:40.185" endtime="20220809 20:49:45.827"/>
+<msg timestamp="20220810 17:50:05.854" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
+<status status="PASS" starttime="20220810 17:50:05.854" endtime="20220810 17:50:12.544"/>
 </kw>
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <arg>0.3s</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20220809 20:49:45.827" endtime="20220809 20:49:45.828"/>
+<status status="PASS" starttime="20220810 17:50:12.544" endtime="20220810 17:50:12.545"/>
 </kw>
-<status status="PASS" starttime="20220809 20:49:39.745" endtime="20220809 20:49:45.828"/>
+<status status="PASS" starttime="20220810 17:50:05.418" endtime="20220810 17:50:12.546"/>
 </kw>
-<kw name="And I click on image &quot;sample-3&quot;" library="catalog">
+<kw name="And I click on element button_next" library="catalog">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${BUTTON_NEXT}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220809 20:49:45.831" level="INFO">Clicking element '//a[@class='bx-next']'.</msg>
-<status status="PASS" starttime="20220809 20:49:45.830" endtime="20220809 20:49:46.556"/>
+<msg timestamp="20220810 17:50:12.550" level="INFO">Clicking element '//a[@class='bx-next']'.</msg>
+<status status="PASS" starttime="20220810 17:50:12.549" endtime="20220810 17:50:13.262"/>
 </kw>
+<status status="PASS" starttime="20220810 17:50:12.547" endtime="20220810 17:50:13.262"/>
+</kw>
+<kw name="And I click on element button_next" library="catalog">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${BUTTON_NEXT}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220809 20:49:46.557" level="INFO">Clicking element '//a[@class='bx-next']'.</msg>
-<status status="PASS" starttime="20220809 20:49:46.556" endtime="20220809 20:49:47.229"/>
+<msg timestamp="20220810 17:50:13.264" level="INFO">Clicking element '//a[@class='bx-next']'.</msg>
+<status status="PASS" starttime="20220810 17:50:13.263" endtime="20220810 17:50:13.949"/>
 </kw>
+<status status="PASS" starttime="20220810 17:50:13.263" endtime="20220810 17:50:13.949"/>
+</kw>
+<kw name="And I wait until element is visible &quot;${IMG_SAMPLE_3}&quot;" library="catalog" sourcename="I wait until element is visible &quot;${IMG}&quot;">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${IMG_SAMPLE_3}</arg>
+<arg>${IMG}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220809 20:49:47.229" endtime="20220809 20:49:47.884"/>
+<status status="PASS" starttime="20220810 17:50:13.950" endtime="20220810 17:50:14.591"/>
 </kw>
+<status status="PASS" starttime="20220810 17:50:13.950" endtime="20220810 17:50:14.591"/>
+</kw>
+<kw name="When I click on element slider_row" library="catalog">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${SLIDER_ROW}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220809 20:49:47.884" level="INFO">Clicking element '//div[@id='slider_row']'.</msg>
-<status status="PASS" starttime="20220809 20:49:47.884" endtime="20220809 20:49:52.835"/>
+<msg timestamp="20220810 17:50:14.593" level="INFO">Clicking element '//div[@id='slider_row']'.</msg>
+<status status="PASS" starttime="20220810 17:50:14.591" endtime="20220810 17:50:19.365"/>
 </kw>
-<status status="PASS" starttime="20220809 20:49:45.829" endtime="20220809 20:49:52.835"/>
+<status status="PASS" starttime="20220810 17:50:14.591" endtime="20220810 17:50:19.365"/>
 </kw>
-<kw name="Then I verify a successful redirect" library="catalog">
+<kw name="Then I verify a successful redirect!" library="catalog">
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>${TITLE_PAGE_PRESTASHOP}</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20220809 20:49:53.156" level="INFO">Page title is 'Crie e construa a sua loja online com PrestaShop'.</msg>
-<status status="PASS" starttime="20220809 20:49:52.836" endtime="20220809 20:49:53.156"/>
+<msg timestamp="20220810 17:50:19.684" level="INFO">Page title is 'Crie e construa a sua loja online com PrestaShop'.</msg>
+<status status="PASS" starttime="20220810 17:50:19.365" endtime="20220810 17:50:19.684"/>
 </kw>
-<status status="PASS" starttime="20220809 20:49:52.836" endtime="20220809 20:49:53.156"/>
+<status status="PASS" starttime="20220810 17:50:19.365" endtime="20220810 17:50:19.684"/>
 </kw>
 <kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220809 20:49:53.156" endtime="20220809 20:49:55.682"/>
+<status status="PASS" starttime="20220810 17:50:19.684" endtime="20220810 17:50:22.055"/>
 </kw>
-<status status="PASS" starttime="20220809 20:49:38.436" endtime="20220809 20:49:55.682"/>
+<status status="PASS" starttime="20220810 17:50:04.197" endtime="20220810 17:50:22.055"/>
 </test>
-<test id="s1-t4" name="Test case 04 - Click on image &quot;Sale 25% Off&quot;" line="28">
+<test id="s1-t4" name="Test case 04 - Click on image &quot;Sale 25% Off&quot;" line="36">
 <kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
 <arg>browser=chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220809 20:49:55.690" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20220809 20:49:55.689" endtime="20220809 20:49:56.948"/>
+<msg timestamp="20220810 17:50:22.062" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220810 17:50:22.061" endtime="20220810 17:50:23.324"/>
 </kw>
 <kw name="Given I am at automationpractice.com" library="navigation">
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220809 20:49:56.949" endtime="20220809 20:49:57.375"/>
+<status status="PASS" starttime="20220810 17:50:23.325" endtime="20220810 17:50:23.773"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220809 20:49:57.375" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
-<status status="PASS" starttime="20220809 20:49:57.375" endtime="20220809 20:50:07.949"/>
+<msg timestamp="20220810 17:50:23.773" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
+<status status="PASS" starttime="20220810 17:50:23.773" endtime="20220810 17:50:33.722"/>
 </kw>
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <arg>0.3s</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20220809 20:50:07.949" endtime="20220809 20:50:07.949"/>
+<status status="PASS" starttime="20220810 17:50:33.722" endtime="20220810 17:50:33.722"/>
 </kw>
-<status status="PASS" starttime="20220809 20:49:56.949" endtime="20220809 20:50:07.950"/>
+<status status="PASS" starttime="20220810 17:50:23.324" endtime="20220810 17:50:33.722"/>
 </kw>
-<kw name="And I click on image &quot;banner_img6&quot;" library="catalog">
+<kw name="And I click on image &quot;${BANNER_IMG_06}&quot;" library="catalog" sourcename="I click on image &quot;${IMG}&quot;">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${BANNER_IMG_06}</arg>
+<arg>${IMG}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220809 20:50:07.951" endtime="20220809 20:50:08.599"/>
+<status status="PASS" starttime="20220810 17:50:33.723" endtime="20220810 17:50:34.369"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>${BANNER_IMG_06}</arg>
+<arg>${IMG}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220809 20:50:08.599" level="INFO">Clicking element '(//img[@class='item-img'])[1]'.</msg>
-<status status="PASS" starttime="20220809 20:50:08.599" endtime="20220809 20:50:13.220"/>
+<msg timestamp="20220810 17:50:34.369" level="INFO">Clicking element '(//img[@class='item-img'])[1]'.</msg>
+<status status="PASS" starttime="20220810 17:50:34.369" endtime="20220810 17:50:38.969"/>
 </kw>
-<status status="PASS" starttime="20220809 20:50:07.950" endtime="20220809 20:50:13.220"/>
+<status status="PASS" starttime="20220810 17:50:33.723" endtime="20220810 17:50:38.969"/>
 </kw>
-<kw name="Then I verify a successful redirect" library="catalog">
+<kw name="Then I verify a successful redirect!" library="catalog">
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>${TITLE_PAGE_PRESTASHOP}</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20220809 20:50:13.527" level="INFO">Page title is 'Crie e construa a sua loja online com PrestaShop'.</msg>
-<status status="PASS" starttime="20220809 20:50:13.221" endtime="20220809 20:50:13.528"/>
+<msg timestamp="20220810 17:50:39.282" level="INFO">Page title is 'Crie e construa a sua loja online com PrestaShop'.</msg>
+<status status="PASS" starttime="20220810 17:50:38.971" endtime="20220810 17:50:39.282"/>
 </kw>
-<status status="PASS" starttime="20220809 20:50:13.221" endtime="20220809 20:50:13.528"/>
+<status status="PASS" starttime="20220810 17:50:38.969" endtime="20220810 17:50:39.282"/>
 </kw>
 <kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220809 20:50:13.529" endtime="20220809 20:50:16.025"/>
+<status status="PASS" starttime="20220810 17:50:39.283" endtime="20220810 17:50:41.709"/>
 </kw>
-<status status="PASS" starttime="20220809 20:49:55.688" endtime="20220809 20:50:16.025"/>
+<status status="PASS" starttime="20220810 17:50:22.060" endtime="20220810 17:50:41.709"/>
 </test>
-<test id="s1-t5" name="Test case 05 - Click on image &quot;Summer 45% Off&quot;" line="33">
+<test id="s1-t5" name="Test case 05 - Click on image &quot;Summer 45% Off&quot;" line="41">
 <kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
 <arg>browser=chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220809 20:50:16.032" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20220809 20:50:16.031" endtime="20220809 20:50:17.325"/>
+<msg timestamp="20220810 17:50:41.717" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220810 17:50:41.716" endtime="20220810 17:50:42.995"/>
 </kw>
 <kw name="Given I am at automationpractice.com" library="navigation">
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220809 20:50:17.327" endtime="20220809 20:50:17.747"/>
+<status status="PASS" starttime="20220810 17:50:42.996" endtime="20220810 17:50:43.424"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220809 20:50:17.747" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
-<status status="PASS" starttime="20220809 20:50:17.747" endtime="20220809 20:50:24.278"/>
+<msg timestamp="20220810 17:50:43.424" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
+<status status="PASS" starttime="20220810 17:50:43.424" endtime="20220810 17:50:53.415"/>
 </kw>
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <arg>0.3s</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20220809 20:50:24.278" endtime="20220809 20:50:24.279"/>
+<status status="PASS" starttime="20220810 17:50:53.415" endtime="20220810 17:50:53.415"/>
 </kw>
-<status status="PASS" starttime="20220809 20:50:17.326" endtime="20220809 20:50:24.279"/>
+<status status="PASS" starttime="20220810 17:50:42.996" endtime="20220810 17:50:53.415"/>
 </kw>
-<kw name="And I click on image &quot;banner_img7&quot;" library="catalog">
+<kw name="And I click on image &quot;${BANNER_IMG_07}&quot;" library="catalog" sourcename="I click on image &quot;${IMG}&quot;">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${BANNER_IMG_07}</arg>
+<arg>${IMG}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220809 20:50:24.280" endtime="20220809 20:50:24.921"/>
+<status status="PASS" starttime="20220810 17:50:53.416" endtime="20220810 17:50:54.062"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>${BANNER_IMG_07}</arg>
+<arg>${IMG}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220809 20:50:24.922" level="INFO">Clicking element '(//img[@class='item-img'])[2]'.</msg>
-<status status="PASS" starttime="20220809 20:50:24.921" endtime="20220809 20:50:29.564"/>
+<msg timestamp="20220810 17:50:54.062" level="INFO">Clicking element '(//img[@class='item-img'])[2]'.</msg>
+<status status="PASS" starttime="20220810 17:50:54.062" endtime="20220810 17:50:58.594"/>
 </kw>
-<status status="PASS" starttime="20220809 20:50:24.280" endtime="20220809 20:50:29.564"/>
+<status status="PASS" starttime="20220810 17:50:53.416" endtime="20220810 17:50:58.594"/>
 </kw>
-<kw name="Then I verify a successful redirect" library="catalog">
+<kw name="Then I verify a successful redirect!" library="catalog">
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>${TITLE_PAGE_PRESTASHOP}</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20220809 20:50:29.880" level="INFO">Page title is 'Crie e construa a sua loja online com PrestaShop'.</msg>
-<status status="PASS" starttime="20220809 20:50:29.567" endtime="20220809 20:50:29.880"/>
+<msg timestamp="20220810 17:50:58.904" level="INFO">Page title is 'Crie e construa a sua loja online com PrestaShop'.</msg>
+<status status="PASS" starttime="20220810 17:50:58.595" endtime="20220810 17:50:58.904"/>
 </kw>
-<status status="PASS" starttime="20220809 20:50:29.564" endtime="20220809 20:50:29.880"/>
+<status status="PASS" starttime="20220810 17:50:58.595" endtime="20220810 17:50:58.904"/>
 </kw>
 <kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220809 20:50:29.880" endtime="20220809 20:50:32.273"/>
+<status status="PASS" starttime="20220810 17:50:58.904" endtime="20220810 17:51:01.429"/>
 </kw>
-<status status="PASS" starttime="20220809 20:50:16.030" endtime="20220809 20:50:32.273"/>
+<status status="PASS" starttime="20220810 17:50:41.715" endtime="20220810 17:51:01.429"/>
 </test>
-<test id="s1-t6" name="Test case 06 - Click on image &quot;Faded Short Sleeve T-shirts&quot;" line="37">
+<test id="s1-t6" name="Test case 06 - Click on image &quot;Faded Short Sleeve T-shirts&quot;" line="46">
 <kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
 <arg>browser=chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220809 20:50:32.279" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20220809 20:50:32.278" endtime="20220809 20:50:33.472"/>
+<msg timestamp="20220810 17:51:01.433" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220810 17:51:01.432" endtime="20220810 17:51:02.622"/>
 </kw>
 <kw name="Given I am at automationpractice.com" library="navigation">
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220809 20:50:33.474" endtime="20220809 20:50:33.904"/>
+<status status="PASS" starttime="20220810 17:51:02.624" endtime="20220810 17:51:03.053"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220809 20:50:33.904" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
-<status status="PASS" starttime="20220809 20:50:33.904" endtime="20220809 20:50:41.817"/>
+<msg timestamp="20220810 17:51:03.053" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
+<status status="PASS" starttime="20220810 17:51:03.053" endtime="20220810 17:51:13.601"/>
 </kw>
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <arg>0.3s</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20220809 20:50:41.817" endtime="20220809 20:50:41.818"/>
+<status status="PASS" starttime="20220810 17:51:13.601" endtime="20220810 17:51:13.601"/>
 </kw>
-<status status="PASS" starttime="20220809 20:50:33.473" endtime="20220809 20:50:41.818"/>
+<status status="PASS" starttime="20220810 17:51:02.623" endtime="20220810 17:51:13.601"/>
 </kw>
-<kw name="And I click on image &quot;Faded Short Sleeve T-shirts&quot;" library="catalog">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${FADED_SHORT_IMG}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220809 20:50:41.821" endtime="20220809 20:50:42.498"/>
-</kw>
+<kw name="And I put mouse over image &quot;${FADED_SHORT_IMG}&quot;" library="catalog" sourcename="I put mouse over image &quot;${IMG}&quot;">
 <kw name="Mouse Over" library="SeleniumLibrary">
-<arg>${FADED_SHORT_IMG}</arg>
+<arg>${IMG}</arg>
 <doc>Simulates hovering the mouse over the element ``locator``.</doc>
-<msg timestamp="20220809 20:50:42.498" level="INFO">Simulating Mouse Over on element '(//img[@itemprop='image'])[1]'.</msg>
-<status status="PASS" starttime="20220809 20:50:42.498" endtime="20220809 20:50:43.415"/>
+<msg timestamp="20220810 17:51:13.603" level="INFO">Simulating Mouse Over on element '(//img[@itemprop='image'])[1]'.</msg>
+<status status="PASS" starttime="20220810 17:51:13.603" endtime="20220810 17:51:14.527"/>
+</kw>
+<status status="PASS" starttime="20220810 17:51:13.602" endtime="20220810 17:51:14.527"/>
+</kw>
+<kw name="When I click on image &quot;${FADED_SHORT_TITLE}&quot;" library="catalog" sourcename="I click on image &quot;${IMG}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${IMG}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220810 17:51:14.527" endtime="20220810 17:51:15.177"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>${FADED_SHORT_TITLE}</arg>
+<arg>${IMG}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220809 20:50:43.415" level="INFO">Clicking element '(//a[@title='Faded Short Sleeve T-shirts'])[2]'.</msg>
-<status status="PASS" starttime="20220809 20:50:43.415" endtime="20220809 20:50:46.128"/>
+<msg timestamp="20220810 17:51:15.177" level="INFO">Clicking element '(//a[@title='Faded Short Sleeve T-shirts'])[2]'.</msg>
+<status status="PASS" starttime="20220810 17:51:15.177" endtime="20220810 17:51:19.212"/>
 </kw>
-<status status="PASS" starttime="20220809 20:50:41.819" endtime="20220809 20:50:46.128"/>
+<status status="PASS" starttime="20220810 17:51:14.527" endtime="20220810 17:51:19.212"/>
 </kw>
-<kw name="Then I verify a successful redirect for product page &quot;Short&quot;" library="catalog">
-<kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>Faded Short Sleeve T-shirts</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20220809 20:50:46.775" level="INFO">Current page contains text 'Faded Short Sleeve T-shirts'.</msg>
-<status status="PASS" starttime="20220809 20:50:46.129" endtime="20220809 20:50:46.775"/>
-</kw>
+<kw name="Then I verify a successful redirect for product page &quot;${FADED_SHORT_PAGE}&quot;" library="catalog" sourcename="I verify a successful redirect for product page &quot;${TITLE_PAGE}&quot;">
 <kw name="Title Should Be" library="SeleniumLibrary">
-<arg>Faded Short Sleeve T-shirts - My Store</arg>
+<arg>${TITLE_PAGE}</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20220809 20:50:47.078" level="INFO">Page title is 'Faded Short Sleeve T-shirts - My Store'.</msg>
-<status status="PASS" starttime="20220809 20:50:46.775" endtime="20220809 20:50:47.078"/>
+<msg timestamp="20220810 17:51:19.539" level="INFO">Page title is 'Faded Short Sleeve T-shirts - My Store'.</msg>
+<status status="PASS" starttime="20220810 17:51:19.215" endtime="20220810 17:51:19.539"/>
 </kw>
-<status status="PASS" starttime="20220809 20:50:46.129" endtime="20220809 20:50:47.078"/>
+<status status="PASS" starttime="20220810 17:51:19.214" endtime="20220810 17:51:19.540"/>
 </kw>
 <kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220809 20:50:47.078" endtime="20220809 20:50:49.456"/>
+<status status="PASS" starttime="20220810 17:51:19.541" endtime="20220810 17:51:21.960"/>
 </kw>
-<status status="PASS" starttime="20220809 20:50:32.277" endtime="20220809 20:50:49.456"/>
+<status status="PASS" starttime="20220810 17:51:01.432" endtime="20220810 17:51:21.960"/>
 </test>
-<test id="s1-t7" name="Test case 07 - Click on image &quot;Blouse&quot;" line="42">
+<test id="s1-t7" name="Test case 07 - Click on image &quot;Blouse&quot;" line="52">
 <kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
 <arg>browser=chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220809 20:50:49.463" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20220809 20:50:49.462" endtime="20220809 20:50:50.754"/>
+<msg timestamp="20220810 17:51:21.966" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220810 17:51:21.966" endtime="20220810 17:51:23.246"/>
 </kw>
 <kw name="Given I am at automationpractice.com" library="navigation">
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220809 20:50:50.755" endtime="20220809 20:50:51.179"/>
+<status status="PASS" starttime="20220810 17:51:23.247" endtime="20220810 17:51:23.678"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220809 20:50:51.179" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
-<status status="PASS" starttime="20220809 20:50:51.179" endtime="20220809 20:50:57.538"/>
+<msg timestamp="20220810 17:51:23.678" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
+<status status="PASS" starttime="20220810 17:51:23.678" endtime="20220810 17:51:30.150"/>
 </kw>
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <arg>0.3s</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20220809 20:50:57.539" endtime="20220809 20:50:57.539"/>
+<status status="PASS" starttime="20220810 17:51:30.150" endtime="20220810 17:51:30.151"/>
 </kw>
-<status status="PASS" starttime="20220809 20:50:50.755" endtime="20220809 20:50:57.540"/>
+<status status="PASS" starttime="20220810 17:51:23.247" endtime="20220810 17:51:30.151"/>
 </kw>
-<kw name="And I click on image &quot;Blouse&quot;" library="catalog">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${BLOUSE_IMG}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220809 20:50:57.543" endtime="20220809 20:50:58.203"/>
-</kw>
+<kw name="And I put mouse over image &quot;${BLOUSE_IMG}&quot;" library="catalog" sourcename="I put mouse over image &quot;${IMG}&quot;">
 <kw name="Mouse Over" library="SeleniumLibrary">
-<arg>${BLOUSE_IMG}</arg>
+<arg>${IMG}</arg>
 <doc>Simulates hovering the mouse over the element ``locator``.</doc>
-<msg timestamp="20220809 20:50:58.203" level="INFO">Simulating Mouse Over on element '(//img[@itemprop='image'])[2]'.</msg>
-<status status="PASS" starttime="20220809 20:50:58.203" endtime="20220809 20:50:59.143"/>
+<msg timestamp="20220810 17:51:30.154" level="INFO">Simulating Mouse Over on element '(//img[@itemprop='image'])[2]'.</msg>
+<status status="PASS" starttime="20220810 17:51:30.153" endtime="20220810 17:51:31.089"/>
+</kw>
+<status status="PASS" starttime="20220810 17:51:30.152" endtime="20220810 17:51:31.089"/>
+</kw>
+<kw name="When I click on image &quot;${BLOUSE_TITLE}&quot;" library="catalog" sourcename="I click on image &quot;${IMG}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${IMG}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220810 17:51:31.089" endtime="20220810 17:51:31.777"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>${BLOUSE_TITLE}</arg>
+<arg>${IMG}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220809 20:50:59.143" level="INFO">Clicking element '(//a[@title='Blouse'])[2]'.</msg>
-<status status="PASS" starttime="20220809 20:50:59.143" endtime="20220809 20:51:02.241"/>
+<msg timestamp="20220810 17:51:31.777" level="INFO">Clicking element '(//a[@title='Blouse'])[2]'.</msg>
+<status status="PASS" starttime="20220810 17:51:31.777" endtime="20220810 17:51:36.240"/>
 </kw>
-<status status="PASS" starttime="20220809 20:50:57.541" endtime="20220809 20:51:02.241"/>
+<status status="PASS" starttime="20220810 17:51:31.089" endtime="20220810 17:51:36.240"/>
 </kw>
-<kw name="Then I verify a successful redirect for product page &quot;Blouse&quot;" library="catalog">
-<kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>Blouse</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20220809 20:51:02.874" level="INFO">Current page contains text 'Blouse'.</msg>
-<status status="PASS" starttime="20220809 20:51:02.242" endtime="20220809 20:51:02.874"/>
-</kw>
+<kw name="Then I verify a successful redirect for product page &quot;${BLOUSE_PAGE}&quot;" library="catalog" sourcename="I verify a successful redirect for product page &quot;${TITLE_PAGE}&quot;">
 <kw name="Title Should Be" library="SeleniumLibrary">
-<arg>Blouse - My Store</arg>
+<arg>${TITLE_PAGE}</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20220809 20:51:03.177" level="INFO">Page title is 'Blouse - My Store'.</msg>
-<status status="PASS" starttime="20220809 20:51:02.874" endtime="20220809 20:51:03.177"/>
+<msg timestamp="20220810 17:51:36.549" level="INFO">Page title is 'Blouse - My Store'.</msg>
+<status status="PASS" starttime="20220810 17:51:36.242" endtime="20220810 17:51:36.549"/>
 </kw>
-<status status="PASS" starttime="20220809 20:51:02.242" endtime="20220809 20:51:03.177"/>
+<status status="PASS" starttime="20220810 17:51:36.241" endtime="20220810 17:51:36.549"/>
 </kw>
 <kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220809 20:51:03.177" endtime="20220809 20:51:05.660"/>
+<status status="PASS" starttime="20220810 17:51:36.549" endtime="20220810 17:51:38.924"/>
 </kw>
-<status status="PASS" starttime="20220809 20:50:49.461" endtime="20220809 20:51:05.660"/>
+<status status="PASS" starttime="20220810 17:51:21.965" endtime="20220810 17:51:38.924"/>
 </test>
-<test id="s1-t8" name="Test case 08 - Click on image &quot;Printed Dress1&quot;" line="47">
+<test id="s1-t8" name="Test case 08 - Click on image &quot;Printed Dress1&quot;" line="58">
 <kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
 <arg>browser=chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220809 20:51:05.668" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20220809 20:51:05.667" endtime="20220809 20:51:06.910"/>
+<msg timestamp="20220810 17:51:38.930" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220810 17:51:38.929" endtime="20220810 17:51:40.232"/>
 </kw>
 <kw name="Given I am at automationpractice.com" library="navigation">
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220809 20:51:06.913" endtime="20220809 20:51:07.364"/>
+<status status="PASS" starttime="20220810 17:51:40.233" endtime="20220810 17:51:40.668"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220809 20:51:07.364" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
-<status status="PASS" starttime="20220809 20:51:07.364" endtime="20220809 20:51:14.686"/>
+<msg timestamp="20220810 17:51:40.668" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
+<status status="PASS" starttime="20220810 17:51:40.668" endtime="20220810 17:51:53.907"/>
 </kw>
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <arg>0.3s</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20220809 20:51:14.687" endtime="20220809 20:51:14.688"/>
+<status status="PASS" starttime="20220810 17:51:53.907" endtime="20220810 17:51:53.907"/>
 </kw>
-<status status="PASS" starttime="20220809 20:51:06.912" endtime="20220809 20:51:14.688"/>
+<status status="PASS" starttime="20220810 17:51:40.232" endtime="20220810 17:51:53.908"/>
 </kw>
-<kw name="And I click on image &quot;Printed Dress1&quot;" library="catalog">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${P_DRESS_IMG1}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220809 20:51:14.692" endtime="20220809 20:51:15.348"/>
-</kw>
+<kw name="And I put mouse over image &quot;${P_DRESS_IMG1}&quot;" library="catalog" sourcename="I put mouse over image &quot;${IMG}&quot;">
 <kw name="Mouse Over" library="SeleniumLibrary">
-<arg>${P_DRESS_IMG1}</arg>
+<arg>${IMG}</arg>
 <doc>Simulates hovering the mouse over the element ``locator``.</doc>
-<msg timestamp="20220809 20:51:15.348" level="INFO">Simulating Mouse Over on element '(//img[@itemprop='image'])[3]'.</msg>
-<status status="PASS" starttime="20220809 20:51:15.348" endtime="20220809 20:51:16.288"/>
+<msg timestamp="20220810 17:51:53.909" level="INFO">Simulating Mouse Over on element '(//img[@itemprop='image'])[3]'.</msg>
+<status status="PASS" starttime="20220810 17:51:53.908" endtime="20220810 17:51:54.836"/>
+</kw>
+<status status="PASS" starttime="20220810 17:51:53.908" endtime="20220810 17:51:54.836"/>
+</kw>
+<kw name="When I click on image &quot;${P_DRESS_TITLE1}&quot;" library="catalog" sourcename="I click on image &quot;${IMG}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${IMG}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220810 17:51:54.836" endtime="20220810 17:51:55.499"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>${P_DRESS_TITLE1}</arg>
+<arg>${IMG}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220809 20:51:16.288" level="INFO">Clicking element '(//a[@title='Printed Dress'])[2]'.</msg>
-<status status="PASS" starttime="20220809 20:51:16.288" endtime="20220809 20:51:20.522"/>
+<msg timestamp="20220810 17:51:55.499" level="INFO">Clicking element '(//a[@title='Printed Dress'])[2]'.</msg>
+<status status="PASS" starttime="20220810 17:51:55.499" endtime="20220810 17:52:11.657"/>
 </kw>
-<status status="PASS" starttime="20220809 20:51:14.691" endtime="20220809 20:51:20.522"/>
+<status status="PASS" starttime="20220810 17:51:54.836" endtime="20220810 17:52:11.657"/>
 </kw>
-<kw name="Then I verify a successful redirect for product page &quot;Printed Dress1&quot;" library="catalog">
-<kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>Printed Dress</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20220809 20:51:21.156" level="INFO">Current page contains text 'Printed Dress'.</msg>
-<status status="PASS" starttime="20220809 20:51:20.523" endtime="20220809 20:51:21.156"/>
-</kw>
+<kw name="Then I verify a successful redirect for product page &quot;${P_DRESS_PAGE}&quot;" library="catalog" sourcename="I verify a successful redirect for product page &quot;${TITLE_PAGE}&quot;">
 <kw name="Title Should Be" library="SeleniumLibrary">
-<arg>Printed Dress - My Store</arg>
+<arg>${TITLE_PAGE}</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20220809 20:51:21.457" level="INFO">Page title is 'Printed Dress - My Store'.</msg>
-<status status="PASS" starttime="20220809 20:51:21.156" endtime="20220809 20:51:21.457"/>
+<msg timestamp="20220810 17:52:11.965" level="INFO">Page title is 'Printed Dress - My Store'.</msg>
+<status status="PASS" starttime="20220810 17:52:11.658" endtime="20220810 17:52:11.965"/>
 </kw>
-<status status="PASS" starttime="20220809 20:51:20.523" endtime="20220809 20:51:21.457"/>
+<status status="PASS" starttime="20220810 17:52:11.658" endtime="20220810 17:52:11.965"/>
 </kw>
 <kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220809 20:51:21.457" endtime="20220809 20:51:23.824"/>
+<status status="PASS" starttime="20220810 17:52:11.965" endtime="20220810 17:52:14.342"/>
 </kw>
-<status status="PASS" starttime="20220809 20:51:05.666" endtime="20220809 20:51:23.824"/>
+<status status="PASS" starttime="20220810 17:51:38.928" endtime="20220810 17:52:14.342"/>
 </test>
-<test id="s1-t9" name="Test case 09 - Click on image &quot;Printed Dress2&quot;" line="52">
+<test id="s1-t9" name="Test case 09 - Click on image &quot;Printed Dress2&quot;" line="64">
 <kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
 <arg>browser=chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220809 20:51:23.831" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20220809 20:51:23.831" endtime="20220809 20:51:25.133"/>
+<msg timestamp="20220810 17:52:14.348" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220810 17:52:14.347" endtime="20220810 17:52:15.584"/>
 </kw>
 <kw name="Given I am at automationpractice.com" library="navigation">
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220809 20:51:25.134" endtime="20220809 20:51:25.555"/>
+<status status="PASS" starttime="20220810 17:52:15.586" endtime="20220810 17:52:16.014"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220809 20:51:25.555" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
-<status status="PASS" starttime="20220809 20:51:25.555" endtime="20220809 20:51:33.366"/>
+<msg timestamp="20220810 17:52:16.014" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
+<status status="PASS" starttime="20220810 17:52:16.014" endtime="20220810 17:52:34.731"/>
 </kw>
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <arg>0.3s</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20220809 20:51:33.366" endtime="20220809 20:51:33.367"/>
+<status status="PASS" starttime="20220810 17:52:34.731" endtime="20220810 17:52:34.731"/>
 </kw>
-<status status="PASS" starttime="20220809 20:51:25.134" endtime="20220809 20:51:33.367"/>
+<status status="PASS" starttime="20220810 17:52:15.585" endtime="20220810 17:52:34.732"/>
 </kw>
-<kw name="And I click on image &quot;Printed Dress2&quot;" library="catalog">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${P_DRESS_IMG2}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220809 20:51:33.368" endtime="20220809 20:51:34.032"/>
-</kw>
+<kw name="And I put mouse over image &quot;${P_DRESS_IMG2}&quot;" library="catalog" sourcename="I put mouse over image &quot;${IMG}&quot;">
 <kw name="Mouse Over" library="SeleniumLibrary">
-<arg>${P_DRESS_IMG2}</arg>
+<arg>${IMG}</arg>
 <doc>Simulates hovering the mouse over the element ``locator``.</doc>
-<msg timestamp="20220809 20:51:34.033" level="INFO">Simulating Mouse Over on element '(//img[@itemprop='image'])[4]'.</msg>
-<status status="PASS" starttime="20220809 20:51:34.032" endtime="20220809 20:51:34.956"/>
+<msg timestamp="20220810 17:52:34.733" level="INFO">Simulating Mouse Over on element '(//img[@itemprop='image'])[4]'.</msg>
+<status status="PASS" starttime="20220810 17:52:34.733" endtime="20220810 17:52:35.670"/>
+</kw>
+<status status="PASS" starttime="20220810 17:52:34.732" endtime="20220810 17:52:35.670"/>
+</kw>
+<kw name="When I click on image &quot;${P_DRESS_TITLE2}&quot;" library="catalog" sourcename="I click on image &quot;${IMG}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${IMG}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220810 17:52:35.671" endtime="20220810 17:52:36.308"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>${P_DRESS_TITLE2}</arg>
+<arg>${IMG}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220809 20:51:34.956" level="INFO">Clicking element '(//a[@title='Printed Dress'])[4]'.</msg>
-<status status="PASS" starttime="20220809 20:51:34.956" endtime="20220809 20:51:41.259"/>
+<msg timestamp="20220810 17:52:36.308" level="INFO">Clicking element '(//a[@title='Printed Dress'])[4]'.</msg>
+<status status="PASS" starttime="20220810 17:52:36.308" endtime="20220810 17:52:45.984"/>
 </kw>
-<status status="PASS" starttime="20220809 20:51:33.368" endtime="20220809 20:51:41.259"/>
+<status status="PASS" starttime="20220810 17:52:35.671" endtime="20220810 17:52:45.984"/>
 </kw>
-<kw name="Then I verify a successful redirect for product page &quot;Printed Dress2&quot;" library="catalog">
-<kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>Printed Dress</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20220809 20:51:41.885" level="INFO">Current page contains text 'Printed Dress'.</msg>
-<status status="PASS" starttime="20220809 20:51:41.261" endtime="20220809 20:51:41.885"/>
-</kw>
+<kw name="Then I verify a successful redirect for product page &quot;${P_DRESS_PAGE}&quot;" library="catalog" sourcename="I verify a successful redirect for product page &quot;${TITLE_PAGE}&quot;">
 <kw name="Title Should Be" library="SeleniumLibrary">
-<arg>Printed Dress - My Store</arg>
+<arg>${TITLE_PAGE}</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20220809 20:51:42.186" level="INFO">Page title is 'Printed Dress - My Store'.</msg>
-<status status="PASS" starttime="20220809 20:51:41.885" endtime="20220809 20:51:42.186"/>
+<msg timestamp="20220810 17:52:46.294" level="INFO">Page title is 'Printed Dress - My Store'.</msg>
+<status status="PASS" starttime="20220810 17:52:45.985" endtime="20220810 17:52:46.294"/>
 </kw>
-<status status="PASS" starttime="20220809 20:51:41.261" endtime="20220809 20:51:42.186"/>
+<status status="PASS" starttime="20220810 17:52:45.985" endtime="20220810 17:52:46.295"/>
 </kw>
 <kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220809 20:51:42.186" endtime="20220809 20:51:44.691"/>
+<status status="PASS" starttime="20220810 17:52:46.295" endtime="20220810 17:52:48.669"/>
 </kw>
-<status status="PASS" starttime="20220809 20:51:23.829" endtime="20220809 20:51:44.691"/>
+<status status="PASS" starttime="20220810 17:52:14.346" endtime="20220810 17:52:48.669"/>
 </test>
-<test id="s1-t10" name="Test case 10 - Click on image &quot;Printed Summer Dress1&quot;" line="57">
+<test id="s1-t10" name="Test case 10 - Click on image &quot;Printed Summer Dress1&quot;" line="70">
 <kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
 <arg>browser=chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220809 20:51:44.698" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20220809 20:51:44.698" endtime="20220809 20:51:46.002"/>
+<msg timestamp="20220810 17:52:48.676" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220810 17:52:48.675" endtime="20220810 17:52:49.888"/>
 </kw>
 <kw name="Given I am at automationpractice.com" library="navigation">
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220809 20:51:46.003" endtime="20220809 20:51:46.442"/>
+<status status="PASS" starttime="20220810 17:52:49.889" endtime="20220810 17:52:50.334"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220809 20:51:46.442" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
-<status status="PASS" starttime="20220809 20:51:46.442" endtime="20220809 20:51:53.719"/>
+<msg timestamp="20220810 17:52:50.334" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
+<status status="PASS" starttime="20220810 17:52:50.334" endtime="20220810 17:52:56.385"/>
 </kw>
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <arg>0.3s</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20220809 20:51:53.720" endtime="20220809 20:51:53.720"/>
+<status status="PASS" starttime="20220810 17:52:56.385" endtime="20220810 17:52:56.385"/>
 </kw>
-<status status="PASS" starttime="20220809 20:51:46.003" endtime="20220809 20:51:53.721"/>
+<status status="PASS" starttime="20220810 17:52:49.889" endtime="20220810 17:52:56.385"/>
 </kw>
-<kw name="And I click on image &quot;Printed Summer Dress1&quot;" library="catalog">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${P_SUMMER_DRESS_IMG1}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220809 20:51:53.723" endtime="20220809 20:51:54.388"/>
-</kw>
+<kw name="And I put mouse over image &quot;${P_SUMMER_DRESS_IMG1}&quot;" library="catalog" sourcename="I put mouse over image &quot;${IMG}&quot;">
 <kw name="Mouse Over" library="SeleniumLibrary">
-<arg>${P_SUMMER_DRESS_TITLE1}</arg>
+<arg>${IMG}</arg>
 <doc>Simulates hovering the mouse over the element ``locator``.</doc>
-<msg timestamp="20220809 20:51:54.389" level="INFO">Simulating Mouse Over on element '(//a[@title='Printed Summer Dress'])[2]'.</msg>
-<status status="PASS" starttime="20220809 20:51:54.388" endtime="20220809 20:51:55.336"/>
+<msg timestamp="20220810 17:52:56.387" level="INFO">Simulating Mouse Over on element '(//img[@itemprop='image'])[5]'.</msg>
+<status status="PASS" starttime="20220810 17:52:56.386" endtime="20220810 17:52:57.315"/>
+</kw>
+<status status="PASS" starttime="20220810 17:52:56.386" endtime="20220810 17:52:57.315"/>
+</kw>
+<kw name="When I click on image &quot;${P_SUMMER_DRESS_TITLE1}&quot;" library="catalog" sourcename="I click on image &quot;${IMG}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${IMG}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220810 17:52:57.315" endtime="20220810 17:52:57.969"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>${P_SUMMER_DRESS_TITLE1}</arg>
+<arg>${IMG}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220809 20:51:55.336" level="INFO">Clicking element '(//a[@title='Printed Summer Dress'])[2]'.</msg>
-<status status="PASS" starttime="20220809 20:51:55.336" endtime="20220809 20:52:02.468"/>
+<msg timestamp="20220810 17:52:57.969" level="INFO">Clicking element '(//a[@title='Printed Summer Dress'])[2]'.</msg>
+<status status="PASS" starttime="20220810 17:52:57.969" endtime="20220810 17:53:01.355"/>
 </kw>
-<status status="PASS" starttime="20220809 20:51:53.722" endtime="20220809 20:52:02.468"/>
+<status status="PASS" starttime="20220810 17:52:57.315" endtime="20220810 17:53:01.355"/>
 </kw>
-<kw name="Then I verify a successful redirect for product page &quot;Printed Summer Dress1&quot;" library="catalog">
-<kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>Printed Summer Dress</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20220809 20:52:03.099" level="INFO">Current page contains text 'Printed Summer Dress'.</msg>
-<status status="PASS" starttime="20220809 20:52:02.470" endtime="20220809 20:52:03.099"/>
-</kw>
+<kw name="Then I verify a successful redirect for product page &quot;${P_SUMMER_DRESS_PAGE}&quot;" library="catalog" sourcename="I verify a successful redirect for product page &quot;${TITLE_PAGE}&quot;">
 <kw name="Title Should Be" library="SeleniumLibrary">
-<arg>Printed Summer Dress - My Store</arg>
+<arg>${TITLE_PAGE}</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20220809 20:52:03.400" level="INFO">Page title is 'Printed Summer Dress - My Store'.</msg>
-<status status="PASS" starttime="20220809 20:52:03.099" endtime="20220809 20:52:03.400"/>
+<msg timestamp="20220810 17:53:01.668" level="INFO">Page title is 'Printed Summer Dress - My Store'.</msg>
+<status status="PASS" starttime="20220810 17:53:01.357" endtime="20220810 17:53:01.668"/>
 </kw>
-<status status="PASS" starttime="20220809 20:52:02.470" endtime="20220809 20:52:03.400"/>
+<status status="PASS" starttime="20220810 17:53:01.356" endtime="20220810 17:53:01.668"/>
 </kw>
 <kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220809 20:52:03.400" endtime="20220809 20:52:05.805"/>
+<status status="PASS" starttime="20220810 17:53:01.668" endtime="20220810 17:53:04.138"/>
 </kw>
-<status status="PASS" starttime="20220809 20:51:44.696" endtime="20220809 20:52:05.805"/>
+<status status="PASS" starttime="20220810 17:52:48.674" endtime="20220810 17:53:04.138"/>
 </test>
-<test id="s1-t11" name="Test case 11 - Click on image &quot;Printed Summer Dress2&quot;" line="62">
+<test id="s1-t11" name="Test case 11 - Click on image &quot;Printed Summer Dress2&quot;" line="76">
 <kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
 <arg>browser=chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220809 20:52:05.811" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20220809 20:52:05.811" endtime="20220809 20:52:07.083"/>
+<msg timestamp="20220810 17:53:04.145" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220810 17:53:04.144" endtime="20220810 17:53:05.511"/>
 </kw>
 <kw name="Given I am at automationpractice.com" library="navigation">
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220809 20:52:07.085" endtime="20220809 20:52:07.532"/>
+<status status="PASS" starttime="20220810 17:53:05.512" endtime="20220810 17:53:05.942"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220809 20:52:07.532" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
-<status status="PASS" starttime="20220809 20:52:07.532" endtime="20220809 20:52:19.656"/>
+<msg timestamp="20220810 17:53:05.942" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
+<status status="PASS" starttime="20220810 17:53:05.942" endtime="20220810 17:53:13.577"/>
 </kw>
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <arg>0.3s</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20220809 20:52:19.656" endtime="20220809 20:52:19.657"/>
+<status status="PASS" starttime="20220810 17:53:13.577" endtime="20220810 17:53:13.578"/>
 </kw>
-<status status="PASS" starttime="20220809 20:52:07.084" endtime="20220809 20:52:19.657"/>
+<status status="PASS" starttime="20220810 17:53:05.512" endtime="20220810 17:53:13.578"/>
 </kw>
-<kw name="And I click on image &quot;Printed Summer Dress2&quot;" library="catalog">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${P_SUMMER_DRESS_IMG2}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220809 20:52:19.659" endtime="20220809 20:52:20.329"/>
-</kw>
+<kw name="And I put mouse over image &quot;${P_SUMMER_DRESS_IMG2}&quot;" library="catalog" sourcename="I put mouse over image &quot;${IMG}&quot;">
 <kw name="Mouse Over" library="SeleniumLibrary">
-<arg>${P_SUMMER_DRESS_TITLE2}</arg>
+<arg>${IMG}</arg>
 <doc>Simulates hovering the mouse over the element ``locator``.</doc>
-<msg timestamp="20220809 20:52:20.329" level="INFO">Simulating Mouse Over on element '(//a[@title='Printed Summer Dress'])[4]'.</msg>
-<status status="PASS" starttime="20220809 20:52:20.329" endtime="20220809 20:52:21.269"/>
+<msg timestamp="20220810 17:53:13.582" level="INFO">Simulating Mouse Over on element '(//img[@itemprop='image'])[6]'.</msg>
+<status status="PASS" starttime="20220810 17:53:13.581" endtime="20220810 17:53:14.549"/>
+</kw>
+<status status="PASS" starttime="20220810 17:53:13.579" endtime="20220810 17:53:14.549"/>
+</kw>
+<kw name="When I click on image &quot;${P_SUMMER_DRESS_TITLE2}&quot;" library="catalog" sourcename="I click on image &quot;${IMG}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${IMG}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220810 17:53:14.549" endtime="20220810 17:53:15.187"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>${P_SUMMER_DRESS_TITLE2}</arg>
+<arg>${IMG}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220809 20:52:21.269" level="INFO">Clicking element '(//a[@title='Printed Summer Dress'])[4]'.</msg>
-<status status="PASS" starttime="20220809 20:52:21.269" endtime="20220809 20:52:30.843"/>
+<msg timestamp="20220810 17:53:15.187" level="INFO">Clicking element '(//a[@title='Printed Summer Dress'])[4]'.</msg>
+<status status="PASS" starttime="20220810 17:53:15.187" endtime="20220810 17:53:19.722"/>
 </kw>
-<status status="PASS" starttime="20220809 20:52:19.658" endtime="20220809 20:52:30.843"/>
+<status status="PASS" starttime="20220810 17:53:14.549" endtime="20220810 17:53:19.722"/>
 </kw>
-<kw name="Then I verify a successful redirect for product page &quot;Printed Summer Dress2&quot;" library="catalog">
-<kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>Printed Summer Dress</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20220809 20:52:31.468" level="INFO">Current page contains text 'Printed Summer Dress'.</msg>
-<status status="PASS" starttime="20220809 20:52:30.844" endtime="20220809 20:52:31.468"/>
-</kw>
+<kw name="Then I verify a successful redirect for product page &quot;${P_SUMMER_DRESS_PAGE}&quot;" library="catalog" sourcename="I verify a successful redirect for product page &quot;${TITLE_PAGE}&quot;">
 <kw name="Title Should Be" library="SeleniumLibrary">
-<arg>Printed Summer Dress - My Store</arg>
+<arg>${TITLE_PAGE}</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20220809 20:52:31.776" level="INFO">Page title is 'Printed Summer Dress - My Store'.</msg>
-<status status="PASS" starttime="20220809 20:52:31.468" endtime="20220809 20:52:31.776"/>
+<msg timestamp="20220810 17:53:20.037" level="INFO">Page title is 'Printed Summer Dress - My Store'.</msg>
+<status status="PASS" starttime="20220810 17:53:19.723" endtime="20220810 17:53:20.037"/>
 </kw>
-<status status="PASS" starttime="20220809 20:52:30.844" endtime="20220809 20:52:31.776"/>
+<status status="PASS" starttime="20220810 17:53:19.723" endtime="20220810 17:53:20.037"/>
 </kw>
 <kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220809 20:52:31.777" endtime="20220809 20:52:34.201"/>
+<status status="PASS" starttime="20220810 17:53:20.037" endtime="20220810 17:53:22.443"/>
 </kw>
-<status status="PASS" starttime="20220809 20:52:05.809" endtime="20220809 20:52:34.201"/>
+<status status="PASS" starttime="20220810 17:53:04.143" endtime="20220810 17:53:22.443"/>
 </test>
-<test id="s1-t12" name="Test case 12 - Click on image &quot;Printed Chiffon Dress&quot;" line="67">
+<test id="s1-t12" name="Test case 12 - Click on image &quot;Printed Chiffon Dress&quot;" line="82">
 <kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
 <arg>browser=chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220809 20:52:34.208" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20220809 20:52:34.208" endtime="20220809 20:52:35.478"/>
+<msg timestamp="20220810 17:53:22.450" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220810 17:53:22.450" endtime="20220810 17:53:23.669"/>
 </kw>
 <kw name="Given I am at automationpractice.com" library="navigation">
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220809 20:52:35.480" endtime="20220809 20:52:35.913"/>
+<status status="PASS" starttime="20220810 17:53:23.671" endtime="20220810 17:53:24.112"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220809 20:52:35.913" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
-<status status="PASS" starttime="20220809 20:52:35.913" endtime="20220809 20:52:42.957"/>
+<msg timestamp="20220810 17:53:24.112" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
+<status status="PASS" starttime="20220810 17:53:24.112" endtime="20220810 17:53:35.632"/>
 </kw>
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <arg>0.3s</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20220809 20:52:42.958" endtime="20220809 20:52:42.959"/>
+<status status="PASS" starttime="20220810 17:53:35.632" endtime="20220810 17:53:35.632"/>
 </kw>
-<status status="PASS" starttime="20220809 20:52:35.479" endtime="20220809 20:52:42.960"/>
+<status status="PASS" starttime="20220810 17:53:23.670" endtime="20220810 17:53:35.633"/>
 </kw>
-<kw name="And I click on image &quot;Printed Chiffon Dress&quot;" library="catalog">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${P_CHIFRON_DRESS_IMG}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220809 20:52:42.961" endtime="20220809 20:52:43.636"/>
-</kw>
+<kw name="And I put mouse over image &quot;${P_CHIFRON_DRESS_IMG}&quot;" library="catalog" sourcename="I put mouse over image &quot;${IMG}&quot;">
 <kw name="Mouse Over" library="SeleniumLibrary">
-<arg>${P_CHIFRON_DRESS_TITLE}</arg>
+<arg>${IMG}</arg>
 <doc>Simulates hovering the mouse over the element ``locator``.</doc>
-<msg timestamp="20220809 20:52:43.636" level="INFO">Simulating Mouse Over on element '(//a[@title='Printed Chiffon Dress'])[2]'.</msg>
-<status status="PASS" starttime="20220809 20:52:43.636" endtime="20220809 20:52:44.560"/>
+<msg timestamp="20220810 17:53:35.635" level="INFO">Simulating Mouse Over on element '(//img[@itemprop='image'])[7]'.</msg>
+<status status="PASS" starttime="20220810 17:53:35.635" endtime="20220810 17:53:36.559"/>
+</kw>
+<status status="PASS" starttime="20220810 17:53:35.634" endtime="20220810 17:53:36.559"/>
+</kw>
+<kw name="When I click on image &quot;${P_CHIFRON_DRESS_TITLE}&quot;" library="catalog" sourcename="I click on image &quot;${IMG}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${IMG}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220810 17:53:36.562" endtime="20220810 17:53:37.210"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>${P_CHIFRON_DRESS_TITLE}</arg>
+<arg>${IMG}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220809 20:52:44.560" level="INFO">Clicking element '(//a[@title='Printed Chiffon Dress'])[2]'.</msg>
-<status status="PASS" starttime="20220809 20:52:44.560" endtime="20220809 20:52:49.386"/>
+<msg timestamp="20220810 17:53:37.210" level="INFO">Clicking element '(//a[@title='Printed Chiffon Dress'])[2]'.</msg>
+<status status="PASS" starttime="20220810 17:53:37.210" endtime="20220810 17:53:51.107"/>
 </kw>
-<status status="PASS" starttime="20220809 20:52:42.961" endtime="20220809 20:52:49.386"/>
+<status status="PASS" starttime="20220810 17:53:36.559" endtime="20220810 17:53:51.107"/>
 </kw>
-<kw name="Then I verify a successful redirect for product page &quot;Printed Chiffon Dress&quot;" library="catalog">
-<kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>Printed Chiffon Dress</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20220809 20:52:50.014" level="INFO">Current page contains text 'Printed Chiffon Dress'.</msg>
-<status status="PASS" starttime="20220809 20:52:49.387" endtime="20220809 20:52:50.014"/>
-</kw>
+<kw name="Then I verify a successful redirect for product page &quot;${P_CHIFRON_DRESS_PAGE}&quot;" library="catalog" sourcename="I verify a successful redirect for product page &quot;${TITLE_PAGE}&quot;">
 <kw name="Title Should Be" library="SeleniumLibrary">
-<arg>Printed Chiffon Dress - My Store</arg>
+<arg>${TITLE_PAGE}</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20220809 20:52:50.326" level="INFO">Page title is 'Printed Chiffon Dress - My Store'.</msg>
-<status status="PASS" starttime="20220809 20:52:50.014" endtime="20220809 20:52:50.326"/>
+<msg timestamp="20220810 17:53:51.419" level="INFO">Page title is 'Printed Chiffon Dress - My Store'.</msg>
+<status status="PASS" starttime="20220810 17:53:51.108" endtime="20220810 17:53:51.419"/>
 </kw>
-<status status="PASS" starttime="20220809 20:52:49.387" endtime="20220809 20:52:50.326"/>
+<status status="PASS" starttime="20220810 17:53:51.108" endtime="20220810 17:53:51.419"/>
 </kw>
 <kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220809 20:52:50.326" endtime="20220809 20:52:52.825"/>
+<status status="PASS" starttime="20220810 17:53:51.420" endtime="20220810 17:53:53.804"/>
 </kw>
-<status status="PASS" starttime="20220809 20:52:34.206" endtime="20220809 20:52:52.825"/>
+<status status="PASS" starttime="20220810 17:53:22.448" endtime="20220810 17:53:53.804"/>
 </test>
-<test id="s1-t13" name="Test case 13 - Click on image &quot;Top Trends&quot;" line="72">
+<test id="s1-t13" name="Test case 13 - Click on image &quot;Top Trends&quot;" line="88">
 <kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
 <arg>browser=chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220809 20:52:52.832" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20220809 20:52:52.831" endtime="20220809 20:52:54.114"/>
+<msg timestamp="20220810 17:53:53.811" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220810 17:53:53.810" endtime="20220810 17:53:55.103"/>
 </kw>
 <kw name="Given I am at automationpractice.com" library="navigation">
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220809 20:52:54.117" endtime="20220809 20:52:54.547"/>
+<status status="PASS" starttime="20220810 17:53:55.104" endtime="20220810 17:53:55.538"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220809 20:52:54.547" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
-<status status="PASS" starttime="20220809 20:52:54.547" endtime="20220809 20:53:02.343"/>
+<msg timestamp="20220810 17:53:55.538" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
+<status status="PASS" starttime="20220810 17:53:55.538" endtime="20220810 17:54:07.805"/>
 </kw>
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <arg>0.3s</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20220809 20:53:02.343" endtime="20220809 20:53:02.344"/>
+<status status="PASS" starttime="20220810 17:54:07.805" endtime="20220810 17:54:07.805"/>
 </kw>
-<status status="PASS" starttime="20220809 20:52:54.116" endtime="20220809 20:53:02.344"/>
+<status status="PASS" starttime="20220810 17:53:55.103" endtime="20220810 17:54:07.805"/>
 </kw>
-<kw name="And I click on image &quot;Top Trends&quot;" library="catalog">
+<kw name="And I click on image &quot;${TOP_TRENDS_IMG}&quot;" library="catalog" sourcename="I click on image &quot;${IMG}&quot;">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${TOP_TRENDS_IMG}</arg>
+<arg>${IMG}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220809 20:53:02.346" endtime="20220809 20:53:02.992"/>
+<status status="PASS" starttime="20220810 17:54:07.807" endtime="20220810 17:54:08.455"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>${TOP_TRENDS_IMG}</arg>
+<arg>${IMG}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220809 20:53:02.992" level="INFO">Clicking element '(//img[@class='item-img'])[3]'.</msg>
-<status status="PASS" starttime="20220809 20:53:02.992" endtime="20220809 20:53:08.869"/>
+<msg timestamp="20220810 17:54:08.456" level="INFO">Clicking element '(//img[@class='item-img'])[3]'.</msg>
+<status status="PASS" starttime="20220810 17:54:08.455" endtime="20220810 17:54:13.611"/>
 </kw>
-<status status="PASS" starttime="20220809 20:53:02.345" endtime="20220809 20:53:08.869"/>
+<status status="PASS" starttime="20220810 17:54:07.807" endtime="20220810 17:54:13.611"/>
 </kw>
-<kw name="Then I verify a successful redirect" library="catalog">
+<kw name="Then I verify a successful redirect!" library="catalog">
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>${TITLE_PAGE_PRESTASHOP}</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20220809 20:53:09.181" level="INFO">Page title is 'Crie e construa a sua loja online com PrestaShop'.</msg>
-<status status="PASS" starttime="20220809 20:53:08.869" endtime="20220809 20:53:09.181"/>
+<msg timestamp="20220810 17:54:13.921" level="INFO">Page title is 'Crie e construa a sua loja online com PrestaShop'.</msg>
+<status status="PASS" starttime="20220810 17:54:13.612" endtime="20220810 17:54:13.921"/>
 </kw>
-<status status="PASS" starttime="20220809 20:53:08.869" endtime="20220809 20:53:09.181"/>
+<status status="PASS" starttime="20220810 17:54:13.612" endtime="20220810 17:54:13.921"/>
 </kw>
 <kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220809 20:53:09.181" endtime="20220809 20:53:11.610"/>
+<status status="PASS" starttime="20220810 17:54:13.921" endtime="20220810 17:54:16.304"/>
 </kw>
-<status status="PASS" starttime="20220809 20:52:52.830" endtime="20220809 20:53:11.610"/>
+<status status="PASS" starttime="20220810 17:53:53.808" endtime="20220810 17:54:16.304"/>
 </test>
-<test id="s1-t14" name="Test case 14 - Click on image &quot;Men's C&amp;J&quot;" line="77">
+<test id="s1-t14" name="Test case 14 - Click on image &quot;Men's C&amp;J&quot;" line="93">
 <kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
 <arg>browser=chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220809 20:53:11.616" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20220809 20:53:11.616" endtime="20220809 20:53:12.854"/>
+<msg timestamp="20220810 17:54:16.311" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220810 17:54:16.310" endtime="20220810 17:54:17.497"/>
 </kw>
 <kw name="Given I am at automationpractice.com" library="navigation">
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220809 20:53:12.856" endtime="20220809 20:53:13.279"/>
+<status status="PASS" starttime="20220810 17:54:17.498" endtime="20220810 17:54:17.946"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220809 20:53:13.279" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
-<status status="PASS" starttime="20220809 20:53:13.279" endtime="20220809 20:53:19.092"/>
+<msg timestamp="20220810 17:54:17.946" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
+<status status="PASS" starttime="20220810 17:54:17.946" endtime="20220810 17:54:31.186"/>
 </kw>
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <arg>0.3s</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20220809 20:53:19.092" endtime="20220809 20:53:19.093"/>
+<status status="PASS" starttime="20220810 17:54:31.186" endtime="20220810 17:54:31.187"/>
 </kw>
-<status status="PASS" starttime="20220809 20:53:12.855" endtime="20220809 20:53:19.094"/>
+<status status="PASS" starttime="20220810 17:54:17.498" endtime="20220810 17:54:31.188"/>
 </kw>
-<kw name="And I click on image &quot;Men's C&amp;J&quot;" library="catalog">
+<kw name="And I click on image &quot;${MENS_C&amp;J_IMG}&quot;" library="catalog" sourcename="I click on image &quot;${IMG}&quot;">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${MENS_C&amp;J_IMG}</arg>
+<arg>${IMG}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220809 20:53:19.097" endtime="20220809 20:53:19.742"/>
+<status status="PASS" starttime="20220810 17:54:31.191" endtime="20220810 17:54:31.850"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>${MENS_C&amp;J_IMG}</arg>
+<arg>${IMG}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220809 20:53:19.742" level="INFO">Clicking element '(//img[@class='item-img'])[4]'.</msg>
-<status status="PASS" starttime="20220809 20:53:19.742" endtime="20220809 20:53:24.432"/>
+<msg timestamp="20220810 17:54:31.851" level="INFO">Clicking element '(//img[@class='item-img'])[4]'.</msg>
+<status status="PASS" starttime="20220810 17:54:31.850" endtime="20220810 17:54:36.706"/>
 </kw>
-<status status="PASS" starttime="20220809 20:53:19.096" endtime="20220809 20:53:24.432"/>
+<status status="PASS" starttime="20220810 17:54:31.189" endtime="20220810 17:54:36.706"/>
 </kw>
-<kw name="Then I verify a successful redirect" library="catalog">
+<kw name="Then I verify a successful redirect!" library="catalog">
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>${TITLE_PAGE_PRESTASHOP}</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20220809 20:53:24.748" level="INFO">Page title is 'Crie e construa a sua loja online com PrestaShop'.</msg>
-<status status="PASS" starttime="20220809 20:53:24.435" endtime="20220809 20:53:24.748"/>
+<msg timestamp="20220810 17:54:37.016" level="INFO">Page title is 'Crie e construa a sua loja online com PrestaShop'.</msg>
+<status status="PASS" starttime="20220810 17:54:36.707" endtime="20220810 17:54:37.016"/>
 </kw>
-<status status="PASS" starttime="20220809 20:53:24.433" endtime="20220809 20:53:24.748"/>
+<status status="PASS" starttime="20220810 17:54:36.707" endtime="20220810 17:54:37.017"/>
 </kw>
 <kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220809 20:53:24.748" endtime="20220809 20:53:27.188"/>
+<status status="PASS" starttime="20220810 17:54:37.017" endtime="20220810 17:54:39.516"/>
 </kw>
-<status status="PASS" starttime="20220809 20:53:11.615" endtime="20220809 20:53:27.188"/>
+<status status="PASS" starttime="20220810 17:54:16.309" endtime="20220810 17:54:39.516"/>
 </test>
-<test id="s1-t15" name="Test case 15 - Click on image &quot;Women's C&amp;J&quot;" line="82">
+<test id="s1-t15" name="Test case 15 - Click on image &quot;Women's C&amp;J&quot;" line="98">
 <kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
 <arg>browser=chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220809 20:53:27.192" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20220809 20:53:27.191" endtime="20220809 20:53:28.386"/>
+<msg timestamp="20220810 17:54:39.523" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220810 17:54:39.522" endtime="20220810 17:54:40.817"/>
 </kw>
 <kw name="Given I am at automationpractice.com" library="navigation">
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220809 20:53:28.390" endtime="20220809 20:53:28.843"/>
+<status status="PASS" starttime="20220810 17:54:40.819" endtime="20220810 17:54:41.243"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220809 20:53:28.843" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
-<status status="PASS" starttime="20220809 20:53:28.843" endtime="20220809 20:53:37.344"/>
+<msg timestamp="20220810 17:54:41.243" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
+<status status="PASS" starttime="20220810 17:54:41.243" endtime="20220810 17:54:55.840"/>
 </kw>
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <arg>0.3s</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20220809 20:53:37.344" endtime="20220809 20:53:37.345"/>
+<status status="PASS" starttime="20220810 17:54:55.840" endtime="20220810 17:54:55.841"/>
 </kw>
-<status status="PASS" starttime="20220809 20:53:28.389" endtime="20220809 20:53:37.345"/>
+<status status="PASS" starttime="20220810 17:54:40.818" endtime="20220810 17:54:55.841"/>
 </kw>
-<kw name="And I click on image &quot;Women's C&amp;J&quot;" library="catalog">
+<kw name="And I click on image &quot;${WOMEN_C&amp;J_IMG}&quot;" library="catalog" sourcename="I click on image &quot;${IMG}&quot;">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${WOMEN_C&amp;J_IMG}</arg>
+<arg>${IMG}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220809 20:53:37.346" endtime="20220809 20:53:37.991"/>
+<status status="PASS" starttime="20220810 17:54:55.844" endtime="20220810 17:54:56.513"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>${WOMEN_C&amp;J_IMG}</arg>
+<arg>${IMG}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220809 20:53:37.991" level="INFO">Clicking element '(//img[@class='item-img'])[5]'.</msg>
-<status status="PASS" starttime="20220809 20:53:37.991" endtime="20220809 20:53:42.652"/>
+<msg timestamp="20220810 17:54:56.514" level="INFO">Clicking element '(//img[@class='item-img'])[5]'.</msg>
+<status status="PASS" starttime="20220810 17:54:56.513" endtime="20220810 17:55:03.479"/>
 </kw>
-<status status="PASS" starttime="20220809 20:53:37.346" endtime="20220809 20:53:42.652"/>
+<status status="PASS" starttime="20220810 17:54:55.843" endtime="20220810 17:55:03.479"/>
 </kw>
-<kw name="Then I verify a successful redirect" library="catalog">
+<kw name="Then I verify a successful redirect!" library="catalog">
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>${TITLE_PAGE_PRESTASHOP}</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20220809 20:53:42.968" level="INFO">Page title is 'Crie e construa a sua loja online com PrestaShop'.</msg>
-<status status="PASS" starttime="20220809 20:53:42.653" endtime="20220809 20:53:42.968"/>
+<msg timestamp="20220810 17:55:03.786" level="INFO">Page title is 'Crie e construa a sua loja online com PrestaShop'.</msg>
+<status status="PASS" starttime="20220810 17:55:03.479" endtime="20220810 17:55:03.786"/>
 </kw>
-<status status="PASS" starttime="20220809 20:53:42.653" endtime="20220809 20:53:42.968"/>
+<status status="PASS" starttime="20220810 17:55:03.479" endtime="20220810 17:55:03.786"/>
 </kw>
 <kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220809 20:53:42.970" endtime="20220809 20:53:45.425"/>
+<status status="PASS" starttime="20220810 17:55:03.787" endtime="20220810 17:55:06.300"/>
 </kw>
-<status status="PASS" starttime="20220809 20:53:27.190" endtime="20220809 20:53:45.425"/>
+<status status="PASS" starttime="20220810 17:54:39.521" endtime="20220810 17:55:06.300"/>
 </test>
-<test id="s1-t16" name="Test case 16 - Click on image &quot;Sunglasses &amp; Eyewear&quot;" line="87">
+<test id="s1-t16" name="Test case 16 - Click on image &quot;Sunglasses &amp; Eyewear&quot;" line="103">
 <kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
 <arg>browser=chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220809 20:53:45.432" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20220809 20:53:45.431" endtime="20220809 20:53:46.658"/>
+<msg timestamp="20220810 17:55:06.305" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220810 17:55:06.304" endtime="20220810 17:55:07.511"/>
 </kw>
 <kw name="Given I am at automationpractice.com" library="navigation">
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220809 20:53:46.660" endtime="20220809 20:53:47.095"/>
+<status status="PASS" starttime="20220810 17:55:07.512" endtime="20220810 17:55:07.943"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220809 20:53:47.095" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
-<status status="PASS" starttime="20220809 20:53:47.095" endtime="20220809 20:53:54.961"/>
+<msg timestamp="20220810 17:55:07.943" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
+<status status="PASS" starttime="20220810 17:55:07.943" endtime="20220810 17:55:21.572"/>
 </kw>
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <arg>0.3s</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20220809 20:53:54.961" endtime="20220809 20:53:54.962"/>
+<status status="PASS" starttime="20220810 17:55:21.572" endtime="20220810 17:55:21.573"/>
 </kw>
-<status status="PASS" starttime="20220809 20:53:46.659" endtime="20220809 20:53:54.963"/>
+<status status="PASS" starttime="20220810 17:55:07.512" endtime="20220810 17:55:21.573"/>
 </kw>
-<kw name="And I click on image &quot;Sunglasses &amp; Eyewear&quot;" library="catalog">
+<kw name="And I click on image &quot;${SUNGLASSES_&amp;_EYEWERE_IMG}&quot;" library="catalog" sourcename="I click on image &quot;${IMG}&quot;">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${SUNGLASSES_&amp;_EYEWERE_IMG}</arg>
+<arg>${IMG}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220809 20:53:54.965" endtime="20220809 20:53:55.611"/>
+<status status="PASS" starttime="20220810 17:55:21.576" endtime="20220810 17:55:22.268"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>${SUNGLASSES_&amp;_EYEWERE_IMG}</arg>
+<arg>${IMG}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220809 20:53:55.611" level="INFO">Clicking element '(//img[@class='item-img'])[6]'.</msg>
-<status status="PASS" starttime="20220809 20:53:55.611" endtime="20220809 20:54:00.596"/>
+<msg timestamp="20220810 17:55:22.268" level="INFO">Clicking element '(//img[@class='item-img'])[6]'.</msg>
+<status status="PASS" starttime="20220810 17:55:22.268" endtime="20220810 17:55:31.213"/>
 </kw>
-<status status="PASS" starttime="20220809 20:53:54.964" endtime="20220809 20:54:00.596"/>
+<status status="PASS" starttime="20220810 17:55:21.574" endtime="20220810 17:55:31.213"/>
 </kw>
-<kw name="Then I verify a successful redirect" library="catalog">
+<kw name="Then I verify a successful redirect!" library="catalog">
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>${TITLE_PAGE_PRESTASHOP}</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20220809 20:54:00.916" level="INFO">Page title is 'Crie e construa a sua loja online com PrestaShop'.</msg>
-<status status="PASS" starttime="20220809 20:54:00.596" endtime="20220809 20:54:00.917"/>
+<msg timestamp="20220810 17:55:31.530" level="INFO">Page title is 'Crie e construa a sua loja online com PrestaShop'.</msg>
+<status status="PASS" starttime="20220810 17:55:31.214" endtime="20220810 17:55:31.530"/>
 </kw>
-<status status="PASS" starttime="20220809 20:54:00.596" endtime="20220809 20:54:00.917"/>
+<status status="PASS" starttime="20220810 17:55:31.214" endtime="20220810 17:55:31.530"/>
 </kw>
 <kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220809 20:54:00.919" endtime="20220809 20:54:03.440"/>
+<status status="PASS" starttime="20220810 17:55:31.531" endtime="20220810 17:55:33.890"/>
 </kw>
-<status status="PASS" starttime="20220809 20:53:45.430" endtime="20220809 20:54:03.440"/>
+<status status="PASS" starttime="20220810 17:55:06.303" endtime="20220810 17:55:33.890"/>
 </test>
-<test id="s1-t17" name="Test case 17 - Click on image &quot;Savvy Trends Handbags&quot;" line="92">
+<test id="s1-t17" name="Test case 17 - Click on image &quot;Savvy Trends Handbags&quot;" line="108">
 <kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
 <arg>browser=chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220809 20:54:03.447" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20220809 20:54:03.447" endtime="20220809 20:54:04.729"/>
+<msg timestamp="20220810 17:55:33.898" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220810 17:55:33.897" endtime="20220810 17:55:35.102"/>
 </kw>
 <kw name="Given I am at automationpractice.com" library="navigation">
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220809 20:54:04.730" endtime="20220809 20:54:05.175"/>
+<status status="PASS" starttime="20220810 17:55:35.104" endtime="20220810 17:55:35.538"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220809 20:54:05.175" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
-<status status="PASS" starttime="20220809 20:54:05.175" endtime="20220809 20:54:11.808"/>
+<msg timestamp="20220810 17:55:35.538" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
+<status status="PASS" starttime="20220810 17:55:35.538" endtime="20220810 17:55:41.363"/>
 </kw>
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <arg>0.3s</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20220809 20:54:11.808" endtime="20220809 20:54:11.809"/>
+<status status="PASS" starttime="20220810 17:55:41.363" endtime="20220810 17:55:41.364"/>
 </kw>
-<status status="PASS" starttime="20220809 20:54:04.730" endtime="20220809 20:54:11.809"/>
+<status status="PASS" starttime="20220810 17:55:35.104" endtime="20220810 17:55:41.365"/>
 </kw>
-<kw name="And I click on image &quot;Savvy Trends Handbags&quot;" library="catalog">
+<kw name="And I click on image &quot;${SAVVY_TRENDS_HANDBAGS_IMG}&quot;" library="catalog" sourcename="I click on image &quot;${IMG}&quot;">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${SAVVY_TRENDS_HANDBAGS_IMG}</arg>
+<arg>${IMG}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220809 20:54:11.810" endtime="20220809 20:54:12.471"/>
+<status status="PASS" starttime="20220810 17:55:41.367" endtime="20220810 17:55:42.022"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>${SAVVY_TRENDS_HANDBAGS_IMG}</arg>
+<arg>${IMG}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220809 20:54:12.471" level="INFO">Clicking element '(//img[@class='item-img'])[7]'.</msg>
-<status status="PASS" starttime="20220809 20:54:12.471" endtime="20220809 20:54:17.152"/>
+<msg timestamp="20220810 17:55:42.022" level="INFO">Clicking element '(//img[@class='item-img'])[7]'.</msg>
+<status status="PASS" starttime="20220810 17:55:42.022" endtime="20220810 17:55:46.771"/>
 </kw>
-<status status="PASS" starttime="20220809 20:54:11.810" endtime="20220809 20:54:17.152"/>
+<status status="PASS" starttime="20220810 17:55:41.366" endtime="20220810 17:55:46.771"/>
 </kw>
-<kw name="Then I verify a successful redirect" library="catalog">
+<kw name="Then I verify a successful redirect!" library="catalog">
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>${TITLE_PAGE_PRESTASHOP}</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20220809 20:54:17.460" level="INFO">Page title is 'Crie e construa a sua loja online com PrestaShop'.</msg>
-<status status="PASS" starttime="20220809 20:54:17.154" endtime="20220809 20:54:17.460"/>
+<msg timestamp="20220810 17:55:47.086" level="INFO">Page title is 'Crie e construa a sua loja online com PrestaShop'.</msg>
+<status status="PASS" starttime="20220810 17:55:46.772" endtime="20220810 17:55:47.086"/>
 </kw>
-<status status="PASS" starttime="20220809 20:54:17.153" endtime="20220809 20:54:17.460"/>
+<status status="PASS" starttime="20220810 17:55:46.772" endtime="20220810 17:55:47.086"/>
 </kw>
 <kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220809 20:54:17.460" endtime="20220809 20:54:19.896"/>
+<status status="PASS" starttime="20220810 17:55:47.086" endtime="20220810 17:55:49.468"/>
 </kw>
-<status status="PASS" starttime="20220809 20:54:03.445" endtime="20220809 20:54:19.896"/>
+<status status="PASS" starttime="20220810 17:55:33.895" endtime="20220810 17:55:49.468"/>
 </test>
 <doc>Catalog feature tests suite.</doc>
-<status status="PASS" starttime="20220809 20:49:04.008" endtime="20220809 20:54:19.902"/>
+<status status="PASS" starttime="20220810 17:49:28.208" endtime="20220810 17:55:49.474"/>
 </suite>
 <statistics>
 <total>
