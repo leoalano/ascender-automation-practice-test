@@ -15,11 +15,8 @@ I click on image "${IMG}"
     Wait Until Element Is Visible           ${IMG}
     Click Element                           ${IMG}
 
-I verify a successful redirect!
-    Title Should Be                         ${TITLE_PAGE_PRESTASHOP}
+I verify a successful redirect! "${TITLE_PAGE}"
+    Title Should Be                         ${TITLE_PAGE}
 
 I put mouse over image "${IMG}"
     Mouse Over                              ${IMG}
-
-I verify a successful redirect for product page "${TITLE_PAGE}"
-    Title Should Be                         ${TITLE_PAGE}

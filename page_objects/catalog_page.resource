@@ -1,4 +1,6 @@
 *** Variables ***
+${HOME_PAGE_TITLE}                  My Store
+${SALE_70%}                         //img[@src='http://automationpractice.com/modules/blockbanner/img/sale70.png']
 ${SLIDER_ROW}                       //div[@id='slider_row']
 ${BUTTON_NEXT}                      //a[@class='bx-next']
 ${TITLE_PAGE_PRESTASHOP}            Crie e construa a sua loja online com PrestaShop
