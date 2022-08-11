@@ -1,286 +1,285 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.4 on win32)" generated="20220809 21:41:37.746" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0.1 (Python 3.10.4 on win32)" generated="20220811 00:08:48.654" rpa="false" schemaversion="3">
 <suite id="s1" name="Newsletter Test" source="C:\Users\Jacques Teixeira\Documents\ascender-automation-practice-test\tests\newsletter_test.robot">
-<test id="s1-t1" name="Test case 01 - Test with registered email" line="20">
+<test id="s1-t1" name="Test case 01 - Test with registered email" line="18">
 <kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
 <arg>browser=chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220809 21:41:38.605" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20220809 21:41:38.604" endtime="20220809 21:41:39.985"/>
+<msg timestamp="20220811 00:08:49.472" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220811 00:08:49.471" endtime="20220811 00:08:50.877"/>
 </kw>
 <kw name="Given I am at automationpractice.com" library="navigation">
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220809 21:41:39.986" endtime="20220809 21:41:40.107"/>
+<status status="PASS" starttime="20220811 00:08:50.879" endtime="20220811 00:08:51.003"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220809 21:41:40.107" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
-<status status="PASS" starttime="20220809 21:41:40.107" endtime="20220809 21:41:57.888"/>
+<msg timestamp="20220811 00:08:51.003" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
+<status status="PASS" starttime="20220811 00:08:51.003" endtime="20220811 00:09:02.795"/>
 </kw>
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <arg>0.3s</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20220809 21:41:57.888" endtime="20220809 21:41:57.888"/>
+<status status="PASS" starttime="20220811 00:09:02.796" endtime="20220811 00:09:02.796"/>
 </kw>
-<status status="PASS" starttime="20220809 21:41:39.986" endtime="20220809 21:41:57.888"/>
+<status status="PASS" starttime="20220811 00:08:50.878" endtime="20220811 00:09:02.796"/>
 </kw>
-<kw name="And I put mouse over field &quot;newsletter-input&quot;" library="footer">
+<kw name="And I put mouse over &quot;newsletter&quot; field" library="newsletter">
 <kw name="Mouse Over" library="SeleniumLibrary">
-<arg>${NEWSLETTER-INPUT}</arg>
+<arg>${NEWSLETTER_INPUT}</arg>
 <doc>Simulates hovering the mouse over the element ``locator``.</doc>
-<msg timestamp="20220809 21:41:57.891" level="INFO">Simulating Mouse Over on element 'id=newsletter-input'.</msg>
-<status status="PASS" starttime="20220809 21:41:57.890" endtime="20220809 21:41:58.796"/>
+<msg timestamp="20220811 00:09:02.799" level="INFO">Simulating Mouse Over on element 'id=newsletter-input'.</msg>
+<status status="PASS" starttime="20220811 00:09:02.798" endtime="20220811 00:09:03.701"/>
 </kw>
-<status status="PASS" starttime="20220809 21:41:57.889" endtime="20220809 21:41:58.796"/>
+<status status="PASS" starttime="20220811 00:09:02.797" endtime="20220811 00:09:03.701"/>
 </kw>
-<kw name="When I fill with registered email &quot;${EMAIL_REGISTERED}&quot;" library="newsletter" sourcename="I fill with registered email &quot;${EMAIL_REGISTERED}&quot;">
+<kw name="When I fill with &quot;${EMAIL_REGISTERED}&quot;" library="newsletter" sourcename="I fill with &quot;${EMAIL}&quot;">
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>${NEWSLETTER-INPUT}</arg>
-<arg>${EMAIL_REGISTERED}</arg>
+<arg>${NEWSLETTER_INPUT}</arg>
+<arg>${EMAIL}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220809 21:41:58.797" level="INFO">Typing text 'christian.hernan@gmail.com' into text field 'id=newsletter-input'.</msg>
-<status status="PASS" starttime="20220809 21:41:58.797" endtime="20220809 21:41:59.829"/>
+<msg timestamp="20220811 00:09:03.704" level="INFO">Typing text 'christian.hernan@gmail.com' into text field 'id=newsletter-input'.</msg>
+<status status="PASS" starttime="20220811 00:09:03.704" endtime="20220811 00:09:04.792"/>
 </kw>
-<status status="PASS" starttime="20220809 21:41:58.797" endtime="20220809 21:41:59.829"/>
+<status status="PASS" starttime="20220811 00:09:03.701" endtime="20220811 00:09:04.792"/>
 </kw>
-<kw name="And I click in &quot;submitnewsletter button&quot;" library="footer">
+<kw name="And I click in &quot;submitnewsletter button&quot;" library="newsletter">
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>${SUBMIT_NEWSLETTER}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220809 21:41:59.831" level="INFO">Clicking button 'name=submitNewsletter'.</msg>
-<status status="PASS" starttime="20220809 21:41:59.831" endtime="20220809 21:42:06.516"/>
+<msg timestamp="20220811 00:09:04.796" level="INFO">Clicking button 'name=submitNewsletter'.</msg>
+<status status="PASS" starttime="20220811 00:09:04.792" endtime="20220811 00:09:11.851"/>
 </kw>
-<status status="PASS" starttime="20220809 21:41:59.830" endtime="20220809 21:42:06.516"/>
+<status status="PASS" starttime="20220811 00:09:04.792" endtime="20220811 00:09:11.851"/>
 </kw>
-<kw name="Then I verify message &quot;already registered&quot;" library="newsletter">
+<kw name="Then I verify message &quot;${ALREADY_REGISTERED}&quot;" library="newsletter" sourcename="I verify message &quot;${MSG}&quot;">
 <kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>Newsletter : This email address is already registered.</arg>
+<arg>${MSG}</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20220809 21:42:07.144" level="INFO">Current page contains text 'Newsletter : This email address is already registered.'.</msg>
-<status status="PASS" starttime="20220809 21:42:06.518" endtime="20220809 21:42:07.144"/>
+<msg timestamp="20220811 00:09:12.491" level="INFO">Current page contains text 'Newsletter : This email address is already registered.'.</msg>
+<status status="PASS" starttime="20220811 00:09:11.852" endtime="20220811 00:09:12.491"/>
 </kw>
-<status status="PASS" starttime="20220809 21:42:06.517" endtime="20220809 21:42:07.144"/>
+<status status="PASS" starttime="20220811 00:09:11.852" endtime="20220811 00:09:12.491"/>
 </kw>
 <kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220809 21:42:07.145" endtime="20220809 21:42:09.529"/>
+<status status="PASS" starttime="20220811 00:09:12.492" endtime="20220811 00:09:14.928"/>
 </kw>
-<status status="PASS" starttime="20220809 21:41:38.601" endtime="20220809 21:42:09.529"/>
+<status status="PASS" starttime="20220811 00:08:49.466" endtime="20220811 00:09:14.928"/>
 </test>
-<test id="s1-t2" name="Test case 02 - Test with unregistered email" line="27">
+<test id="s1-t2" name="Test case 02 - Test with unregistered email" line="25">
 <kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
 <arg>browser=chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220809 21:42:09.537" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20220809 21:42:09.536" endtime="20220809 21:42:10.803"/>
+<msg timestamp="20220811 00:09:14.935" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220811 00:09:14.934" endtime="20220811 00:09:16.166"/>
 </kw>
 <kw name="Email" library="FakerLibrary">
-<var>${NEW_EMAIL}</var>
-<msg timestamp="20220809 21:42:10.804" level="INFO">${NEW_EMAIL} = juliecastro@example.com</msg>
-<status status="PASS" starttime="20220809 21:42:10.804" endtime="20220809 21:42:10.805"/>
+<var>${UNREGISTERED_EMAIL}</var>
+<msg timestamp="20220811 00:09:16.168" level="INFO">${UNREGISTERED_EMAIL} = stephen25@example.net</msg>
+<status status="PASS" starttime="20220811 00:09:16.167" endtime="20220811 00:09:16.168"/>
 </kw>
 <kw name="Given I am at automationpractice.com" library="navigation">
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220809 21:42:10.805" endtime="20220809 21:42:11.250"/>
+<status status="PASS" starttime="20220811 00:09:16.169" endtime="20220811 00:09:16.597"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220809 21:42:11.250" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
-<status status="PASS" starttime="20220809 21:42:11.250" endtime="20220809 21:42:25.488"/>
+<msg timestamp="20220811 00:09:16.597" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
+<status status="PASS" starttime="20220811 00:09:16.597" endtime="20220811 00:09:24.521"/>
 </kw>
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <arg>0.3s</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20220809 21:42:25.488" endtime="20220809 21:42:25.489"/>
+<status status="PASS" starttime="20220811 00:09:24.521" endtime="20220811 00:09:24.522"/>
 </kw>
-<status status="PASS" starttime="20220809 21:42:10.805" endtime="20220809 21:42:25.489"/>
+<status status="PASS" starttime="20220811 00:09:16.169" endtime="20220811 00:09:24.522"/>
 </kw>
-<kw name="And I put mouse over field &quot;newsletter-input&quot;" library="footer">
+<kw name="And I put mouse over &quot;newsletter&quot; field" library="newsletter">
 <kw name="Mouse Over" library="SeleniumLibrary">
-<arg>${NEWSLETTER-INPUT}</arg>
+<arg>${NEWSLETTER_INPUT}</arg>
 <doc>Simulates hovering the mouse over the element ``locator``.</doc>
-<msg timestamp="20220809 21:42:25.492" level="INFO">Simulating Mouse Over on element 'id=newsletter-input'.</msg>
-<status status="PASS" starttime="20220809 21:42:25.491" endtime="20220809 21:42:26.395"/>
+<msg timestamp="20220811 00:09:24.525" level="INFO">Simulating Mouse Over on element 'id=newsletter-input'.</msg>
+<status status="PASS" starttime="20220811 00:09:24.524" endtime="20220811 00:09:25.451"/>
 </kw>
-<status status="PASS" starttime="20220809 21:42:25.490" endtime="20220809 21:42:26.395"/>
+<status status="PASS" starttime="20220811 00:09:24.523" endtime="20220811 00:09:25.451"/>
 </kw>
-<kw name="When I fill with unregistered email" library="newsletter">
-<arg>${NEW_EMAIL}</arg>
+<kw name="When I fill with &quot;${UNREGISTERED_EMAIL}&quot;" library="newsletter" sourcename="I fill with &quot;${EMAIL}&quot;">
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>${NEWSLETTER-INPUT}</arg>
-<arg>${NEW_EMAIL}</arg>
+<arg>${NEWSLETTER_INPUT}</arg>
+<arg>${EMAIL}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220809 21:42:26.400" level="INFO">Typing text 'juliecastro@example.com' into text field 'id=newsletter-input'.</msg>
-<status status="PASS" starttime="20220809 21:42:26.399" endtime="20220809 21:42:27.481"/>
+<msg timestamp="20220811 00:09:25.454" level="INFO">Typing text 'stephen25@example.net' into text field 'id=newsletter-input'.</msg>
+<status status="PASS" starttime="20220811 00:09:25.454" endtime="20220811 00:09:26.509"/>
 </kw>
-<status status="PASS" starttime="20220809 21:42:26.395" endtime="20220809 21:42:27.482"/>
+<status status="PASS" starttime="20220811 00:09:25.451" endtime="20220811 00:09:26.509"/>
 </kw>
-<kw name="And I click in &quot;submitnewsletter button&quot;" library="footer">
+<kw name="And I click in &quot;submitnewsletter button&quot;" library="newsletter">
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>${SUBMIT_NEWSLETTER}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220809 21:42:27.484" level="INFO">Clicking button 'name=submitNewsletter'.</msg>
-<status status="PASS" starttime="20220809 21:42:27.484" endtime="20220809 21:42:36.699"/>
+<msg timestamp="20220811 00:09:26.511" level="INFO">Clicking button 'name=submitNewsletter'.</msg>
+<status status="PASS" starttime="20220811 00:09:26.509" endtime="20220811 00:09:29.757"/>
 </kw>
-<status status="PASS" starttime="20220809 21:42:27.483" endtime="20220809 21:42:36.699"/>
+<status status="PASS" starttime="20220811 00:09:26.509" endtime="20220811 00:09:29.757"/>
 </kw>
-<kw name="Then I verify message &quot;successfully subscribed&quot;" library="newsletter">
+<kw name="Then I verify message &quot;${SUCCESSFULLY_SUBSCRIBED}&quot;" library="newsletter" sourcename="I verify message &quot;${MSG}&quot;">
 <kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>Newsletter : You have successfully subscribed to this newsletter.</arg>
+<arg>${MSG}</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20220809 21:42:37.328" level="INFO">Current page contains text 'Newsletter : You have successfully subscribed to this newsletter.'.</msg>
-<status status="PASS" starttime="20220809 21:42:36.700" endtime="20220809 21:42:37.328"/>
+<msg timestamp="20220811 00:09:30.391" level="INFO">Current page contains text 'Newsletter : You have successfully subscribed to this newsletter.'.</msg>
+<status status="PASS" starttime="20220811 00:09:29.758" endtime="20220811 00:09:30.391"/>
 </kw>
-<status status="PASS" starttime="20220809 21:42:36.700" endtime="20220809 21:42:37.328"/>
+<status status="PASS" starttime="20220811 00:09:29.758" endtime="20220811 00:09:30.391"/>
 </kw>
 <kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220809 21:42:37.329" endtime="20220809 21:42:39.696"/>
+<status status="PASS" starttime="20220811 00:09:30.391" endtime="20220811 00:09:32.843"/>
 </kw>
-<status status="PASS" starttime="20220809 21:42:09.534" endtime="20220809 21:42:39.698"/>
+<status status="PASS" starttime="20220811 00:09:14.933" endtime="20220811 00:09:32.843"/>
 </test>
-<test id="s1-t3" name="Test case 03 - Test with invalid email" line="35">
+<test id="s1-t3" name="Test case 03 - Test with invalid email" line="33">
 <kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
 <arg>browser=chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220809 21:42:39.704" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20220809 21:42:39.703" endtime="20220809 21:42:40.976"/>
+<msg timestamp="20220811 00:09:32.850" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220811 00:09:32.849" endtime="20220811 00:09:34.130"/>
 </kw>
 <kw name="Given I am at automationpractice.com" library="navigation">
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220809 21:42:40.979" endtime="20220809 21:42:41.418"/>
+<status status="PASS" starttime="20220811 00:09:34.133" endtime="20220811 00:09:34.560"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220809 21:42:41.418" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
-<status status="PASS" starttime="20220809 21:42:41.418" endtime="20220809 21:42:53.844"/>
+<msg timestamp="20220811 00:09:34.560" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
+<status status="PASS" starttime="20220811 00:09:34.560" endtime="20220811 00:09:45.242"/>
 </kw>
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <arg>0.3s</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20220809 21:42:53.845" endtime="20220809 21:42:53.845"/>
+<status status="PASS" starttime="20220811 00:09:45.242" endtime="20220811 00:09:45.243"/>
 </kw>
-<status status="PASS" starttime="20220809 21:42:40.978" endtime="20220809 21:42:53.846"/>
+<status status="PASS" starttime="20220811 00:09:34.132" endtime="20220811 00:09:45.243"/>
 </kw>
-<kw name="And I put mouse over field &quot;newsletter-input&quot;" library="footer">
+<kw name="And I put mouse over &quot;newsletter&quot; field" library="newsletter">
 <kw name="Mouse Over" library="SeleniumLibrary">
-<arg>${NEWSLETTER-INPUT}</arg>
+<arg>${NEWSLETTER_INPUT}</arg>
 <doc>Simulates hovering the mouse over the element ``locator``.</doc>
-<msg timestamp="20220809 21:42:53.848" level="INFO">Simulating Mouse Over on element 'id=newsletter-input'.</msg>
-<status status="PASS" starttime="20220809 21:42:53.848" endtime="20220809 21:42:54.778"/>
+<msg timestamp="20220811 00:09:45.244" level="INFO">Simulating Mouse Over on element 'id=newsletter-input'.</msg>
+<status status="PASS" starttime="20220811 00:09:45.244" endtime="20220811 00:09:46.160"/>
 </kw>
-<status status="PASS" starttime="20220809 21:42:53.847" endtime="20220809 21:42:54.778"/>
+<status status="PASS" starttime="20220811 00:09:45.244" endtime="20220811 00:09:46.160"/>
 </kw>
-<kw name="When I fill with invalid email &quot;${INVALID_EMAIL}&quot;" library="newsletter" sourcename="I fill with invalid email &quot;${INVALID_EMAIL}&quot;">
+<kw name="When I fill with &quot;${INVALID_EMAIL}&quot;" library="newsletter" sourcename="I fill with &quot;${EMAIL}&quot;">
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>${NEWSLETTER-INPUT}</arg>
-<arg>${INVALID_EMAIL}</arg>
+<arg>${NEWSLETTER_INPUT}</arg>
+<arg>${EMAIL}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220809 21:42:54.781" level="INFO">Typing text 'compra_teste$gmail.com' into text field 'id=newsletter-input'.</msg>
-<status status="PASS" starttime="20220809 21:42:54.781" endtime="20220809 21:42:55.850"/>
+<msg timestamp="20220811 00:09:46.163" level="INFO">Typing text 'compra_teste$gmail.com' into text field 'id=newsletter-input'.</msg>
+<status status="PASS" starttime="20220811 00:09:46.160" endtime="20220811 00:09:47.224"/>
 </kw>
-<status status="PASS" starttime="20220809 21:42:54.778" endtime="20220809 21:42:55.850"/>
+<status status="PASS" starttime="20220811 00:09:46.160" endtime="20220811 00:09:47.224"/>
 </kw>
-<kw name="And I click in &quot;submitnewsletter button&quot;" library="footer">
+<kw name="And I click in &quot;submitnewsletter button&quot;" library="newsletter">
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>${SUBMIT_NEWSLETTER}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220809 21:42:55.853" level="INFO">Clicking button 'name=submitNewsletter'.</msg>
-<status status="PASS" starttime="20220809 21:42:55.850" endtime="20220809 21:43:05.459"/>
+<msg timestamp="20220811 00:09:47.227" level="INFO">Clicking button 'name=submitNewsletter'.</msg>
+<status status="PASS" starttime="20220811 00:09:47.224" endtime="20220811 00:09:53.384"/>
 </kw>
-<status status="PASS" starttime="20220809 21:42:55.850" endtime="20220809 21:43:05.459"/>
+<status status="PASS" starttime="20220811 00:09:47.224" endtime="20220811 00:09:53.384"/>
 </kw>
-<kw name="Then I verify message &quot;invalid email address&quot;" library="newsletter">
+<kw name="Then I verify message &quot;${MSG_INVALID_EMAIL}&quot;" library="newsletter" sourcename="I verify message &quot;${MSG}&quot;">
 <kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>Newsletter : Invalid email address.</arg>
+<arg>${MSG}</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20220809 21:43:06.100" level="INFO">Current page contains text 'Newsletter : Invalid email address.'.</msg>
-<status status="PASS" starttime="20220809 21:43:05.460" endtime="20220809 21:43:06.100"/>
+<msg timestamp="20220811 00:09:54.033" level="INFO">Current page contains text 'Newsletter : Invalid email address.'.</msg>
+<status status="PASS" starttime="20220811 00:09:53.385" endtime="20220811 00:09:54.033"/>
 </kw>
-<status status="PASS" starttime="20220809 21:43:05.460" endtime="20220809 21:43:06.100"/>
+<status status="PASS" starttime="20220811 00:09:53.385" endtime="20220811 00:09:54.033"/>
 </kw>
 <kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220809 21:43:06.101" endtime="20220809 21:43:08.473"/>
+<status status="PASS" starttime="20220811 00:09:54.033" endtime="20220811 00:09:56.465"/>
 </kw>
-<status status="PASS" starttime="20220809 21:42:39.701" endtime="20220809 21:43:08.473"/>
+<status status="PASS" starttime="20220811 00:09:32.848" endtime="20220811 00:09:56.465"/>
 </test>
-<test id="s1-t4" name="Test case 04 - Test with empty email field" line="42">
+<test id="s1-t4" name="Test case 04 - Test with empty email field" line="40">
 <kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
 <arg>browser=chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220809 21:43:08.480" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20220809 21:43:08.480" endtime="20220809 21:43:09.736"/>
+<msg timestamp="20220811 00:09:56.472" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220811 00:09:56.471" endtime="20220811 00:09:57.707"/>
 </kw>
 <kw name="Given I am at automationpractice.com" library="navigation">
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220809 21:43:09.737" endtime="20220809 21:43:10.156"/>
+<status status="PASS" starttime="20220811 00:09:57.710" endtime="20220811 00:09:58.145"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220809 21:43:10.156" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
-<status status="PASS" starttime="20220809 21:43:10.156" endtime="20220809 21:43:37.345"/>
+<msg timestamp="20220811 00:09:58.145" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
+<status status="PASS" starttime="20220811 00:09:58.145" endtime="20220811 00:10:05.699"/>
 </kw>
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <arg>0.3s</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20220809 21:43:37.345" endtime="20220809 21:43:37.345"/>
+<status status="PASS" starttime="20220811 00:10:05.699" endtime="20220811 00:10:05.700"/>
 </kw>
-<status status="PASS" starttime="20220809 21:43:09.737" endtime="20220809 21:43:37.346"/>
+<status status="PASS" starttime="20220811 00:09:57.709" endtime="20220811 00:10:05.700"/>
 </kw>
-<kw name="And I put mouse over field &quot;newsletter-input&quot;" library="footer">
+<kw name="And I put mouse over &quot;newsletter&quot; field" library="newsletter">
 <kw name="Mouse Over" library="SeleniumLibrary">
-<arg>${NEWSLETTER-INPUT}</arg>
+<arg>${NEWSLETTER_INPUT}</arg>
 <doc>Simulates hovering the mouse over the element ``locator``.</doc>
-<msg timestamp="20220809 21:43:37.347" level="INFO">Simulating Mouse Over on element 'id=newsletter-input'.</msg>
-<status status="PASS" starttime="20220809 21:43:37.347" endtime="20220809 21:43:38.268"/>
+<msg timestamp="20220811 00:10:05.704" level="INFO">Simulating Mouse Over on element 'id=newsletter-input'.</msg>
+<status status="PASS" starttime="20220811 00:10:05.703" endtime="20220811 00:10:06.621"/>
 </kw>
-<status status="PASS" starttime="20220809 21:43:37.346" endtime="20220809 21:43:38.268"/>
+<status status="PASS" starttime="20220811 00:10:05.702" endtime="20220811 00:10:06.621"/>
 </kw>
-<kw name="When I leave the email field empty ${EMPTY_EMAIL}" library="newsletter" sourcename="I leave the email field empty ${EMPTY_EMAIL}">
+<kw name="When I fill with &quot;&quot;" library="newsletter" sourcename="I fill with &quot;${EMAIL}&quot;">
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>${NEWSLETTER-INPUT}</arg>
-<arg>${EMPTY_EMAIL}</arg>
+<arg>${NEWSLETTER_INPUT}</arg>
+<arg>${EMAIL}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220809 21:43:38.271" level="INFO">Typing text '' into text field 'id=newsletter-input'.</msg>
-<status status="PASS" starttime="20220809 21:43:38.270" endtime="20220809 21:43:39.277"/>
+<msg timestamp="20220811 00:10:06.624" level="INFO">Typing text '' into text field 'id=newsletter-input'.</msg>
+<status status="PASS" starttime="20220811 00:10:06.621" endtime="20220811 00:10:07.643"/>
 </kw>
-<status status="PASS" starttime="20220809 21:43:38.269" endtime="20220809 21:43:39.277"/>
+<status status="PASS" starttime="20220811 00:10:06.621" endtime="20220811 00:10:07.643"/>
 </kw>
-<kw name="And I click in &quot;submitnewsletter button&quot;" library="footer">
+<kw name="And I click in &quot;submitnewsletter button&quot;" library="newsletter">
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>${SUBMIT_NEWSLETTER}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220809 21:43:39.279" level="INFO">Clicking button 'name=submitNewsletter'.</msg>
-<status status="PASS" starttime="20220809 21:43:39.278" endtime="20220809 21:43:47.960"/>
+<msg timestamp="20220811 00:10:07.643" level="INFO">Clicking button 'name=submitNewsletter'.</msg>
+<status status="PASS" starttime="20220811 00:10:07.643" endtime="20220811 00:10:11.534"/>
 </kw>
-<status status="PASS" starttime="20220809 21:43:39.278" endtime="20220809 21:43:47.960"/>
+<status status="PASS" starttime="20220811 00:10:07.643" endtime="20220811 00:10:11.534"/>
 </kw>
-<kw name="Then I verify message &quot;invalid email address&quot;" library="newsletter">
+<kw name="Then I verify message &quot;${MSG_INVALID_EMAIL}&quot;" library="newsletter" sourcename="I verify message &quot;${MSG}&quot;">
 <kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>Newsletter : Invalid email address.</arg>
+<arg>${MSG}</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20220809 21:43:48.597" level="INFO">Current page contains text 'Newsletter : Invalid email address.'.</msg>
-<status status="PASS" starttime="20220809 21:43:47.961" endtime="20220809 21:43:48.597"/>
+<msg timestamp="20220811 00:10:12.170" level="INFO">Current page contains text 'Newsletter : Invalid email address.'.</msg>
+<status status="PASS" starttime="20220811 00:10:11.535" endtime="20220811 00:10:12.170"/>
 </kw>
-<status status="PASS" starttime="20220809 21:43:47.961" endtime="20220809 21:43:48.597"/>
+<status status="PASS" starttime="20220811 00:10:11.535" endtime="20220811 00:10:12.170"/>
 </kw>
 <kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220809 21:43:48.597" endtime="20220809 21:43:51.087"/>
+<status status="PASS" starttime="20220811 00:10:12.170" endtime="20220811 00:10:14.552"/>
 </kw>
-<status status="PASS" starttime="20220809 21:43:08.478" endtime="20220809 21:43:51.087"/>
+<status status="PASS" starttime="20220811 00:09:56.470" endtime="20220811 00:10:14.552"/>
 </test>
 <doc>Newsletter feature tests suite.</doc>
-<status status="PASS" starttime="20220809 21:41:37.762" endtime="20220809 21:43:51.093"/>
+<status status="PASS" starttime="20220811 00:08:48.654" endtime="20220811 00:10:14.558"/>
 </suite>
 <statistics>
 <total>
