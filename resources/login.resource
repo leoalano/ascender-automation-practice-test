@@ -31,7 +31,7 @@ I submit login form
 I should see an error message
     [Arguments]                          ${ERROR_MESSAGE}
     Log                                  ${ERROR_MESSAGE}
-    Wait Until Page Contains             ${ERROR_MESSAGE}
+    Wait Until Page Contains             ${ERROR_MESSAGE}       timeout=10
 
 I should be logged in successfully
     Wait Until Page Contains             My account
