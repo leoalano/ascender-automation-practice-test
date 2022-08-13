@@ -7,6 +7,7 @@ Resource          ../resources/navigation.resource
 Resource          ../resources/wishlist.resource
 Resource          ../resources/menu.resource
 Resource          ../resources/login.resource
+Resource          ../page_objects/catalog_page.resource
 
 Test Setup        Open Browser  browser=chrome
 Test Teardown     Close All Browsers
@@ -49,6 +50,8 @@ Test case 04 - Add products to a wish list
      When I fill login form with "${EMAIL_REGISTERED}" and "${PASSWORD_REGISTERED}"
       And I submit login form
      When I click on button "${WISHLIST_MENU}"
+      And I fill the field with "${LIST_TEST_01}" 
+     When I click on button "${SAVE_LIST}"
       And I click on button "${LIST_TEST_01_SALVA}"
      When I click on button "${FADED_SHORT_PRODUCT}"
       And I click on button "${ADD_BUTTON}"
@@ -60,8 +63,14 @@ Test case 05 - Delete products from a wish list
      When I fill login form with "${EMAIL_REGISTERED}" and "${PASSWORD_REGISTERED}"
       And I submit login form
      When I click on button "${WISHLIST_MENU}"
+      And I fill the field with "${LIST_TEST_01}" 
+     When I click on button "${SAVE_LIST}"
       And I click on button "${LIST_TEST_01_SALVA}"
-      And I put mouse over image "${FADED_SHORT_PRODUCT}"
+     When I click on button "${FADED_SHORT_PRODUCT}"
+      And I click on button "${ADD_BUTTON}"
+     When I click on button "${CLOSE}"    #Neste ponto a tela não fecha.
+      And I verify message "${ADD_LIST_MSG}"
+     When I put mouse over image "${FADED_SHORT_PRODUCT}"
       And I click on button "${ICON_REMOVE_ITEM1}"
      When I click on button "${LIST_TEST_01_SALVA}"
      Then I verify message "${NO_PRODUCTS_MSG}"
@@ -72,5 +81,8 @@ Test case 06 - Delete a wish list
      When I fill login form with "${EMAIL_REGISTERED}" and "${PASSWORD_REGISTERED}"
       And I submit login form
      When I click on button "${WISHLIST_MENU}"
-      And I click on button "${ICON_LIST_REMOVE}"
-     Then I click OK on the alert message
+      And I fill the field with "${LIST_TEST_01}" 
+     When I click on button "${SAVE_LIST}"
+     When I click on button "${WISHLIST_MENU}"
+      And I click on button "${ICON_REMOVE_LIST_TEST_01}"
+     Then I click ok on the alert message

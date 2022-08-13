@@ -17,5 +17,5 @@ I verify message "${MSG}"
 I fill the field with "${LIST_TEST}" 
     Input Text           ${INPUT_LIST_NAME}       ${LIST_TEST}
 
-I click OK on the alert message
+I click ok on the alert message
     Handle Alert
