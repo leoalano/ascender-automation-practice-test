@@ -14,17 +14,4 @@ ${FADED_SHORT_PRODUCT}          //a[contains(.,'Faded Short Sleeve T-shirts')]
 ${ICON_REMOVE_ITEM1}            (//i[@class='icon-remove-sign'])[1]
 ${ICON_REMOVE_LIST_TEST_01}     (//i[@class='icon-remove'])[1]
 ${NO_PRODUCTS_MSG}              No products
-${CLOSE}                        xpath=//a[@title='Close']
-
-#Nenhuma destas formas funcionou.
-#    //a[@href='javascript:;']
-#    xpath=//a[@class='fancybox-item fancybox-close']
-#    xpath=//a[contains(@class,'fancybox-item fancybox-close')]
-#    xpath=//a[@title='Close']
-#    xpath=//a[contains(@title,'Close')]
-
-
-
-
-
-
+${CLOSE_BUTTON}                 xpath=//a[@title='Close']

@@ -17,6 +17,7 @@ ${EMAIL_REGISTERED}           christian.hernan@gmail.com
 ${PASSWORD_REGISTERED}        123456
 
 *** Test Cases ***
+
 Test case 01 - Add product without user logged in
     Given I am at automationpractice.com
       And I put mouse over image "${FADED_SHORT_IMG}"
@@ -32,7 +33,9 @@ Test case 02 - Add product with logged in user
      When I click on button "${HOME}"
       And I click on title "${FADED_SHORT_TITLE}"
      When I click on button "${ADD_BUTTON}"
-     Then I verify message "${ADD_LIST_MSG}"
+      And I verify message "${ADD_LIST_MSG}"
+     When I wait for element is visible
+     Then I click on button "Close"
 
 Test case 03 - Create a wish list
     Given I am at automationpractice.com
@@ -56,7 +59,7 @@ Test case 04 - Add products to a wish list
      When I click on button "${FADED_SHORT_PRODUCT}"
       And I click on button "${ADD_BUTTON}"
      Then I verify message "${ADD_LIST_MSG}"
-    
+
 Test case 05 - Delete products from a wish list
     Given I am at automationpractice.com
       And I enter menu "Sign in"
@@ -68,13 +71,16 @@ Test case 05 - Delete products from a wish list
       And I click on button "${LIST_TEST_01_SALVA}"
      When I click on button "${FADED_SHORT_PRODUCT}"
       And I click on button "${ADD_BUTTON}"
-     When I click on button "${CLOSE}"    #Neste ponto a tela não fecha.
-      And I verify message "${ADD_LIST_MSG}"
-     When I put mouse over image "${FADED_SHORT_PRODUCT}"
-      And I click on button "${ICON_REMOVE_ITEM1}"
-     When I click on button "${LIST_TEST_01_SALVA}"
+     When I wait for element is visible
+      And I click on button "Close"
+     When I click on button "${CUSTOMER_BUTTON}"
+      And I click on button "${WISHLIST_MENU}"
+     When I click on button "${LIST_TEST_01_SALVA}" 
+      And I put mouse over image "${FADED_SHORT_PRODUCT}"
+     When I click on button "${ICON_REMOVE_ITEM1}"
+      And I click on button "${LIST_TEST_01_SALVA}"
      Then I verify message "${NO_PRODUCTS_MSG}"
-    
+
 Test case 06 - Delete a wish list
     Given I am at automationpractice.com
       And I enter menu "Sign in"
