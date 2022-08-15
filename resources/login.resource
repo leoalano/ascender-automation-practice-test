@@ -1,7 +1,6 @@
 *** Settings ***
 Resource    ../page_objects/login_page.resource
 Resource    ../page_objects/menu_page.resource
-Resource    ../page_objects/login_page.resource
 
 *** Keywords ***
 I click on "Forgot Password"
