@@ -32,4 +32,5 @@ I fill contact us form without subject heading
 
 I should receive an error message
     [Arguments]                          ${ERROR_MESSAGE}
-    Wait Until Page Contains             ${ERROR_MESSAGE}
+    Wait Until page contains             ${ERROR_MESSAGE}
+    Page Should Contain                  ${ERROR_MESSAGE}

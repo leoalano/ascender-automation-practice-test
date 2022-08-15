@@ -7,6 +7,11 @@ ${FORGOT_PASS}                  //a[contains(.,'Forgot your password?')]
 ${TITLE_PAGE_LOGIN}             Login - My Store
 ${RETRIEVE_PASSWORD_BUTTON}     //span[contains(.,'Retrieve Password')]
 ${RETRIEVED_SUCCESS_MESS}       //p[contains(@class,'alert alert-success')]
+${TITLE_PAGE_LOGIN}             Login - My Store
 ${TITLE_ACCOUNT}                My account - My Store
+<<<<<<< HEAD
 ${PASSWORD_EMPTY_VALIDATION}    //li[contains(.,'Password is required.')]
 ${EMPTY_PASSWORD}               #Sem atribuição de valor para variavel. TC#05-Login
+=======
+${PASSWORD_EMPTY_VALIDATION}    //li[contains(.,'Password is required.')]
+>>>>>>> main

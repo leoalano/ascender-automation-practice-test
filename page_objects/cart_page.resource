@@ -21,3 +21,4 @@ ${CART_TITLE}                   cart_title
 ${BLOUSE_ADD_TO_CART_BUTTON}    xpath=//a[@data-id-product = 2]
 ${SUCESS_ADD_TO_CART}           Product successfully added to your shopping cart
 ${VALIDATE_PAGE_LOGIN1}         xpath=//h3[@class='page-subheading'][contains(.,'Already registered?')]
+${EMPTY_CART_MSG}               Your shopping cart is empty.  #TC04-Verify empty Cart

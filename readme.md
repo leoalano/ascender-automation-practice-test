@@ -8,8 +8,6 @@ Areas of learning include: Robot Framework, Selenium, user stories, Gherkin, tre
 
 ## Table of Contents (Optional)
 
-If your README is long, add a table of contents to make it easy for users to find what they need.
-
 - [Installation](#installation)
 - [Usage](#usage)
 - [How to Contribute](#how-to-contribute)
@@ -30,6 +28,7 @@ a. Choose desired browser / correct version and extract the executable webdriver
 [Opera](https://github.com/operasoftware/operachromiumdriver/releases)
 [Safari](https://developer.apple.com/documentation/testing_with_webdriver_in_safari)
 b. Move this file to /usr/bin/ using *mv geckodriver/usr/bin/*
+c. If in Windows OS, configure Environment Variables. 
 
 ### Agile and communication tools 
 - [Trello board](https://trello.com/b/7xX0VoSb/ascender-turma-02)
