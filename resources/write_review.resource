@@ -1,6 +1,5 @@
 *** Settings ***
 Resource          ../page_objects/login_page.resource
-Resource          ../page_objects/menu_page.resource
 Resource          ../page_objects/write_review_page.resource
 
 *** Keywords ***
