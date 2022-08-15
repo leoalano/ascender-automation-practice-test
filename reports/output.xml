@@ -1,294 +1,879 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.4 on win32)" generated="20220811 00:08:48.654" rpa="false" schemaversion="3">
-<suite id="s1" name="Newsletter Test" source="C:\Users\Jacques Teixeira\Documents\ascender-automation-practice-test\tests\newsletter_test.robot">
-<test id="s1-t1" name="Test case 01 - Test with registered email" line="18">
+<robot generator="Robot 5.0.1 (Python 3.10.4 on win32)" generated="20220813 23:12:30.517" rpa="false" schemaversion="3">
+<suite id="s1" name="Wishlist Test" source="C:\Users\Jacques Teixeira\Documents\ascender-automation-practice-test\tests\wishlist_test.robot">
+<test id="s1-t1" name="Test case 01 - Add product without user logged in" line="21">
 <kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
 <arg>browser=chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220811 00:08:49.472" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20220811 00:08:49.471" endtime="20220811 00:08:50.877"/>
+<msg timestamp="20220813 23:12:30.828" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220813 23:12:30.827" endtime="20220813 23:12:32.101"/>
 </kw>
 <kw name="Given I am at automationpractice.com" library="navigation">
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220811 00:08:50.879" endtime="20220811 00:08:51.003"/>
+<status status="PASS" starttime="20220813 23:12:32.103" endtime="20220813 23:12:32.235"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220811 00:08:51.003" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
-<status status="PASS" starttime="20220811 00:08:51.003" endtime="20220811 00:09:02.795"/>
+<msg timestamp="20220813 23:12:32.235" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
+<status status="PASS" starttime="20220813 23:12:32.235" endtime="20220813 23:12:37.997"/>
 </kw>
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <arg>0.3s</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20220811 00:09:02.796" endtime="20220811 00:09:02.796"/>
+<status status="PASS" starttime="20220813 23:12:37.998" endtime="20220813 23:12:37.998"/>
 </kw>
-<status status="PASS" starttime="20220811 00:08:50.878" endtime="20220811 00:09:02.796"/>
+<status status="PASS" starttime="20220813 23:12:32.102" endtime="20220813 23:12:37.999"/>
 </kw>
-<kw name="And I put mouse over &quot;newsletter&quot; field" library="newsletter">
+<kw name="And I put mouse over image &quot;${FADED_SHORT_IMG}&quot;" library="wishlist" sourcename="I put mouse over image &quot;${PUT}&quot;">
 <kw name="Mouse Over" library="SeleniumLibrary">
-<arg>${NEWSLETTER_INPUT}</arg>
+<arg>${PUT}</arg>
 <doc>Simulates hovering the mouse over the element ``locator``.</doc>
-<msg timestamp="20220811 00:09:02.799" level="INFO">Simulating Mouse Over on element 'id=newsletter-input'.</msg>
-<status status="PASS" starttime="20220811 00:09:02.798" endtime="20220811 00:09:03.701"/>
+<msg timestamp="20220813 23:12:38.002" level="INFO">Simulating Mouse Over on element '(//img[@itemprop='image'])[1]'.</msg>
+<status status="PASS" starttime="20220813 23:12:38.002" endtime="20220813 23:12:38.926"/>
 </kw>
-<status status="PASS" starttime="20220811 00:09:02.797" endtime="20220811 00:09:03.701"/>
+<status status="PASS" starttime="20220813 23:12:38.000" endtime="20220813 23:12:38.926"/>
 </kw>
-<kw name="When I fill with &quot;${EMAIL_REGISTERED}&quot;" library="newsletter" sourcename="I fill with &quot;${EMAIL}&quot;">
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${NEWSLETTER_INPUT}</arg>
-<arg>${EMAIL}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220811 00:09:03.704" level="INFO">Typing text 'christian.hernan@gmail.com' into text field 'id=newsletter-input'.</msg>
-<status status="PASS" starttime="20220811 00:09:03.704" endtime="20220811 00:09:04.792"/>
+<kw name="When I click on title &quot;${FADED_SHORT_TITLE}&quot;" library="wishlist" sourcename="I click on title &quot;${IMG}&quot;">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${IMG}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220813 23:12:38.928" level="INFO">Clicking element '(//a[@title='Faded Short Sleeve T-shirts'])[2]'.</msg>
+<status status="PASS" starttime="20220813 23:12:38.926" endtime="20220813 23:12:42.198"/>
 </kw>
-<status status="PASS" starttime="20220811 00:09:03.701" endtime="20220811 00:09:04.792"/>
+<status status="PASS" starttime="20220813 23:12:38.926" endtime="20220813 23:12:42.198"/>
 </kw>
-<kw name="And I click in &quot;submitnewsletter button&quot;" library="newsletter">
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>${SUBMIT_NEWSLETTER}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220811 00:09:04.796" level="INFO">Clicking button 'name=submitNewsletter'.</msg>
-<status status="PASS" starttime="20220811 00:09:04.792" endtime="20220811 00:09:11.851"/>
+<kw name="And I click on button &quot;${ADD_BUTTON}&quot;" library="wishlist" sourcename="I click on button &quot;${BUTTON}&quot;">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220813 23:12:42.200" level="INFO">Clicking element '//a[@title='Add to my wishlist']'.</msg>
+<status status="PASS" starttime="20220813 23:12:42.200" endtime="20220813 23:12:42.893"/>
 </kw>
-<status status="PASS" starttime="20220811 00:09:04.792" endtime="20220811 00:09:11.851"/>
+<status status="PASS" starttime="20220813 23:12:42.199" endtime="20220813 23:12:42.893"/>
 </kw>
-<kw name="Then I verify message &quot;${ALREADY_REGISTERED}&quot;" library="newsletter" sourcename="I verify message &quot;${MSG}&quot;">
+<kw name="Then I verify message &quot;${MUST_BE_LOGGED}&quot;" library="wishlist" sourcename="I verify message &quot;${MSG}&quot;">
 <kw name="Page Should Contain" library="SeleniumLibrary">
 <arg>${MSG}</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20220811 00:09:12.491" level="INFO">Current page contains text 'Newsletter : This email address is already registered.'.</msg>
-<status status="PASS" starttime="20220811 00:09:11.852" endtime="20220811 00:09:12.491"/>
+<msg timestamp="20220813 23:12:43.545" level="INFO">Current page contains text 'You must be logged in to manage your wishlist.'.</msg>
+<status status="PASS" starttime="20220813 23:12:42.896" endtime="20220813 23:12:43.545"/>
 </kw>
-<status status="PASS" starttime="20220811 00:09:11.852" endtime="20220811 00:09:12.491"/>
+<status status="PASS" starttime="20220813 23:12:42.893" endtime="20220813 23:12:43.545"/>
 </kw>
 <kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220811 00:09:12.492" endtime="20220811 00:09:14.928"/>
+<status status="PASS" starttime="20220813 23:12:43.545" endtime="20220813 23:12:46.013"/>
 </kw>
-<status status="PASS" starttime="20220811 00:08:49.466" endtime="20220811 00:09:14.928"/>
+<status status="PASS" starttime="20220813 23:12:30.816" endtime="20220813 23:12:46.013"/>
 </test>
-<test id="s1-t2" name="Test case 02 - Test with unregistered email" line="25">
+<test id="s1-t2" name="Test case 02 - Add product with logged in user" line="28">
 <kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
 <arg>browser=chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220811 00:09:14.935" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20220811 00:09:14.934" endtime="20220811 00:09:16.166"/>
-</kw>
-<kw name="Email" library="FakerLibrary">
-<var>${UNREGISTERED_EMAIL}</var>
-<msg timestamp="20220811 00:09:16.168" level="INFO">${UNREGISTERED_EMAIL} = stephen25@example.net</msg>
-<status status="PASS" starttime="20220811 00:09:16.167" endtime="20220811 00:09:16.168"/>
+<msg timestamp="20220813 23:12:46.020" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220813 23:12:46.019" endtime="20220813 23:12:47.220"/>
 </kw>
 <kw name="Given I am at automationpractice.com" library="navigation">
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220811 00:09:16.169" endtime="20220811 00:09:16.597"/>
+<status status="PASS" starttime="20220813 23:12:47.222" endtime="20220813 23:12:47.657"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220811 00:09:16.597" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
-<status status="PASS" starttime="20220811 00:09:16.597" endtime="20220811 00:09:24.521"/>
+<msg timestamp="20220813 23:12:47.657" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
+<status status="PASS" starttime="20220813 23:12:47.657" endtime="20220813 23:12:53.738"/>
 </kw>
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <arg>0.3s</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20220811 00:09:24.521" endtime="20220811 00:09:24.522"/>
+<status status="PASS" starttime="20220813 23:12:53.738" endtime="20220813 23:12:53.739"/>
 </kw>
-<status status="PASS" starttime="20220811 00:09:16.169" endtime="20220811 00:09:24.522"/>
+<status status="PASS" starttime="20220813 23:12:47.221" endtime="20220813 23:12:53.739"/>
 </kw>
-<kw name="And I put mouse over &quot;newsletter&quot; field" library="newsletter">
-<kw name="Mouse Over" library="SeleniumLibrary">
-<arg>${NEWSLETTER_INPUT}</arg>
-<doc>Simulates hovering the mouse over the element ``locator``.</doc>
-<msg timestamp="20220811 00:09:24.525" level="INFO">Simulating Mouse Over on element 'id=newsletter-input'.</msg>
-<status status="PASS" starttime="20220811 00:09:24.524" endtime="20220811 00:09:25.451"/>
+<kw name="And I enter menu &quot;Sign in&quot;" library="menu">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${SIGN_IN_MENU_BUTTON}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220813 23:12:53.741" endtime="20220813 23:12:54.417"/>
 </kw>
-<status status="PASS" starttime="20220811 00:09:24.523" endtime="20220811 00:09:25.451"/>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SIGN_IN_MENU_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220813 23:12:54.417" level="INFO">Clicking element 'class=login'.</msg>
+<status status="PASS" starttime="20220813 23:12:54.417" endtime="20220813 23:12:57.479"/>
 </kw>
-<kw name="When I fill with &quot;${UNREGISTERED_EMAIL}&quot;" library="newsletter" sourcename="I fill with &quot;${EMAIL}&quot;">
+<status status="PASS" starttime="20220813 23:12:53.740" endtime="20220813 23:12:57.479"/>
+</kw>
+<kw name="When I fill login form with &quot;${EMAIL_REGISTERED}&quot; and &quot;${PASSWORD_REGISTERED}&quot;" library="login" sourcename="I fill login form with &quot;${EMAIL_TEST_DATA}&quot; and &quot;${PASSWORD_TEST_DATA}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${EMAIL_INPUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220813 23:12:57.482" endtime="20220813 23:12:58.143"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PASSWORD_INPUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220813 23:12:58.143" endtime="20220813 23:12:58.799"/>
+</kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>${NEWSLETTER_INPUT}</arg>
-<arg>${EMAIL}</arg>
+<arg>${EMAIL_INPUT}</arg>
+<arg>${EMAIL_TEST_DATA}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220811 00:09:25.454" level="INFO">Typing text 'stephen25@example.net' into text field 'id=newsletter-input'.</msg>
-<status status="PASS" starttime="20220811 00:09:25.454" endtime="20220811 00:09:26.509"/>
+<msg timestamp="20220813 23:12:58.799" level="INFO">Typing text 'christian.hernan@gmail.com' into text field 'id=email'.</msg>
+<status status="PASS" starttime="20220813 23:12:58.799" endtime="20220813 23:12:59.836"/>
 </kw>
-<status status="PASS" starttime="20220811 00:09:25.451" endtime="20220811 00:09:26.509"/>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${PASSWORD_INPUT}</arg>
+<arg>${PASSWORD_TEST_DATA}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220813 23:12:59.836" level="INFO">Typing password into text field 'id=passwd'.</msg>
+<msg timestamp="20220813 23:13:00.483" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220813 23:13:00.839" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220813 23:12:59.836" endtime="20220813 23:13:00.839"/>
 </kw>
-<kw name="And I click in &quot;submitnewsletter button&quot;" library="newsletter">
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>${SUBMIT_NEWSLETTER}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220811 00:09:26.511" level="INFO">Clicking button 'name=submitNewsletter'.</msg>
-<status status="PASS" starttime="20220811 00:09:26.509" endtime="20220811 00:09:29.757"/>
+<status status="PASS" starttime="20220813 23:12:57.479" endtime="20220813 23:13:00.839"/>
 </kw>
-<status status="PASS" starttime="20220811 00:09:26.509" endtime="20220811 00:09:29.757"/>
+<kw name="And I submit login form" library="login">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${SIGN_IN_BUTTON}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220813 23:13:00.839" endtime="20220813 23:13:01.465"/>
 </kw>
-<kw name="Then I verify message &quot;${SUCCESSFULLY_SUBSCRIBED}&quot;" library="newsletter" sourcename="I verify message &quot;${MSG}&quot;">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SIGN_IN_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220813 23:13:01.465" level="INFO">Clicking element 'id=SubmitLogin'.</msg>
+<status status="PASS" starttime="20220813 23:13:01.465" endtime="20220813 23:13:04.069"/>
+</kw>
+<status status="PASS" starttime="20220813 23:13:00.839" endtime="20220813 23:13:04.069"/>
+</kw>
+<kw name="When I click on button &quot;${HOME}&quot;" library="wishlist" sourcename="I click on button &quot;${BUTTON}&quot;">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220813 23:13:04.071" level="INFO">Clicking element '//span[contains(.,'Home')]'.</msg>
+<status status="PASS" starttime="20220813 23:13:04.069" endtime="20220813 23:13:06.855"/>
+</kw>
+<status status="PASS" starttime="20220813 23:13:04.069" endtime="20220813 23:13:06.855"/>
+</kw>
+<kw name="And I click on title &quot;${FADED_SHORT_TITLE}&quot;" library="wishlist" sourcename="I click on title &quot;${IMG}&quot;">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${IMG}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220813 23:13:06.858" level="INFO">Clicking element '(//a[@title='Faded Short Sleeve T-shirts'])[2]'.</msg>
+<status status="PASS" starttime="20220813 23:13:06.858" endtime="20220813 23:13:09.636"/>
+</kw>
+<status status="PASS" starttime="20220813 23:13:06.857" endtime="20220813 23:13:09.636"/>
+</kw>
+<kw name="When I click on button &quot;${ADD_BUTTON}&quot;" library="wishlist" sourcename="I click on button &quot;${BUTTON}&quot;">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220813 23:13:09.639" level="INFO">Clicking element '//a[@title='Add to my wishlist']'.</msg>
+<status status="PASS" starttime="20220813 23:13:09.639" endtime="20220813 23:13:10.364"/>
+</kw>
+<status status="PASS" starttime="20220813 23:13:09.638" endtime="20220813 23:13:10.364"/>
+</kw>
+<kw name="And I verify message &quot;${ADD_LIST_MSG}&quot;" library="wishlist" sourcename="I verify message &quot;${MSG}&quot;">
 <kw name="Page Should Contain" library="SeleniumLibrary">
 <arg>${MSG}</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20220811 00:09:30.391" level="INFO">Current page contains text 'Newsletter : You have successfully subscribed to this newsletter.'.</msg>
-<status status="PASS" starttime="20220811 00:09:29.758" endtime="20220811 00:09:30.391"/>
+<msg timestamp="20220813 23:13:10.992" level="INFO">Current page contains text 'Added to your wishlist.'.</msg>
+<status status="PASS" starttime="20220813 23:13:10.365" endtime="20220813 23:13:10.992"/>
 </kw>
-<status status="PASS" starttime="20220811 00:09:29.758" endtime="20220811 00:09:30.391"/>
+<status status="PASS" starttime="20220813 23:13:10.365" endtime="20220813 23:13:10.992"/>
+</kw>
+<kw name="When I wait for element is visible" library="wishlist">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${CLOSE_BUTTON}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220813 23:13:10.994" endtime="20220813 23:13:12.162"/>
+</kw>
+<status status="PASS" starttime="20220813 23:13:10.993" endtime="20220813 23:13:12.162"/>
+</kw>
+<kw name="Then I click on button &quot;Close&quot;" library="wishlist">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CLOSE_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220813 23:13:12.163" level="INFO">Clicking element 'xpath=//a[@title='Close']'.</msg>
+<status status="PASS" starttime="20220813 23:13:12.163" endtime="20220813 23:13:12.830"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220813 23:13:14.842" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220813 23:13:12.830" endtime="20220813 23:13:14.842"/>
+</kw>
+<status status="PASS" starttime="20220813 23:13:12.163" endtime="20220813 23:13:14.842"/>
 </kw>
 <kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220811 00:09:30.391" endtime="20220811 00:09:32.843"/>
+<status status="PASS" starttime="20220813 23:13:14.843" endtime="20220813 23:13:17.314"/>
 </kw>
-<status status="PASS" starttime="20220811 00:09:14.933" endtime="20220811 00:09:32.843"/>
+<status status="PASS" starttime="20220813 23:12:46.017" endtime="20220813 23:13:17.314"/>
 </test>
-<test id="s1-t3" name="Test case 03 - Test with invalid email" line="33">
+<test id="s1-t3" name="Test case 03 - Create a wish list" line="40">
 <kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
 <arg>browser=chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220811 00:09:32.850" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20220811 00:09:32.849" endtime="20220811 00:09:34.130"/>
+<msg timestamp="20220813 23:13:17.321" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220813 23:13:17.321" endtime="20220813 23:13:18.567"/>
 </kw>
 <kw name="Given I am at automationpractice.com" library="navigation">
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220811 00:09:34.133" endtime="20220811 00:09:34.560"/>
+<status status="PASS" starttime="20220813 23:13:18.569" endtime="20220813 23:13:19.020"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220811 00:09:34.560" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
-<status status="PASS" starttime="20220811 00:09:34.560" endtime="20220811 00:09:45.242"/>
+<msg timestamp="20220813 23:13:19.020" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
+<status status="PASS" starttime="20220813 23:13:19.020" endtime="20220813 23:13:25.639"/>
 </kw>
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <arg>0.3s</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20220811 00:09:45.242" endtime="20220811 00:09:45.243"/>
+<status status="PASS" starttime="20220813 23:13:25.639" endtime="20220813 23:13:25.640"/>
 </kw>
-<status status="PASS" starttime="20220811 00:09:34.132" endtime="20220811 00:09:45.243"/>
+<status status="PASS" starttime="20220813 23:13:18.568" endtime="20220813 23:13:25.640"/>
 </kw>
-<kw name="And I put mouse over &quot;newsletter&quot; field" library="newsletter">
-<kw name="Mouse Over" library="SeleniumLibrary">
-<arg>${NEWSLETTER_INPUT}</arg>
-<doc>Simulates hovering the mouse over the element ``locator``.</doc>
-<msg timestamp="20220811 00:09:45.244" level="INFO">Simulating Mouse Over on element 'id=newsletter-input'.</msg>
-<status status="PASS" starttime="20220811 00:09:45.244" endtime="20220811 00:09:46.160"/>
+<kw name="And I enter menu &quot;Sign in&quot;" library="menu">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${SIGN_IN_MENU_BUTTON}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220813 23:13:25.642" endtime="20220813 23:13:26.317"/>
 </kw>
-<status status="PASS" starttime="20220811 00:09:45.244" endtime="20220811 00:09:46.160"/>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SIGN_IN_MENU_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220813 23:13:26.317" level="INFO">Clicking element 'class=login'.</msg>
+<status status="PASS" starttime="20220813 23:13:26.317" endtime="20220813 23:13:29.752"/>
 </kw>
-<kw name="When I fill with &quot;${INVALID_EMAIL}&quot;" library="newsletter" sourcename="I fill with &quot;${EMAIL}&quot;">
+<status status="PASS" starttime="20220813 23:13:25.642" endtime="20220813 23:13:29.752"/>
+</kw>
+<kw name="When I fill login form with &quot;${EMAIL_REGISTERED}&quot; and &quot;${PASSWORD_REGISTERED}&quot;" library="login" sourcename="I fill login form with &quot;${EMAIL_TEST_DATA}&quot; and &quot;${PASSWORD_TEST_DATA}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${EMAIL_INPUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220813 23:13:29.755" endtime="20220813 23:13:30.440"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PASSWORD_INPUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220813 23:13:30.440" endtime="20220813 23:13:31.096"/>
+</kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>${NEWSLETTER_INPUT}</arg>
-<arg>${EMAIL}</arg>
+<arg>${EMAIL_INPUT}</arg>
+<arg>${EMAIL_TEST_DATA}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220811 00:09:46.163" level="INFO">Typing text 'compra_teste$gmail.com' into text field 'id=newsletter-input'.</msg>
-<status status="PASS" starttime="20220811 00:09:46.160" endtime="20220811 00:09:47.224"/>
+<msg timestamp="20220813 23:13:31.096" level="INFO">Typing text 'christian.hernan@gmail.com' into text field 'id=email'.</msg>
+<status status="PASS" starttime="20220813 23:13:31.096" endtime="20220813 23:13:32.138"/>
 </kw>
-<status status="PASS" starttime="20220811 00:09:46.160" endtime="20220811 00:09:47.224"/>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${PASSWORD_INPUT}</arg>
+<arg>${PASSWORD_TEST_DATA}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220813 23:13:32.138" level="INFO">Typing password into text field 'id=passwd'.</msg>
+<msg timestamp="20220813 23:13:32.775" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220813 23:13:33.138" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220813 23:13:32.138" endtime="20220813 23:13:33.138"/>
 </kw>
-<kw name="And I click in &quot;submitnewsletter button&quot;" library="newsletter">
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>${SUBMIT_NEWSLETTER}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220811 00:09:47.227" level="INFO">Clicking button 'name=submitNewsletter'.</msg>
-<status status="PASS" starttime="20220811 00:09:47.224" endtime="20220811 00:09:53.384"/>
+<status status="PASS" starttime="20220813 23:13:29.754" endtime="20220813 23:13:33.138"/>
 </kw>
-<status status="PASS" starttime="20220811 00:09:47.224" endtime="20220811 00:09:53.384"/>
+<kw name="And I submit login form" library="login">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${SIGN_IN_BUTTON}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220813 23:13:33.138" endtime="20220813 23:13:33.768"/>
 </kw>
-<kw name="Then I verify message &quot;${MSG_INVALID_EMAIL}&quot;" library="newsletter" sourcename="I verify message &quot;${MSG}&quot;">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SIGN_IN_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220813 23:13:33.768" level="INFO">Clicking element 'id=SubmitLogin'.</msg>
+<status status="PASS" starttime="20220813 23:13:33.768" endtime="20220813 23:13:36.756"/>
+</kw>
+<status status="PASS" starttime="20220813 23:13:33.138" endtime="20220813 23:13:36.756"/>
+</kw>
+<kw name="When I click on button &quot;${WISHLIST_MENU}&quot;" library="wishlist" sourcename="I click on button &quot;${BUTTON}&quot;">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220813 23:13:36.758" level="INFO">Clicking element '//li[@class='lnk_wishlist']'.</msg>
+<status status="PASS" starttime="20220813 23:13:36.756" endtime="20220813 23:13:39.536"/>
+</kw>
+<status status="PASS" starttime="20220813 23:13:36.756" endtime="20220813 23:13:39.536"/>
+</kw>
+<kw name="And I fill the field with &quot;${LIST_TEST_01}&quot;" library="wishlist" sourcename="I fill the field with &quot;${LIST_TEST}&quot;">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_LIST_NAME}</arg>
+<arg>${LIST_TEST}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220813 23:13:39.539" level="INFO">Typing text 'Lista de desejos 01' into text field '//input[@id='name']'.</msg>
+<status status="PASS" starttime="20220813 23:13:39.539" endtime="20220813 23:13:40.610"/>
+</kw>
+<status status="PASS" starttime="20220813 23:13:39.536" endtime="20220813 23:13:40.610"/>
+</kw>
+<kw name="When I click on button &quot;${SAVE_LIST}&quot;" library="wishlist" sourcename="I click on button &quot;${BUTTON}&quot;">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220813 23:13:40.613" level="INFO">Clicking element '//span[contains(.,'Save')]'.</msg>
+<status status="PASS" starttime="20220813 23:13:40.613" endtime="20220813 23:13:43.599"/>
+</kw>
+<status status="PASS" starttime="20220813 23:13:40.610" endtime="20220813 23:13:43.599"/>
+</kw>
+<kw name="Then I verify message &quot;${LIST_TEST_01}&quot;" library="wishlist" sourcename="I verify message &quot;${MSG}&quot;">
 <kw name="Page Should Contain" library="SeleniumLibrary">
 <arg>${MSG}</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20220811 00:09:54.033" level="INFO">Current page contains text 'Newsletter : Invalid email address.'.</msg>
-<status status="PASS" starttime="20220811 00:09:53.385" endtime="20220811 00:09:54.033"/>
+<msg timestamp="20220813 23:13:44.228" level="INFO">Current page contains text 'Lista de desejos 01'.</msg>
+<status status="PASS" starttime="20220813 23:13:43.600" endtime="20220813 23:13:44.228"/>
 </kw>
-<status status="PASS" starttime="20220811 00:09:53.385" endtime="20220811 00:09:54.033"/>
+<status status="PASS" starttime="20220813 23:13:43.600" endtime="20220813 23:13:44.228"/>
 </kw>
 <kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220811 00:09:54.033" endtime="20220811 00:09:56.465"/>
+<status status="PASS" starttime="20220813 23:13:44.229" endtime="20220813 23:13:46.613"/>
 </kw>
-<status status="PASS" starttime="20220811 00:09:32.848" endtime="20220811 00:09:56.465"/>
+<status status="PASS" starttime="20220813 23:13:17.319" endtime="20220813 23:13:46.613"/>
 </test>
-<test id="s1-t4" name="Test case 04 - Test with empty email field" line="40">
+<test id="s1-t4" name="Test case 04 - Add products to a wish list" line="50">
 <kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
 <arg>browser=chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220811 00:09:56.472" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20220811 00:09:56.471" endtime="20220811 00:09:57.707"/>
+<msg timestamp="20220813 23:13:46.619" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220813 23:13:46.619" endtime="20220813 23:13:47.872"/>
 </kw>
 <kw name="Given I am at automationpractice.com" library="navigation">
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220811 00:09:57.710" endtime="20220811 00:09:58.145"/>
+<status status="PASS" starttime="20220813 23:13:47.874" endtime="20220813 23:13:48.297"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220811 00:09:58.145" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
-<status status="PASS" starttime="20220811 00:09:58.145" endtime="20220811 00:10:05.699"/>
+<msg timestamp="20220813 23:13:48.297" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
+<status status="PASS" starttime="20220813 23:13:48.297" endtime="20220813 23:13:54.510"/>
 </kw>
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <arg>0.3s</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20220811 00:10:05.699" endtime="20220811 00:10:05.700"/>
+<status status="PASS" starttime="20220813 23:13:54.510" endtime="20220813 23:13:54.511"/>
 </kw>
-<status status="PASS" starttime="20220811 00:09:57.709" endtime="20220811 00:10:05.700"/>
+<status status="PASS" starttime="20220813 23:13:47.873" endtime="20220813 23:13:54.511"/>
 </kw>
-<kw name="And I put mouse over &quot;newsletter&quot; field" library="newsletter">
-<kw name="Mouse Over" library="SeleniumLibrary">
-<arg>${NEWSLETTER_INPUT}</arg>
-<doc>Simulates hovering the mouse over the element ``locator``.</doc>
-<msg timestamp="20220811 00:10:05.704" level="INFO">Simulating Mouse Over on element 'id=newsletter-input'.</msg>
-<status status="PASS" starttime="20220811 00:10:05.703" endtime="20220811 00:10:06.621"/>
+<kw name="And I enter menu &quot;Sign in&quot;" library="menu">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${SIGN_IN_MENU_BUTTON}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220813 23:13:54.514" endtime="20220813 23:13:55.178"/>
 </kw>
-<status status="PASS" starttime="20220811 00:10:05.702" endtime="20220811 00:10:06.621"/>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SIGN_IN_MENU_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220813 23:13:55.178" level="INFO">Clicking element 'class=login'.</msg>
+<status status="PASS" starttime="20220813 23:13:55.178" endtime="20220813 23:13:58.546"/>
 </kw>
-<kw name="When I fill with &quot;&quot;" library="newsletter" sourcename="I fill with &quot;${EMAIL}&quot;">
+<status status="PASS" starttime="20220813 23:13:54.513" endtime="20220813 23:13:58.546"/>
+</kw>
+<kw name="When I fill login form with &quot;${EMAIL_REGISTERED}&quot; and &quot;${PASSWORD_REGISTERED}&quot;" library="login" sourcename="I fill login form with &quot;${EMAIL_TEST_DATA}&quot; and &quot;${PASSWORD_TEST_DATA}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${EMAIL_INPUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220813 23:13:58.549" endtime="20220813 23:13:59.210"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PASSWORD_INPUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220813 23:13:59.210" endtime="20220813 23:13:59.866"/>
+</kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>${NEWSLETTER_INPUT}</arg>
-<arg>${EMAIL}</arg>
+<arg>${EMAIL_INPUT}</arg>
+<arg>${EMAIL_TEST_DATA}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220811 00:10:06.624" level="INFO">Typing text '' into text field 'id=newsletter-input'.</msg>
-<status status="PASS" starttime="20220811 00:10:06.621" endtime="20220811 00:10:07.643"/>
+<msg timestamp="20220813 23:13:59.866" level="INFO">Typing text 'christian.hernan@gmail.com' into text field 'id=email'.</msg>
+<status status="PASS" starttime="20220813 23:13:59.866" endtime="20220813 23:14:00.904"/>
 </kw>
-<status status="PASS" starttime="20220811 00:10:06.621" endtime="20220811 00:10:07.643"/>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${PASSWORD_INPUT}</arg>
+<arg>${PASSWORD_TEST_DATA}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220813 23:14:00.904" level="INFO">Typing password into text field 'id=passwd'.</msg>
+<msg timestamp="20220813 23:14:01.541" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220813 23:14:01.909" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220813 23:14:00.904" endtime="20220813 23:14:01.909"/>
 </kw>
-<kw name="And I click in &quot;submitnewsletter button&quot;" library="newsletter">
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>${SUBMIT_NEWSLETTER}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220811 00:10:07.643" level="INFO">Clicking button 'name=submitNewsletter'.</msg>
-<status status="PASS" starttime="20220811 00:10:07.643" endtime="20220811 00:10:11.534"/>
+<status status="PASS" starttime="20220813 23:13:58.546" endtime="20220813 23:14:01.909"/>
 </kw>
-<status status="PASS" starttime="20220811 00:10:07.643" endtime="20220811 00:10:11.534"/>
+<kw name="And I submit login form" library="login">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${SIGN_IN_BUTTON}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220813 23:14:01.909" endtime="20220813 23:14:02.539"/>
 </kw>
-<kw name="Then I verify message &quot;${MSG_INVALID_EMAIL}&quot;" library="newsletter" sourcename="I verify message &quot;${MSG}&quot;">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SIGN_IN_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220813 23:14:02.539" level="INFO">Clicking element 'id=SubmitLogin'.</msg>
+<status status="PASS" starttime="20220813 23:14:02.539" endtime="20220813 23:14:05.138"/>
+</kw>
+<status status="PASS" starttime="20220813 23:14:01.909" endtime="20220813 23:14:05.138"/>
+</kw>
+<kw name="When I click on button &quot;${WISHLIST_MENU}&quot;" library="wishlist" sourcename="I click on button &quot;${BUTTON}&quot;">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220813 23:14:05.140" level="INFO">Clicking element '//li[@class='lnk_wishlist']'.</msg>
+<status status="PASS" starttime="20220813 23:14:05.138" endtime="20220813 23:14:07.784"/>
+</kw>
+<status status="PASS" starttime="20220813 23:14:05.138" endtime="20220813 23:14:07.784"/>
+</kw>
+<kw name="And I fill the field with &quot;${LIST_TEST_01}&quot;" library="wishlist" sourcename="I fill the field with &quot;${LIST_TEST}&quot;">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_LIST_NAME}</arg>
+<arg>${LIST_TEST}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220813 23:14:07.787" level="INFO">Typing text 'Lista de desejos 01' into text field '//input[@id='name']'.</msg>
+<status status="PASS" starttime="20220813 23:14:07.787" endtime="20220813 23:14:08.862"/>
+</kw>
+<status status="PASS" starttime="20220813 23:14:07.784" endtime="20220813 23:14:08.862"/>
+</kw>
+<kw name="When I click on button &quot;${SAVE_LIST}&quot;" library="wishlist" sourcename="I click on button &quot;${BUTTON}&quot;">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220813 23:14:08.865" level="INFO">Clicking element '//span[contains(.,'Save')]'.</msg>
+<status status="PASS" starttime="20220813 23:14:08.865" endtime="20220813 23:14:12.547"/>
+</kw>
+<status status="PASS" starttime="20220813 23:14:08.862" endtime="20220813 23:14:12.547"/>
+</kw>
+<kw name="And I click on button &quot;${LIST_TEST_01_SALVA}&quot;" library="wishlist" sourcename="I click on button &quot;${BUTTON}&quot;">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220813 23:14:12.549" level="INFO">Clicking element '//a[@href='javascript:;'][contains(.,'Lista de desejos 01')]'.</msg>
+<status status="PASS" starttime="20220813 23:14:12.548" endtime="20220813 23:14:13.213"/>
+</kw>
+<status status="PASS" starttime="20220813 23:14:12.548" endtime="20220813 23:14:13.213"/>
+</kw>
+<kw name="When I click on button &quot;${FADED_SHORT_PRODUCT}&quot;" library="wishlist" sourcename="I click on button &quot;${BUTTON}&quot;">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220813 23:14:13.215" level="INFO">Clicking element '//a[contains(.,'Faded Short Sleeve T-shirts')]'.</msg>
+<status status="PASS" starttime="20220813 23:14:13.214" endtime="20220813 23:14:17.414"/>
+</kw>
+<status status="PASS" starttime="20220813 23:14:13.214" endtime="20220813 23:14:17.414"/>
+</kw>
+<kw name="And I click on button &quot;${ADD_BUTTON}&quot;" library="wishlist" sourcename="I click on button &quot;${BUTTON}&quot;">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220813 23:14:17.417" level="INFO">Clicking element '//a[@title='Add to my wishlist']'.</msg>
+<status status="PASS" starttime="20220813 23:14:17.416" endtime="20220813 23:14:18.101"/>
+</kw>
+<status status="PASS" starttime="20220813 23:14:17.415" endtime="20220813 23:14:18.101"/>
+</kw>
+<kw name="Then I verify message &quot;${ADD_LIST_MSG}&quot;" library="wishlist" sourcename="I verify message &quot;${MSG}&quot;">
 <kw name="Page Should Contain" library="SeleniumLibrary">
 <arg>${MSG}</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20220811 00:10:12.170" level="INFO">Current page contains text 'Newsletter : Invalid email address.'.</msg>
-<status status="PASS" starttime="20220811 00:10:11.535" endtime="20220811 00:10:12.170"/>
+<msg timestamp="20220813 23:14:18.729" level="INFO">Current page contains text 'Added to your wishlist.'.</msg>
+<status status="PASS" starttime="20220813 23:14:18.102" endtime="20220813 23:14:18.729"/>
 </kw>
-<status status="PASS" starttime="20220811 00:10:11.535" endtime="20220811 00:10:12.170"/>
+<status status="PASS" starttime="20220813 23:14:18.102" endtime="20220813 23:14:18.729"/>
 </kw>
 <kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20220811 00:10:12.170" endtime="20220811 00:10:14.552"/>
+<status status="PASS" starttime="20220813 23:14:18.730" endtime="20220813 23:14:21.209"/>
 </kw>
-<status status="PASS" starttime="20220811 00:09:56.470" endtime="20220811 00:10:14.552"/>
+<status status="PASS" starttime="20220813 23:13:46.618" endtime="20220813 23:14:21.209"/>
 </test>
-<doc>Newsletter feature tests suite.</doc>
-<status status="PASS" starttime="20220811 00:08:48.654" endtime="20220811 00:10:14.558"/>
+<test id="s1-t5" name="Test case 05 - Delete products from a wish list" line="63">
+<kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220813 23:14:21.216" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220813 23:14:21.215" endtime="20220813 23:14:22.461"/>
+</kw>
+<kw name="Given I am at automationpractice.com" library="navigation">
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220813 23:14:22.463" endtime="20220813 23:14:22.893"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220813 23:14:22.893" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
+<status status="PASS" starttime="20220813 23:14:22.893" endtime="20220813 23:14:29.168"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.3s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20220813 23:14:29.168" endtime="20220813 23:14:29.169"/>
+</kw>
+<status status="PASS" starttime="20220813 23:14:22.462" endtime="20220813 23:14:29.169"/>
+</kw>
+<kw name="And I enter menu &quot;Sign in&quot;" library="menu">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${SIGN_IN_MENU_BUTTON}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220813 23:14:29.171" endtime="20220813 23:14:29.852"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SIGN_IN_MENU_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220813 23:14:29.852" level="INFO">Clicking element 'class=login'.</msg>
+<status status="PASS" starttime="20220813 23:14:29.852" endtime="20220813 23:14:32.713"/>
+</kw>
+<status status="PASS" starttime="20220813 23:14:29.171" endtime="20220813 23:14:32.713"/>
+</kw>
+<kw name="When I fill login form with &quot;${EMAIL_REGISTERED}&quot; and &quot;${PASSWORD_REGISTERED}&quot;" library="login" sourcename="I fill login form with &quot;${EMAIL_TEST_DATA}&quot; and &quot;${PASSWORD_TEST_DATA}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${EMAIL_INPUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220813 23:14:32.716" endtime="20220813 23:14:33.377"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PASSWORD_INPUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220813 23:14:33.377" endtime="20220813 23:14:34.033"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${EMAIL_INPUT}</arg>
+<arg>${EMAIL_TEST_DATA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220813 23:14:34.033" level="INFO">Typing text 'christian.hernan@gmail.com' into text field 'id=email'.</msg>
+<status status="PASS" starttime="20220813 23:14:34.033" endtime="20220813 23:14:35.111"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${PASSWORD_INPUT}</arg>
+<arg>${PASSWORD_TEST_DATA}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220813 23:14:35.111" level="INFO">Typing password into text field 'id=passwd'.</msg>
+<msg timestamp="20220813 23:14:35.751" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220813 23:14:36.121" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220813 23:14:35.111" endtime="20220813 23:14:36.121"/>
+</kw>
+<status status="PASS" starttime="20220813 23:14:32.713" endtime="20220813 23:14:36.121"/>
+</kw>
+<kw name="And I submit login form" library="login">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${SIGN_IN_BUTTON}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220813 23:14:36.121" endtime="20220813 23:14:36.744"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SIGN_IN_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220813 23:14:36.744" level="INFO">Clicking element 'id=SubmitLogin'.</msg>
+<status status="PASS" starttime="20220813 23:14:36.744" endtime="20220813 23:14:40.118"/>
+</kw>
+<status status="PASS" starttime="20220813 23:14:36.121" endtime="20220813 23:14:40.118"/>
+</kw>
+<kw name="When I click on button &quot;${WISHLIST_MENU}&quot;" library="wishlist" sourcename="I click on button &quot;${BUTTON}&quot;">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220813 23:14:40.120" level="INFO">Clicking element '//li[@class='lnk_wishlist']'.</msg>
+<status status="PASS" starttime="20220813 23:14:40.118" endtime="20220813 23:14:42.418"/>
+</kw>
+<status status="PASS" starttime="20220813 23:14:40.118" endtime="20220813 23:14:42.418"/>
+</kw>
+<kw name="And I fill the field with &quot;${LIST_TEST_01}&quot;" library="wishlist" sourcename="I fill the field with &quot;${LIST_TEST}&quot;">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_LIST_NAME}</arg>
+<arg>${LIST_TEST}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220813 23:14:42.421" level="INFO">Typing text 'Lista de desejos 01' into text field '//input[@id='name']'.</msg>
+<status status="PASS" starttime="20220813 23:14:42.418" endtime="20220813 23:14:43.493"/>
+</kw>
+<status status="PASS" starttime="20220813 23:14:42.418" endtime="20220813 23:14:43.493"/>
+</kw>
+<kw name="When I click on button &quot;${SAVE_LIST}&quot;" library="wishlist" sourcename="I click on button &quot;${BUTTON}&quot;">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220813 23:14:43.496" level="INFO">Clicking element '//span[contains(.,'Save')]'.</msg>
+<status status="PASS" starttime="20220813 23:14:43.496" endtime="20220813 23:14:45.450"/>
+</kw>
+<status status="PASS" starttime="20220813 23:14:43.495" endtime="20220813 23:14:45.450"/>
+</kw>
+<kw name="And I click on button &quot;${LIST_TEST_01_SALVA}&quot;" library="wishlist" sourcename="I click on button &quot;${BUTTON}&quot;">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220813 23:14:45.454" level="INFO">Clicking element '//a[@href='javascript:;'][contains(.,'Lista de desejos 01')]'.</msg>
+<status status="PASS" starttime="20220813 23:14:45.454" endtime="20220813 23:14:46.171"/>
+</kw>
+<status status="PASS" starttime="20220813 23:14:45.450" endtime="20220813 23:14:46.171"/>
+</kw>
+<kw name="When I click on button &quot;${FADED_SHORT_PRODUCT}&quot;" library="wishlist" sourcename="I click on button &quot;${BUTTON}&quot;">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220813 23:14:46.173" level="INFO">Clicking element '//a[contains(.,'Faded Short Sleeve T-shirts')]'.</msg>
+<status status="PASS" starttime="20220813 23:14:46.172" endtime="20220813 23:14:51.187"/>
+</kw>
+<status status="PASS" starttime="20220813 23:14:46.172" endtime="20220813 23:14:51.187"/>
+</kw>
+<kw name="And I click on button &quot;${ADD_BUTTON}&quot;" library="wishlist" sourcename="I click on button &quot;${BUTTON}&quot;">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220813 23:14:51.189" level="INFO">Clicking element '//a[@title='Add to my wishlist']'.</msg>
+<status status="PASS" starttime="20220813 23:14:51.188" endtime="20220813 23:14:51.870"/>
+</kw>
+<status status="PASS" starttime="20220813 23:14:51.188" endtime="20220813 23:14:51.870"/>
+</kw>
+<kw name="When I wait for element is visible" library="wishlist">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${CLOSE_BUTTON}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220813 23:14:51.871" endtime="20220813 23:14:55.090"/>
+</kw>
+<status status="PASS" starttime="20220813 23:14:51.871" endtime="20220813 23:14:55.090"/>
+</kw>
+<kw name="And I click on button &quot;Close&quot;" library="wishlist">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CLOSE_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220813 23:14:55.091" level="INFO">Clicking element 'xpath=//a[@title='Close']'.</msg>
+<status status="PASS" starttime="20220813 23:14:55.091" endtime="20220813 23:14:55.767"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220813 23:14:57.772" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220813 23:14:55.768" endtime="20220813 23:14:57.773"/>
+</kw>
+<status status="PASS" starttime="20220813 23:14:55.090" endtime="20220813 23:14:57.773"/>
+</kw>
+<kw name="When I click on button &quot;${CUSTOMER_BUTTON}&quot;" library="wishlist" sourcename="I click on button &quot;${BUTTON}&quot;">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220813 23:14:57.774" level="INFO">Clicking element '//a[@title='Manage my customer account']'.</msg>
+<status status="PASS" starttime="20220813 23:14:57.774" endtime="20220813 23:15:00.442"/>
+</kw>
+<status status="PASS" starttime="20220813 23:14:57.773" endtime="20220813 23:15:00.442"/>
+</kw>
+<kw name="And I click on button &quot;${WISHLIST_MENU}&quot;" library="wishlist" sourcename="I click on button &quot;${BUTTON}&quot;">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220813 23:15:00.444" level="INFO">Clicking element '//li[@class='lnk_wishlist']'.</msg>
+<status status="PASS" starttime="20220813 23:15:00.443" endtime="20220813 23:15:03.750"/>
+</kw>
+<status status="PASS" starttime="20220813 23:15:00.443" endtime="20220813 23:15:03.750"/>
+</kw>
+<kw name="When I click on button &quot;${LIST_TEST_01_SALVA}&quot;" library="wishlist" sourcename="I click on button &quot;${BUTTON}&quot;">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220813 23:15:03.753" level="INFO">Clicking element '//a[@href='javascript:;'][contains(.,'Lista de desejos 01')]'.</msg>
+<status status="PASS" starttime="20220813 23:15:03.753" endtime="20220813 23:15:04.436"/>
+</kw>
+<status status="PASS" starttime="20220813 23:15:03.752" endtime="20220813 23:15:04.436"/>
+</kw>
+<kw name="And I put mouse over image &quot;${FADED_SHORT_PRODUCT}&quot;" library="wishlist" sourcename="I put mouse over image &quot;${PUT}&quot;">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${PUT}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220813 23:15:04.439" level="INFO">Simulating Mouse Over on element '//a[contains(.,'Faded Short Sleeve T-shirts')]'.</msg>
+<status status="PASS" starttime="20220813 23:15:04.439" endtime="20220813 23:15:05.336"/>
+</kw>
+<status status="PASS" starttime="20220813 23:15:04.436" endtime="20220813 23:15:05.336"/>
+</kw>
+<kw name="When I click on button &quot;${ICON_REMOVE_ITEM1}&quot;" library="wishlist" sourcename="I click on button &quot;${BUTTON}&quot;">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220813 23:15:05.341" level="INFO">Clicking element '(//i[@class='icon-remove-sign'])[1]'.</msg>
+<status status="PASS" starttime="20220813 23:15:05.340" endtime="20220813 23:15:06.045"/>
+</kw>
+<status status="PASS" starttime="20220813 23:15:05.339" endtime="20220813 23:15:06.045"/>
+</kw>
+<kw name="And I click on button &quot;${LIST_TEST_01_SALVA}&quot;" library="wishlist" sourcename="I click on button &quot;${BUTTON}&quot;">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220813 23:15:06.048" level="INFO">Clicking element '//a[@href='javascript:;'][contains(.,'Lista de desejos 01')]'.</msg>
+<status status="PASS" starttime="20220813 23:15:06.048" endtime="20220813 23:15:06.726"/>
+</kw>
+<status status="PASS" starttime="20220813 23:15:06.045" endtime="20220813 23:15:06.726"/>
+</kw>
+<kw name="Then I verify message &quot;${NO_PRODUCTS_MSG}&quot;" library="wishlist" sourcename="I verify message &quot;${MSG}&quot;">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${MSG}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20220813 23:15:07.371" level="INFO">Current page contains text 'No products'.</msg>
+<status status="PASS" starttime="20220813 23:15:06.728" endtime="20220813 23:15:07.371"/>
+</kw>
+<status status="PASS" starttime="20220813 23:15:06.726" endtime="20220813 23:15:07.371"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220813 23:15:07.371" endtime="20220813 23:15:09.820"/>
+</kw>
+<status status="PASS" starttime="20220813 23:14:21.214" endtime="20220813 23:15:09.820"/>
+</test>
+<test id="s1-t6" name="Test case 06 - Delete a wish list" line="84">
+<kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220813 23:15:09.827" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20220813 23:15:09.827" endtime="20220813 23:15:11.062"/>
+</kw>
+<kw name="Given I am at automationpractice.com" library="navigation">
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220813 23:15:11.063" endtime="20220813 23:15:11.500"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220813 23:15:11.500" level="INFO">Opening url 'http://www.automationpractice.com'</msg>
+<status status="PASS" starttime="20220813 23:15:11.500" endtime="20220813 23:15:18.926"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.3s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20220813 23:15:18.926" endtime="20220813 23:15:18.927"/>
+</kw>
+<status status="PASS" starttime="20220813 23:15:11.063" endtime="20220813 23:15:18.927"/>
+</kw>
+<kw name="And I enter menu &quot;Sign in&quot;" library="menu">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${SIGN_IN_MENU_BUTTON}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220813 23:15:18.928" endtime="20220813 23:15:19.600"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SIGN_IN_MENU_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220813 23:15:19.600" level="INFO">Clicking element 'class=login'.</msg>
+<status status="PASS" starttime="20220813 23:15:19.600" endtime="20220813 23:15:22.693"/>
+</kw>
+<status status="PASS" starttime="20220813 23:15:18.928" endtime="20220813 23:15:22.693"/>
+</kw>
+<kw name="When I fill login form with &quot;${EMAIL_REGISTERED}&quot; and &quot;${PASSWORD_REGISTERED}&quot;" library="login" sourcename="I fill login form with &quot;${EMAIL_TEST_DATA}&quot; and &quot;${PASSWORD_TEST_DATA}&quot;">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${EMAIL_INPUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220813 23:15:22.696" endtime="20220813 23:15:23.357"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PASSWORD_INPUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220813 23:15:23.357" endtime="20220813 23:15:24.013"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${EMAIL_INPUT}</arg>
+<arg>${EMAIL_TEST_DATA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220813 23:15:24.013" level="INFO">Typing text 'christian.hernan@gmail.com' into text field 'id=email'.</msg>
+<status status="PASS" starttime="20220813 23:15:24.013" endtime="20220813 23:15:25.063"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${PASSWORD_INPUT}</arg>
+<arg>${PASSWORD_TEST_DATA}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220813 23:15:25.063" level="INFO">Typing password into text field 'id=passwd'.</msg>
+<msg timestamp="20220813 23:15:25.713" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220813 23:15:26.074" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220813 23:15:25.063" endtime="20220813 23:15:26.074"/>
+</kw>
+<status status="PASS" starttime="20220813 23:15:22.693" endtime="20220813 23:15:26.074"/>
+</kw>
+<kw name="And I submit login form" library="login">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${SIGN_IN_BUTTON}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220813 23:15:26.074" endtime="20220813 23:15:26.695"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SIGN_IN_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220813 23:15:26.695" level="INFO">Clicking element 'id=SubmitLogin'.</msg>
+<status status="PASS" starttime="20220813 23:15:26.695" endtime="20220813 23:15:29.712"/>
+</kw>
+<status status="PASS" starttime="20220813 23:15:26.074" endtime="20220813 23:15:29.712"/>
+</kw>
+<kw name="When I click on button &quot;${WISHLIST_MENU}&quot;" library="wishlist" sourcename="I click on button &quot;${BUTTON}&quot;">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220813 23:15:29.714" level="INFO">Clicking element '//li[@class='lnk_wishlist']'.</msg>
+<status status="PASS" starttime="20220813 23:15:29.713" endtime="20220813 23:15:33.082"/>
+</kw>
+<status status="PASS" starttime="20220813 23:15:29.713" endtime="20220813 23:15:33.082"/>
+</kw>
+<kw name="And I fill the field with &quot;${LIST_TEST_01}&quot;" library="wishlist" sourcename="I fill the field with &quot;${LIST_TEST}&quot;">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_LIST_NAME}</arg>
+<arg>${LIST_TEST}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220813 23:15:33.086" level="INFO">Typing text 'Lista de desejos 01' into text field '//input[@id='name']'.</msg>
+<status status="PASS" starttime="20220813 23:15:33.086" endtime="20220813 23:15:34.164"/>
+</kw>
+<status status="PASS" starttime="20220813 23:15:33.082" endtime="20220813 23:15:34.164"/>
+</kw>
+<kw name="When I click on button &quot;${SAVE_LIST}&quot;" library="wishlist" sourcename="I click on button &quot;${BUTTON}&quot;">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220813 23:15:34.168" level="INFO">Clicking element '//span[contains(.,'Save')]'.</msg>
+<status status="PASS" starttime="20220813 23:15:34.164" endtime="20220813 23:15:37.253"/>
+</kw>
+<status status="PASS" starttime="20220813 23:15:34.164" endtime="20220813 23:15:37.253"/>
+</kw>
+<kw name="When I click on button &quot;${WISHLIST_MENU}&quot;" library="wishlist" sourcename="I click on button &quot;${BUTTON}&quot;">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220813 23:15:37.255" level="INFO">Clicking element '//li[@class='lnk_wishlist']'.</msg>
+<status status="PASS" starttime="20220813 23:15:37.255" endtime="20220813 23:15:37.908"/>
+</kw>
+<status status="PASS" starttime="20220813 23:15:37.254" endtime="20220813 23:15:37.908"/>
+</kw>
+<kw name="And I click on button &quot;${ICON_REMOVE_LIST_TEST_01}&quot;" library="wishlist" sourcename="I click on button &quot;${BUTTON}&quot;">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220813 23:15:37.910" level="INFO">Clicking element '(//i[@class='icon-remove'])[1]'.</msg>
+<status status="PASS" starttime="20220813 23:15:37.909" endtime="20220813 23:15:38.579"/>
+</kw>
+<status status="PASS" starttime="20220813 23:15:37.909" endtime="20220813 23:15:38.579"/>
+</kw>
+<kw name="Then I click ok on the alert message" library="wishlist">
+<kw name="Handle Alert" library="SeleniumLibrary">
+<doc>Handles the current alert and returns its message.</doc>
+<msg timestamp="20220813 23:15:38.580" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<status status="PASS" starttime="20220813 23:15:38.580" endtime="20220813 23:15:39.512"/>
+</kw>
+<status status="PASS" starttime="20220813 23:15:38.580" endtime="20220813 23:15:39.512"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220813 23:15:39.513" endtime="20220813 23:15:41.890"/>
+</kw>
+<status status="PASS" starttime="20220813 23:15:09.825" endtime="20220813 23:15:41.890"/>
+</test>
+<doc>Wishlist feature tests suite.</doc>
+<status status="PASS" starttime="20220813 23:12:30.517" endtime="20220813 23:15:41.895"/>
 </suite>
 <statistics>
 <total>
-<stat pass="4" fail="0" skip="0">All Tests</stat>
+<stat pass="6" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="4" fail="0" skip="0" id="s1" name="Newsletter Test">Newsletter Test</stat>
+<stat pass="6" fail="0" skip="0" id="s1" name="Wishlist Test">Wishlist Test</stat>
 </suite>
 </statistics>
 <errors>
