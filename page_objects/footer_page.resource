@@ -1,2 +1,2 @@
 *** Variables ***
-${CONTACT_FOOTER}    //a[@title='Contact us']
+${CONTACT_FOOTER}                //a[@title='Contact us']
