@@ -3,13 +3,10 @@ Documentation     Testing Write Review functionality.
 Library           SeleniumLibrary
 Library           FakerLibrary
 
-Resource          ../resources/search.resource
 Resource          ../resources/login.resource
 Resource          ../configs/config.resource
 Resource          ../resources/menu.resource
 Resource          ../resources/navigation.resource
-Resource          ../resources/contact.resource
-Resource          ../resources/footer.resource
 Resource          ../resources/write_review.resource
 
 Test Setup        Open Browser          browser=chrome
